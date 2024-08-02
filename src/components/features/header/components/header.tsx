@@ -5,7 +5,7 @@ import { MobileLinkType } from '@/components/global/type/type';
 // import { ModeToggle, Nav } from '..';
 
 export interface IHeaderProps {
-    Nav: ({ links }: { links: MobileLinkType[] }) => React.ReactElement<any | JSX.Element>;
+    Nav: ({ links }: { links: MobileLinkType[] }) => React.ReactElement;
     ModeToggle: () => React.ReactElement;
     MobileNav: ({ links }: { links: MobileLinkType[] }) => React.ReactElement;
     links: MobileLinkType[];
