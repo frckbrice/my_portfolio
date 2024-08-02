@@ -1,17 +1,20 @@
-export const links = [
+import { MobileLinkType } from "../type/type";
+
+export const links: MobileLinkType[] = [
     {
         path: "/",
         name: "Home",
         icon: ""
     },
-    {
-        path: "/services",
-        name: "Services",
-        icon: ""
-    },
+
     {
         path: "/resume",
         name: "Resume",
+        icon: ""
+    },
+    {
+        path: "/services",
+        name: "Services",
         icon: ""
     },
     {
