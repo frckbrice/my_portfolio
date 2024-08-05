@@ -1,12 +1,2 @@
-import * as React from 'react';
-
-export interface IResumePageProps {
-}
-
-export default function ResumePage(props: IResumePageProps) {
-    return (
-        <div>
-            ResumePage
-        </div>
-    );
-}
+import ResumeInterface from "@/components/features/resume";
+export default ResumeInterface;

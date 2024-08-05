@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { LucideMenu } from "lucide-react";
 
-// componets
+// components
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { MobileLinkType } from '@/components/global/type/type';
+import { MobileLinkType } from '@/components/global/types/type';
 import { cn } from '@/lib/utils';
 
 

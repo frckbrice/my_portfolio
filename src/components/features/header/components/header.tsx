@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { MobileLinkType } from '@/components/global/type/type';
+import { MobileLinkType } from '@/components/global/types/type';
 // import { ModeToggle, Nav } from '..';
 
 export interface IHeaderProps {

@@ -1,12 +1,6 @@
-import * as React from 'react';
+import ServiceInterface from "@/components/features/services";
 
-export interface IServicePageProps {
-}
+// add meta data for this page
 
-export default function ServicePage(props: IServicePageProps) {
-    return (
-        <div>
-            ServicePage
-        </div>
-    );
-}
+
+export default ServiceInterface;
