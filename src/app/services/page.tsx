@@ -1,6 +1,9 @@
 import ServiceInterface from "@/components/features/services";
 
-// add meta data for this page
-
+// metadata 
+export const metadata = {
+    title: 'Avom Brice Services offered',
+    description: 'This  website page showcase services available in my agenda',
+}
 
 export default ServiceInterface;

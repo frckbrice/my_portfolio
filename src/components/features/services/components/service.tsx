@@ -29,7 +29,7 @@ export function Services({ services }: IServicesProps) {
                 >
                     {services.map(({ title, description, href, num }, index) => (
                         <div key={index} className=' flex-1 flex flex-col justify-center
-                        gap-6 group'>
+                        gap-5 group'>
                             {/* top */}
                             <div className=' w-full flex  justify-between items-center'>
                                 <div
@@ -62,7 +62,7 @@ export function Services({ services }: IServicesProps) {
                             </div>
                             {/* tilte */}
                             <h2 className='text-11 font-bold leading-none text-white group-hover:text-accent 
-                            transition-all duration-500'>{title}</h2>
+                            transition-all duration-500 text-2xl'>{title}</h2>
                             {/* description */}
                             <p className=' text-white/60'>{description}</p>
                             {/* border */}

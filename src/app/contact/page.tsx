@@ -1,12 +1,10 @@
-import * as React from 'react';
+import { ContactInterface } from '@/components/features/contact';
 
-export interface IContactPageProps {
+
+// metadata 
+export const metadata = {
+    title: 'Avom Brice contact page',
+    description: 'This  website page shows the contact page where you can contact me',
 }
 
-export default function ContactPage(props: IContactPageProps) {
-    return (
-        <div>
-            ContactPage
-        </div>
-    );
-}
+export default ContactInterface;

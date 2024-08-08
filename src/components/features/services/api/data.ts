@@ -9,22 +9,27 @@ export const services: ServiceType[] = [
     },
     {
         num: "02",
-        title: "Front-end Development",
+        title: "Web Developement:  Front-end ",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus modi distinctio corporis ",
         href: ""
     },
 
     {
         num: "03",
-        title: "Backend-Development",
+        title: "Web Developement: Backend",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus modi distinctio corporis ",
         href: ""
     },
     {
         num: "04",
-        title: "Full-Stack Development",
+        title: "Web Developement: Full-Stack ",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus modi distinctio corporis ",
         href: ""
     },
-
+    {
+        num: "05",
+        title: "Mobile Developement - Cross-platform",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus modi distinctio corporis ",
+        href: ""
+    },
 ]

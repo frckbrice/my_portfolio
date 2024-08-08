@@ -1,4 +1,4 @@
-import { MobileLinkType } from "../type/type";
+import { MobileLinkType } from "../types/type";
 
 export const links: MobileLinkType[] = [
     {

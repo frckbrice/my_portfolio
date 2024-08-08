@@ -12,7 +12,9 @@ import {
 import {
     SiTailwindcss, SiNextdotjs,
     SiGraphql, SiNestjs, SiMongodb, SiPostgresql, SiMysql,
-    SiTypescript
+    SiTypescript,
+    SiExpress,
+    SiFlutter
 } from "react-icons/si";
 
 
@@ -66,7 +68,7 @@ export const experience: ExperienceTypi = {
             company: " SENIMA Cabinet",
             position: "Full-Stack Developer",
             duration: "june 2024 - Present",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at",
+            description: "Free lancer 3 months",
         },
         {
             company: " Rebase Solutions Corporation",
@@ -114,13 +116,53 @@ export const skills: Partial<ExperienceType> = {
     title: "My Skills",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi",
     skillsList: [
-        {
-            icon: <FaJs />,
-            name: "JavaScript",
-        },
+        // {
+        //     icon: <FaJs />,
+        //     name: "JavaScript",
+        // },
         {
             icon: <SiTypescript />,
             name: "Typescript",
+        },
+        {
+            icon: <FaNodeJs />,
+            name: "Node.js",
+        },
+        {
+            icon: <SiNextdotjs />,
+            name: "Next.js",
+        },
+        {
+            icon: <FaReact />,
+            name: "React.js",
+        },
+        {
+            icon: <FaReact />,
+            name: "React Native",
+        },
+        {
+            icon: <SiTailwindcss />,
+            name: "TailwindCss",
+        },
+        {
+            icon: <SiFlutter />,
+            name: "FlutterFlow",
+        },
+        {
+            icon: <FaAngular />,
+            name: "Angular 2",
+        },
+        {
+            icon: <SiExpress />,
+            name: "Express.js",
+        },
+        {
+            icon: <SiNestjs />,
+            name: "Nest.js",
+        },
+        {
+            icon: < SiGraphql />,
+            name: "GraphQL",
         },
         {
             icon: <SiMongodb />,
@@ -134,35 +176,5 @@ export const skills: Partial<ExperienceType> = {
             icon: <SiMysql />,
             name: "MySql",
         },
-        {
-            icon: < SiGraphql />,
-            name: "GraphQL.js",
-        },
-        {
-            icon: <SiNextdotjs />,
-            name: "Next.js",
-        },
-        {
-            icon: <SiTailwindcss />,
-            name: "TailwindCss",
-        },
-        {
-            icon: <FaNodeJs />,
-            name: "Node.js",
-        },
-        {
-            icon: <FaAngular />,
-            name: "Angular 2",
-        },
-
-        {
-            icon: <FaReact />,
-            name: "React.js",
-        },
-        {
-            icon: <SiNestjs />,
-            name: "Nest.js",
-        },
-
     ]
-}
+};
