@@ -1,12 +1,9 @@
-import * as React from 'react';
+import { ResumeInterface } from "@/components/features/resume";
 
-export interface IResumePageProps {
+// metadata 
+export const metadata = {
+    title: 'Avom Brice resume',
+    description: 'This  website page showcase an important part of my resume',
 }
 
-export default function ResumePage(props: IResumePageProps) {
-    return (
-        <div>
-            ResumePage
-        </div>
-    );
-}
+export default ResumeInterface;

@@ -1,7 +1,4 @@
-import Image from "next/image";
 
-export default function Home() {
-  return (
-    <main>Home Page</main>
-  );
-}
+import { HomepageInterface } from "@/components/features/home-page";
+
+export default HomepageInterface;

@@ -6,14 +6,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 // data
-import { links } from '../api/data';
 import { cn } from '@/lib/utils';
+import { MobileLinkType } from '@/components/global/types/type';
 
 
 export interface INavProps {
+    links: MobileLinkType[]
 }
 
-export function Nav() {
+export function Nav({ links }: INavProps) {
 
     const pathName = usePathname();
 

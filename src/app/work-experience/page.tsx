@@ -1,12 +1,10 @@
-import * as React from 'react';
+import { WorkInterface } from '@/components/features/work';
 
-export interface IWExperiencePageProps {
+// generate metadata 
+export const metadata = {
+    title: 'Avom Brice Portfolio Work experience',
+    description: 'This is my portfolio website page for the work experience',
 }
 
-export default function WExperiencePage(props: IWExperiencePageProps) {
-    return (
-        <div>
-            WExperiencePage
-        </div>
-    );
-}
+
+export default WorkInterface

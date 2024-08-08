@@ -66,4 +66,20 @@
   body {
     @apply bg-primary text-white leading-loose;
   }
+  .h1 {
+    @apply text-5xl font-semibold xl:text-7xl leading-[1.1];
+  }
+  .h2 {
+    @apply text-4xl font-semibold xl:text-5xl leading-[1.1];
+  }
+  .h3 {
+    @apply text-xl font-semibold xl:text-2xl leading-[1.1];
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
 }

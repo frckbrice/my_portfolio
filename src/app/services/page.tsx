@@ -1,12 +1,9 @@
-import * as React from 'react';
+import ServiceInterface from "@/components/features/services";
 
-export interface IServicePageProps {
+// metadata 
+export const metadata = {
+    title: 'Avom Brice Services offered',
+    description: 'This  website page showcase services available in my agenda',
 }
 
-export default function ServicePage(props: IServicePageProps) {
-    return (
-        <div>
-            ServicePage
-        </div>
-    );
-}
+export default ServiceInterface;
