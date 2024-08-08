@@ -4,7 +4,7 @@ import "./globals.css";
 
 /** Components */
 import { HeaderInterface } from "@/components/features/header";
-// import { ThemeProvider as ThemeClientProvider } from "@/app/theme-provider";
+import { ThemeProvider as ThemeClientProvider } from "@/app/theme-provider";
 import { PageTransition, StairTransionInterface } from "@/components/global";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -25,23 +25,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script src="http://localhost:8097"></script>
-      </head>
       <body className={jetBrainsMono.variable}>
         <HeaderInterface />
         <StairTransionInterface />
-        {/* <ThemeClientProvider   // will be set later on
+        <ThemeClientProvider   // will be set later on
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
+        >
 
-        <PageTransition>
-          {children}
-        </PageTransition>
-        {/* </ThemeClientProvider> */}
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </ThemeClientProvider>
 
       </body>
     </html>

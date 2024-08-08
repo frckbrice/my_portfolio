@@ -30,7 +30,7 @@ function AboutInterface() {
     return <About aboutMe={aboutMe} />
 }
 
-export async function ResumeInterface() {
+export function ResumeInterface() {
     return <Resume
         AboutMe={AboutInterface}
         Education={EducationInterface}

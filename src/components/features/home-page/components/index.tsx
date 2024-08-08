@@ -10,7 +10,7 @@ import { stats } from "../api/data";
 export function SocialInterface() {
     return <Socials
         containerStyles="flex gap-6"
-        iconStyle=" border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500 p-2"
+        iconStyle=" border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-white hover:text-primary hover:transition-all duration-500 p-2"
         socials={socialLinks}
     />
 }
