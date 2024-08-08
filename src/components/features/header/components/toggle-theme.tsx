@@ -25,7 +25,7 @@ export function ModeToggle() {
     return (
         <Button
             variant={'outline'}
-            size="icon"
+            size="md"
             onClick={handleThemeChange}
         >
             <SunIcon
