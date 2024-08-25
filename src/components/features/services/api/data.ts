@@ -2,8 +2,8 @@ import { ServiceType } from "./type";
 
 export const services: ServiceType[] = [
     {
-        num: "01",
-        title: " TypeScript and Node.js programming",
+        num: "05",
+        title: "Mobile Developement - (Android & iOS)",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus modi distinctio corporis ",
         href: ""
     },
@@ -26,10 +26,5 @@ export const services: ServiceType[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus modi distinctio corporis ",
         href: ""
     },
-    {
-        num: "05",
-        title: "Mobile Developement - Cross-platform",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus modi distinctio corporis ",
-        href: ""
-    },
+
 ]

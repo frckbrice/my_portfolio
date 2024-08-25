@@ -20,7 +20,7 @@ export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
                             <span className=' text-accent'>AVOM Brice</span>
                         </h1>
                         <p className=' max-w-[500px] mb-9 text-white/80'>
-                            I excel at crafting  elegant digital experience  and I am proficient in JavaSript and typeScript Programming languages.
+                            I excel at crafting  elegant digital experience  and I am proficient in JavaSript and typeScript Programming languages and Frameworks.
                         </p>
                         {/* button and socials */}
                         <div className=' flex flex-col gap-8 xl:flex-row items-center '>

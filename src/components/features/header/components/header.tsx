@@ -5,13 +5,13 @@ import { MobileLinkType } from '@/components/global/types/type';
 // import { ModeToggle, Nav } from '..';
 
 export interface IHeaderProps {
-    Nav: ({ links }: { links: MobileLinkType[] }) => React.ReactElement;
+    Nav: () => React.ReactElement;
     ModeToggle: () => React.ReactElement;
-    MobileNav: ({ links }: { links: MobileLinkType[] }) => React.ReactElement;
+    MobileNav: () => React.ReactElement;
     links: MobileLinkType[];
 }
 
-export function Header({ Nav, ModeToggle, MobileNav, links }: IHeaderProps) {
+export function Header({ Nav, MobileNav }: IHeaderProps) {
     return (
         <header className=' py-8 xl:py-12 text-white '>
             <div className=' container mx-auto flex items-center justify-between '>
@@ -24,7 +24,7 @@ export function Header({ Nav, ModeToggle, MobileNav, links }: IHeaderProps) {
 
                 {/* Menu and Hire me button */}
                 <div className=' hidden xl:flex items-center gap-8'>
-                    <Nav links={links} />
+                    <Nav />
                     <Link href={"/contact"}>
                         <h1 className=' text-4xl '>
                             <Button className=' font-semibold'>Hire me</Button>
@@ -32,16 +32,14 @@ export function Header({ Nav, ModeToggle, MobileNav, links }: IHeaderProps) {
                     </Link>
 
                     {/* mobile nav */}
+                    <div className=' xl:hidden '>
+                        <MobileNav />
+                    </div>
 
-
-                    {/* change theme to be set later */}
+                    {/*TODO: change theme to be set later */}
                     {/* <ModeToggle /> */}
-
-
                 </div>
-                <div className=' xl:hidden '>
-                    <MobileNav links={links} />
-                </div>
+
             </div>
         </header>
     );

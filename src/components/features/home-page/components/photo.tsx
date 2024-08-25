@@ -22,7 +22,11 @@ export function Photos() {
                     initial={{ opacity: 0 }}
                     animate={{
                         opacity: 1,
-                        transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" }
+                        transition: {
+                            delay: 2.4,
+                            duration: 0.4,
+                            ease: "easeInOut"
+                        }
                     }}
 
                     className=' w-[298px] h-[298px]
@@ -38,6 +42,7 @@ export function Photos() {
                         priority
                     />
                 </motion.div>
+
                 {/* circle */}
                 <motion.svg
                     fill="transparent"

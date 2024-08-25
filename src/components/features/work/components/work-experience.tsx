@@ -6,23 +6,21 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
-// component;
-import {
-    Tooltip, TooltipContent, TooltipProvider, TooltipTrigger
-} from "@/components/ui/tooltip";
-import Link from 'next/link';
 import Image from 'next/image';
+
+
 
 // type
 import { WorkType } from '../api/type';
+import { ILinkToProjectProps } from './important-links';
 
 export interface IWorkProps {
     works: WorkType[];
     WorkSliderBtns: () => React.JSX.Element;
+    ImportantLinks({ link, title, className, children }: ILinkToProjectProps): React.JSX.Element;
 }
 
-export function Work({ works, WorkSliderBtns }: IWorkProps) {
+export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
 
     const [project, setProject] = React.useState<WorkType>(works[0]);
 
@@ -51,18 +49,21 @@ export function Work({ works, WorkSliderBtns }: IWorkProps) {
 
 
                             {/* outline num */}
-                            <div className=' text-8xl leading-none font-extrabold text-transparent text-outline'>
+                            <div className=' text-5xl leading-none font-extrabold text-transparent text-outline'>
                                 {project.num}
                             </div>
                             <h2 className=' text-[42px] font-bold leading-none text-white
                              group-hover:text-accent transition-all 
                         duration-500  capitalize '>{project.category} project</h2>
+                            <p className='text-[20px] font-bold leading-none text-white
+                             group-hover:text-accent transition-all 
+                        duration-500  capitalize '> <span className=' text-accent '>Title:</span> &nbsp;{project.title} </p>
 
                             {/* project description */}
                             <p className=' text-white/60 '>{project.description}</p>
 
                             {/* stack */}
-                            <ul className=' flex gap-4 '>
+                            <ul className=' flex gap-4 flex-wrap'>
                                 {project.stack.map((item, index) => (
                                     <li key={index}
                                         className=' text-xl text-accent'
@@ -79,14 +80,14 @@ export function Work({ works, WorkSliderBtns }: IWorkProps) {
                             <div className=' flex items-center gap-4 '>
                                 {/* live project */}
 
-                                <ImportantLinks
+                                {project.live ? <ImportantLinks
                                     className=' w-[70px] h-[70px] rounded-full 
                                     bg-white/5 flex justify-center  items-center group
                                     '
                                     link={project.live}
-                                    title='Github project' >
+                                    title='live project' >
                                     <BsArrowUpRight className=' text-3xl text-white group-hover:text-accent' />
-                                </ImportantLinks>
+                                </ImportantLinks> : null}
                                 {/* github */}
 
                                 <ImportantLinks
@@ -139,26 +140,3 @@ export function Work({ works, WorkSliderBtns }: IWorkProps) {
     );
 }
 
-export interface ILinkToProjectProps {
-    link: string;
-    title: string;
-    className: string;
-    children: React.ReactNode
-}
-
-export function ImportantLinks({ link, title, className, children }: ILinkToProjectProps) {
-    return (
-        <Link href={link}>
-            <TooltipProvider delayDuration={100}>
-                <Tooltip>
-                    <TooltipTrigger className={className}>
-                        {children}
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>{title}</p>
-                    </TooltipContent>
-                </Tooltip>
-            </TooltipProvider>
-        </Link>
-    );
-}

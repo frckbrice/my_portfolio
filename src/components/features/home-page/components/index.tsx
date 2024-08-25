@@ -15,13 +15,11 @@ export function SocialInterface() {
     />
 }
 
-
 export function StatsInterface() {
     return <Stats
         statData={stats}
     />
 }
-
 
 export function HomepageInterface() {
     return <Homepage

@@ -1,8 +1,9 @@
 "use client";
 
-import { Work } from "./work";
+import { Work } from "./work-experience";
 import { projects } from "../api/data";
 import { WorkSliderBtns } from "./work-slider-btns";
+import { ILinkToProjectProps, ImportantLinks } from "./important-links";
 
 const WorkSliderBtnsInterface = () => {
     return <WorkSliderBtns
@@ -12,9 +13,23 @@ const WorkSliderBtnsInterface = () => {
     />
 };
 
+const LinksComponent = ({ link, title, className, children }: ILinkToProjectProps) => {
+
+    return (
+        <ImportantLinks
+            link={link}
+            title={title}
+            className={className}
+        >
+            {children}
+        </ImportantLinks>
+    )
+}
+
 export function WorkInterface() {
     return <Work
         works={projects}
         WorkSliderBtns={WorkSliderBtnsInterface}
+        ImportantLinks={LinksComponent}
     />;
 }
