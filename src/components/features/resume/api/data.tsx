@@ -62,37 +62,37 @@ export const aboutMe: Partial<ExperienceType> = {
 export const experience: ExperienceTypi = {
     icons: "/assets/resume/badge.png",
     title: "Work Experience",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at",
+    description: "Seasoned full-stack web developer with a proven track record of building scalable and high-performance web applications. Proficient in JavaScript, React, and Node.js. Successfully led a team to deliver a complex data collector platform, resulting in reducing by 30% the time to share huge quantity of data collected between teams on the farms and the staff at the office. Here below are some of my past projects.",
     items: [
         {
-            company: " SENIMA Cabinet",
+            company: " SENIMA Consulting.",
             position: "Full-Stack Developer",
             duration: "june 2024 - Present",
-            description: "Free lancer 3 months",
+            description: "Consultant for SENIMA Consulting.",
         },
         {
             company: " Rebase Solutions Corporation",
             position: "Full-Stack Developer",
             duration: "2023 - june 2024",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at",
+            description: "I am working as full-stack developer at Rebase Solutions Corporation based in yaounde cameroon.",
         },
         {
             company: " armp.gov.cm",
             position: "web developer",
             duration: "2020 - 2023",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at",
+            description: "I have work as part-time web developer at armp.gov.cm for 2 years contract.",
         },
         {
             company: "minesec.gov.cm",
             position: "teaching assistant",
             duration: "2017 - 2020",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at",
+            description: "I have work as full-time computer science teacher at minesec.gov.cm",
         },
         {
             company: "University of Bamenda/Computer Science Department",
-            position: "Junior Developer",
+            position: "Student",
             duration: "2015 - 2017",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at",
+            description: "I have been student of computer science for 2 years at University of Bamenda.",
         },
     ],
 }
@@ -101,7 +101,7 @@ export const experience: ExperienceTypi = {
 export const education: ExperienceTypi = {
     icons: "/assets/resume/cap.png",
     title: "My Education",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi",
+    description: "Graduated with a Master of Science in Computer Science from the University of Bamenda in 2017. Specialized in web development and programming languages: JavaScript, Node.js",
     items: [
         {
             institution: "Université de Bamenda",
