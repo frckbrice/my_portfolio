@@ -6,6 +6,7 @@ import "./globals.css";
 import { HeaderInterface } from "@/components/features/header";
 import { ThemeProvider as ThemeClientProvider } from "@/app/theme-provider";
 import { PageTransition, StairTransionInterface } from "@/components/global";
+import Footer from "@/components/features/footer";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -39,7 +40,7 @@ export default function RootLayout({
             {children}
           </PageTransition>
         </ThemeClientProvider>
-
+        <Footer />
       </body>
     </html>
   );
