@@ -2,11 +2,12 @@ import { GitHubProjectsSection } from "@/components/features/github-projects";
 import { GitHubProfileStats } from "@/components/features/github-projects/components/github-profile-stats";
 
 interface GitHubProjectsPageProps {
-    searchParams: { filter?: string };
+    searchParams: Promise<{ filter?: string }>;
 }
 
-export default function GitHubProjectsPage({ searchParams }: GitHubProjectsPageProps) {
-    const filter = searchParams.filter || '';
+export default async function GitHubProjectsPage({ searchParams }: GitHubProjectsPageProps) {
+    const params = await searchParams;
+    const filter = params.filter || '';
 
     return (
         <>
