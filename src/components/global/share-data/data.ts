@@ -23,6 +23,11 @@ export const links: MobileLinkType[] = [
         icon: ""
     },
     {
+        path: "/github-projects",
+        name: "GitHub",
+        icon: ""
+    },
+    {
         path: "/contact",
         name: "Contact-me",
         icon: ""

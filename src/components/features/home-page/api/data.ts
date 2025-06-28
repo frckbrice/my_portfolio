@@ -1,21 +1,20 @@
 import { StatsType } from "./type";
 
 export const stats: StatsType[] = [
-
     {
-        num: 90,
-        text: "projects completed "
+        num: 25,
+        text: "Projects Delivered"
+    },
+    {
+        num: 8,
+        text: "Technologies Mastered"
+    },
+    {
+        num: 1500,
+        text: "Code Commits"
     },
     {
         num: 3,
-        text: "Core technologies mastered"
-    },
-    {
-        num: 4000,
-        text: "code commits"
-    },
-    {
-        num: 2,
-        text: "years of experience"
+        text: "Years of Experience"
     },
 ];

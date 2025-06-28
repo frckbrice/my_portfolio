@@ -7,24 +7,24 @@ import {
 export const infos: ContactType[] = [
     {
         icon: <FaPhoneAlt />,
-        title: "Whatsapp Phone Number",
-        description: " (+237) 658 527 973",
+        title: "Phone & WhatsApp",
+        description: "(+237) 658 527 973",
     },
     {
         icon: <FaEnvelope />,
         title: "Email Address",
-        description: "bricefrkc@gmail.com ",
+        description: "bricefrkc@gmail.com",
     },
     {
         icon: <FaMapMarker />,
-        title: "Address",
-        description: "Yaounde-Cameroon",
+        title: "Location",
+        description: "Yaounde, Cameroon",
     },
 ];
 
 export const inputs: InputType[] = [
     { type: 'firstname', placeholder: 'First Name' },
     { type: 'lastname', placeholder: 'Last Name' },
-    { type: 'email', placeholder: 'Email' },
+    { type: 'email', placeholder: 'Email Address' },
     { type: 'phone', placeholder: 'Phone Number' }
 ];

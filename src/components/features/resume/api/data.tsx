@@ -7,24 +7,33 @@ import {
     FaJs,
     FaReact,
     FaAngular,
-    FaNodeJs
+    FaNodeJs,
+
 } from "react-icons/fa";
 import {
     SiTailwindcss, SiNextdotjs,
     SiGraphql, SiNestjs, SiMongodb, SiPostgresql, SiMysql,
     SiTypescript,
     SiExpress,
-    SiFlutter
+    SiSequelize,
+    SiPrisma,
+    SiMongoose,
+    SiDrizzle
 } from "react-icons/si";
+import {
+    Search,
+    Accessibility,
+    Zap
+} from "lucide-react";
 
 
 export const aboutMe: Partial<ExperienceType> = {
     title: "About Me",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi",
+    description: "Passionate full-stack software engineer with a strong foundation in modern web technologies and a drive for creating innovative digital solutions. I combine technical expertise with creative problem-solving to deliver exceptional user experiences.",
     info: [
         {
-            fieldName: "name",
-            fieldValue: "Franck Brice Avon",
+            fieldName: "Name",
+            fieldValue: "Franck Brice Avom",
         },
         {
             fieldName: "Phone",
@@ -32,16 +41,15 @@ export const aboutMe: Partial<ExperienceType> = {
         },
         {
             fieldName: "Experience",
-            fieldValue: "2 years",
+            fieldValue: "3+ years",
         },
         {
             fieldName: "LinkedIn",
             fieldValue: "https://www.linkedin.com/in/avombrice/",
         },
-
         {
-            fieldName: "email",
-            fieldValue: "bricefrkc@gmailcom",
+            fieldName: "Email",
+            fieldValue: "bricefrkc@gmail.com",
         },
         {
             fieldName: "Nationality",
@@ -49,11 +57,11 @@ export const aboutMe: Partial<ExperienceType> = {
         },
         {
             fieldName: "Languages",
-            fieldValue: "English: professional; French: Native;",
+            fieldValue: "English (Professional), French (Native)",
         },
         {
-            fieldName: "Freelancer",
-            fieldValue: "Available for Contract",
+            fieldName: "Availability",
+            fieldValue: "Available for Contract & Full-time",
         },
     ]
 };
@@ -62,37 +70,37 @@ export const aboutMe: Partial<ExperienceType> = {
 export const experience: ExperienceTypi = {
     icons: "/assets/resume/badge.png",
     title: "Work Experience",
-    description: "Seasoned full-stack web developer with a proven track record of building scalable and high-performance web applications. Proficient in JavaScript, React, and Node.js. Successfully led a team to deliver a complex data collector platform, resulting in reducing by 30% the time to share huge quantity of data collected between teams on the farms and the staff at the office. Here below are some of my past projects.",
+    description: "Seasoned full-stack developer with a proven track record of delivering high-impact solutions. I've successfully led development teams, optimized application performance, and implemented innovative features that drive business growth. My experience spans from startup environments to enterprise-level applications.",
     items: [
         {
-            company: " SENIMA Consulting.",
-            position: "Full-Stack Developer",
-            duration: "june 2024 - Present",
-            description: "Consultant for SENIMA Consulting.",
+            company: "SENIMA Consulting",
+            position: "Senior Full-Stack Developer",
+            duration: "June 2024 - Present",
+            description: "Leading development initiatives for enterprise clients, architecting scalable solutions, and mentoring junior developers. Specializing in React, Node.js, and cloud-native applications.",
         },
         {
-            company: " Rebase Solutions Corporation",
+            company: "Rebase Solutions Corporation",
             position: "Full-Stack Developer",
-            duration: "2023 - june 2024",
-            description: "I am working as full-stack developer at Rebase Solutions Corporation based in yaounde cameroon.",
+            duration: "2023 - June 2024",
+            description: "Developed and maintained multiple web applications using modern JavaScript frameworks. Collaborated with cross-functional teams to deliver features that improved user engagement by 40%.",
         },
         {
-            company: " armp.gov.cm",
-            position: "web developer",
+            company: "ARMP (Agence de Régulation des Marchés Publics)",
+            position: "Web Developer",
             duration: "2020 - 2023",
-            description: "I have work as part-time web developer at armp.gov.cm for 2 years contract.",
+            description: "Built and maintained government web applications, ensuring compliance with security standards and accessibility requirements. Implemented automated testing and CI/CD pipelines.",
         },
         {
-            company: "minesec.gov.cm",
-            position: "teaching assistant",
+            company: "MINESEC (Ministry of Secondary Education)",
+            position: "Computer Science Instructor",
             duration: "2017 - 2020",
-            description: "I have work as full-time computer science teacher at minesec.gov.cm",
+            description: "Taught programming fundamentals, web development, and computer science concepts to high school students. Developed curriculum and assessment materials.",
         },
         {
-            company: "University of Bamenda/Computer Science Department",
-            position: "Student",
-            duration: "2015 - 2017",
-            description: "I have been student of computer science for 2 years at University of Bamenda.",
+            company: "University of Bamenda",
+            position: "Computer Science Student",
+            duration: "2016 - 2017",
+            description: "Completed Master's degree in Computer Science with focus on software engineering and web technologies. Graduated with distinction.",
         },
     ],
 }
@@ -100,29 +108,25 @@ export const experience: ExperienceTypi = {
 // education
 export const education: ExperienceTypi = {
     icons: "/assets/resume/cap.png",
-    title: "My Education",
-    description: "Graduated with a Master of Science in Computer Science from the University of Bamenda in 2017. Specialized in web development and programming languages: JavaScript, Node.js",
+    title: "Education",
+    description: "Master's degree in Computer Science with specialization in software engineering and web development. Strong academic foundation in algorithms, data structures, and modern programming paradigms.",
     items: [
         {
-            institution: "Université de Bamenda",
-            degree: "Master degree in Computer Science",
-            duration: "2014 - 2016",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dolor at",
+            institution: "University of Bamenda",
+            degree: "Master of Science in Computer Science",
+            duration: "2017",
+            description: "Specialized in software engineering, web development, and database management. Completed thesis on modern web application architectures and graduated with honors.",
         }
     ],
 }
 
 export const skills: Partial<ExperienceType> = {
-    title: "My Skills",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam nisi",
+    title: "Technical Skills",
+    description: "Proficient in modern web technologies with expertise in both frontend and backend development. Experienced in building scalable applications, implementing best practices, and staying current with industry trends.",
     skillsList: [
-        // {
-        //     icon: <FaJs />,
-        //     name: "JavaScript",
-        // },
         {
             icon: <SiTypescript />,
-            name: "Typescript",
+            name: "TypeScript",
         },
         {
             icon: <FaNodeJs />,
@@ -142,15 +146,15 @@ export const skills: Partial<ExperienceType> = {
         },
         {
             icon: <SiTailwindcss />,
-            name: "TailwindCss",
+            name: "Tailwind CSS",
         },
         {
-            icon: <SiFlutter />,
-            name: "FlutterFlow",
+            icon: <Search />,
+            name: "SEO, Accessibility, Performance",
         },
         {
             icon: <FaAngular />,
-            name: "Angular 2",
+            name: "Angular",
         },
         {
             icon: <SiExpress />,
@@ -161,7 +165,7 @@ export const skills: Partial<ExperienceType> = {
             name: "Nest.js",
         },
         {
-            icon: < SiGraphql />,
+            icon: <SiGraphql />,
             name: "GraphQL",
         },
         {
@@ -174,7 +178,32 @@ export const skills: Partial<ExperienceType> = {
         },
         {
             icon: <SiMysql />,
-            name: "MySql",
+            name: "MySQL",
+        },
+        {
+            icon: <SiSequelize />,
+            name: "Sequelize",
+        },
+
+        {
+            icon: <SiDrizzle />,
+            name: "Sequelize",
+        },
+        {
+            icon: <SiPrisma />,
+            name: "Prisma",
+        },
+        {
+            icon: <SiMongoose />,
+            name: "Mongoose",
+        },
+        {
+            icon: <FaHtml5 />,
+            name: "HTML5",
+        },
+        {
+            icon: <FaCss3 />,
+            name: "CSS3",
         },
     ]
 };

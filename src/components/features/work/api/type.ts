@@ -6,6 +6,7 @@ export interface WorkType {
     stack: {
         name: string
     }[],
+    topics?: string[],
     image: string,
     live: string,
     github: string

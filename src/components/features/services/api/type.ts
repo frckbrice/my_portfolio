@@ -3,4 +3,5 @@ export interface ServiceType {
     title: string;
     description: string;
     href: string;
+    filterKeywords?: string[];
 }
