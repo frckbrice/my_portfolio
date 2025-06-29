@@ -58,14 +58,14 @@ const fallbackReposData = [
 ];
 
 export async function GET(request: NextRequest) {
+    const { searchParams } = new URL(request.url);
+    const endpoint = searchParams.get('endpoint');
+
+    if (!endpoint) {
+        return NextResponse.json({ error: 'Endpoint parameter is required' }, { status: 400 });
+    }
+
     try {
-        const { searchParams } = new URL(request.url);
-        const endpoint = searchParams.get('endpoint');
-
-        if (!endpoint) {
-            return NextResponse.json({ error: 'Endpoint parameter is required' }, { status: 400 });
-        }
-
         const url = `${GITHUB_API_BASE}${endpoint}`;
 
         const response = await fetch(url, {
@@ -80,10 +80,10 @@ export async function GET(request: NextRequest) {
         if (response.status === 403) {
             console.warn('GitHub API rate limited, using fallback data');
             // Return fallback data based on the endpoint
-            if (endpoint.includes('/users/')) {
-                return NextResponse.json(fallbackUserData);
-            } else if (endpoint.includes('/repos')) {
+            if (endpoint.includes('/users/') && endpoint.includes('/repos')) {
                 return NextResponse.json(fallbackReposData);
+            } else if (endpoint.includes('/users/') && !endpoint.includes('/repos')) {
+                return NextResponse.json(fallbackUserData);
             }
         }
 
@@ -98,10 +98,10 @@ export async function GET(request: NextRequest) {
         console.error('GitHub API error:', error);
 
         // Return fallback data on any error
-        if (request.url.includes('/users/')) {
-            return NextResponse.json(fallbackUserData);
-        } else if (request.url.includes('/repos')) {
+        if (endpoint.includes('/users/') && endpoint.includes('/repos')) {
             return NextResponse.json(fallbackReposData);
+        } else if (endpoint.includes('/users/') && !endpoint.includes('/repos')) {
+            return NextResponse.json(fallbackUserData);
         }
 
         return NextResponse.json(

@@ -15,6 +15,12 @@ export class GitHubAPI {
 
             const repos = await response.json();
 
+            // Ensure repos is an array before filtering
+            if (!Array.isArray(repos)) {
+                console.error('GitHub API returned non-array data:', repos);
+                return [];
+            }
+
             // Filter out archived and forked repositories, and sort by stars
             return repos
                 .filter((repo: GitHubProject) => !repo.archived && !repo.fork)
@@ -22,7 +28,8 @@ export class GitHubAPI {
                 .slice(0, 8); // Limit to top 8 projects
         } catch (error) {
             console.error('Error fetching GitHub repositories:', error);
-            throw error;
+            // Return empty array instead of throwing to prevent component crashes
+            return [];
         }
     }
 
