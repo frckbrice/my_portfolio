@@ -18,6 +18,7 @@ export function Socials({ containerStyles, iconStyle, socials }: SocialsProps) {
                 <Link
                     href={path}
                     key={index}
+                    target='_blank'
                     className={iconStyle}
                 >
                     {name}
