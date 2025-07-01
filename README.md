@@ -1,6 +1,6 @@
 # AVOM Brice - Portfolio
 
-A modern, responsive portfolio website showcasing my expertise in full-stack web development, mobile development, and software engineering. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website showcasing my expertise in full-stack web development, mobile development, and software engineering. Built with Next.js 15+, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
@@ -14,7 +14,7 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Next.js 14** - React framework with App Router
+- **Next.js 15+** - React framework with App Router
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Animation library
@@ -100,9 +100,11 @@ The portfolio is designed to be easily customizable:
 - Add new projects to the work experience section
 - Customize the color scheme in `tailwind.config.ts`
 
+
 ## 📄 License
 
 private
+
 
 ## 🤝 Contact
 
