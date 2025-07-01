@@ -6,15 +6,15 @@ export const stats: StatsType[] = [
         text: "Projects Delivered"
     },
     {
-        num: 8,
-        text: "Technologies Mastered"
+        num: "8+",
+        text: "Web & Mobile Technologies Mastered"
     },
     {
-        num: 1500,
+        num: 10000,
         text: "Code Commits"
     },
     {
-        num: 3,
+        num: "3+",
         text: "Years of Experience"
     },
 ];

@@ -25,6 +25,17 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 - **ESLint** - Code linting
 - **PostCSS** - CSS processing
 - **Yarn** - Package manager
+- **Git** - Version control
+- **GitHub** - Code hosting
+
+### Code Quality
+- **Prettier**
+- **ESLint**
+- **TypeScript**
+- **.gitignore**
+
+
+
 
 ## 📁 Project Structure
 
@@ -88,6 +99,14 @@ The portfolio is designed to be easily customizable:
 - Modify styling using Tailwind CSS classes
 - Add new projects to the work experience section
 - Customize the color scheme in `tailwind.config.ts`
+
+## Licence
+
+private
+
+## 📄 License
+
+private
 
 
 ## 🤝 Contact

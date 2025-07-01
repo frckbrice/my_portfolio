@@ -14,6 +14,7 @@ import {
     Monitor,
     Palette
 } from 'lucide-react';
+import Link from 'next/link';
 
 const portfolioFeatures = [
     {
@@ -213,10 +214,15 @@ export function PortfolioShowcase() {
                     transition={{ duration: 0.6, delay: 1.9 }}
                     className="text-center mt-12"
                 >
-                    <div className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-4 transition-all duration-300 cursor-pointer">
+                    <Link
+                        href="https://github.com/frckbrice/my_portfolio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-4 transition-all duration-300 cursor-pointer group"
+                    >
                         <span>Explore the code on GitHub</span>
-                        <ArrowRight className="w-5 h-5" />
-                    </div>
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </Link>
                 </motion.div>
             </div>
         </motion.section>

@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     "SEO Expert",
     "Accessibility Specialist",
     "Performance Optimization",
-    // ... more keywords
   ],
   // ... comprehensive metadata
 };

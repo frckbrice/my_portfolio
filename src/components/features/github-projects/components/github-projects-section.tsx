@@ -69,6 +69,12 @@ export function GitHubProjectsSection({ filter }: GitHubProjectsSectionProps) {
                 setLoading(true);
                 const repos = await GitHubAPI.fetchUserRepositories();
 
+                // Check if we got any repositories
+                if (!repos || repos.length === 0) {
+                    setError('No repositories found or GitHub API is unavailable');
+                    return;
+                }
+
                 // Fetch topics for each repository
                 const reposWithTopics = await Promise.all(
                     repos.map(async (repo) => {

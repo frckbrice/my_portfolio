@@ -1,12 +1,11 @@
 import React from "react";
 // components
-import { DownloadIcon } from "lucide-react";
-import { Button } from '@/components/ui/button';
 import { TechHighlights } from './tech-highlights';
 import { Achievements } from './achievements';
 import { CTASection } from './cta-section';
 import { SEOAccessibilityPerformance } from './seo-accessibility-performance';
 import { PortfolioShowcase } from './portfolio-showcase';
+import { CVDownload } from './cv-download';
 
 export interface IHomepageProps {
     Socials: () => React.ReactElement;
@@ -30,12 +29,9 @@ export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
                                 Passionate full-stack developer with expertise in modern web technologies. I specialize in building scalable, high-performance applications using JavaScript/TypeScript, React, React-native, angular2, Node.js, and cloud technologies. Let's turn your ideas into exceptional digital experiences.
                             </p>
                             {/* button and socials */}
-                            <div className=' flex flex-col gap-8 xl:flex-row items-center '>
-                                <Button variant={"outline"} size={"lg"} className=' uppercase flex items-center gap-2'>
-                                    <span> Download <span className='ml-2 text-xl'>CV</span></span>
-                                    <DownloadIcon className='ml-4' size={22} />
-                                </Button>
-                                <div className=' mb-8 xl:mb-0'>
+                            <div className='flex flex-col gap-8 xl:flex-row items-center'>
+                                <CVDownload />
+                                <div className='mb-8 xl:mb-0'>
                                     <Socials />
                                 </div>
                             </div>

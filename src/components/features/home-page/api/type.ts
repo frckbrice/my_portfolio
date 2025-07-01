@@ -1,4 +1,4 @@
 export interface StatsType {
-    num: number;
+    num: number | string;
     text: string;
 }
