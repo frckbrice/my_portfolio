@@ -100,6 +100,9 @@ The portfolio is designed to be easily customizable:
 - Add new projects to the work experience section
 - Customize the color scheme in `tailwind.config.ts`
 
+## Licence
+
+private
 
 ## 📄 License
 
