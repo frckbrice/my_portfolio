@@ -27,7 +27,7 @@ export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
                                 <span className=' text-accent'>AVOM Brice</span>
                             </h1>
                             <p className=' max-w-[500px] mb-9 text-muted-foreground'>
-                                Passionate full-stack developer with expertise in modern web technologies. I specialize in building scalable, high-performance applications using JavaScript/TypeScript, React, Node.js, and cloud technologies. Let's turn your ideas into exceptional digital experiences.
+                                Passionate full-stack developer with expertise in modern web technologies. I specialize in building scalable, high-performance applications using JavaScript/TypeScript, React, React-native, angular2, Node.js, and cloud technologies. Let's turn your ideas into exceptional digital experiences.
                             </p>
                             {/* button and socials */}
                             <div className=' flex flex-col gap-8 xl:flex-row items-center '>
