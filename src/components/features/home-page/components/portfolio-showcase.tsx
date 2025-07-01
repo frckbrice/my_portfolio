@@ -215,7 +215,7 @@ export function PortfolioShowcase() {
                     className="text-center mt-12"
                 >
                     <Link
-                        href="https://github.com/frckbrice/my-portfolio"
+                        href="https://github.com/frckbrice/my_portfolio"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-4 transition-all duration-300 cursor-pointer group"

@@ -25,6 +25,17 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 - **ESLint** - Code linting
 - **PostCSS** - CSS processing
 - **Yarn** - Package manager
+- **Git** - Version control
+- **GitHub** - Code hosting
+
+### Code Quality
+- **Prettier**
+- **ESLint**
+- **TypeScript**
+- **.gitignore**
+
+
+
 
 ## 📁 Project Structure
 
@@ -91,7 +102,7 @@ The portfolio is designed to be easily customizable:
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+private
 
 ## 🤝 Contact
 
