@@ -13,6 +13,7 @@ import Image from 'next/image';
 // type
 import { WorkType } from '../api/type';
 import { ILinkToProjectProps } from './important-links';
+import { Tooltip, TooltipTrigger } from '@/components/ui/tooltip';
 
 export interface IWorkProps {
     works: WorkType[];
@@ -92,23 +93,47 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                             {/* border */}
                             <div className='border border-border'></div>
                             {/* button */}
-                            <div className='flex items-center gap-4'>
-                                {/* live project */}
+                            <div className='space-y-3 p-4 bg-gradient-to-r from-accent/5 to-accent/10 rounded-lg border border-accent/20 w-fit'>
+                                <p className='text-sm text-accent font-semibold flex items-center gap-2'>
+                                    <span className='w-2 h-2 bg-accent rounded-full'></span>
+                                    Project Links:
+                                </p>
+                                <div className='flex items-center gap-6'>
+                                    {/* live project */}
 
-                                {project.live ? <ImportantLinks
-                                    className='w-[70px] h-[70px] rounded-full bg-card/50 border border-border flex justify-center items-center group hover:bg-accent/20 transition-all duration-300'
-                                    link={project.live}
-                                    title='live project'>
-                                    <BsArrowUpRight className='text-3xl text-foreground group-hover:text-accent' />
-                                </ImportantLinks> : null}
-                                {/* github */}
+                                    {project.live ? <motion.div
+                                        className='flex flex-col items-center gap-2'
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: 0.8, duration: 0.5 }}
+                                    >
+                                        <ImportantLinks
+                                            className='w-[70px] h-[70px] rounded-full bg-card/50 border border-border flex justify-center items-center group hover:bg-accent/20 transition-all duration-300 hover:scale-105 hover:border-accent/50 relative cursor-pointer hover:shadow-lg hover:shadow-accent/20'
+                                            link={project.live}
+                                            title='View Live Demo'>
+                                            <BsArrowUpRight className='text-3xl text-foreground group-hover:text-accent' />
+                                        </ImportantLinks>
+                                        {/* <span className='text-xs text-muted-foreground font-medium'>Live Demo</span> */}
+                                        <span className='text-[10px] text-accent/70'>Click to view ↗</span>
+                                    </motion.div> : null}
+                                    {/* github */}
 
-                                <ImportantLinks
-                                    className='w-[70px] h-[70px] rounded-full bg-card/50 border border-border flex justify-center items-center group hover:bg-accent/20 transition-all duration-300'
-                                    link={project.github}
-                                    title='Github project'>
-                                    <BsGithub className='text-3xl text-foreground group-hover:text-accent' />
-                                </ImportantLinks>
+                                    <motion.div
+                                        className='flex flex-col items-center gap-2'
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: 1.0, duration: 0.5 }}
+                                    >
+                                        <ImportantLinks
+                                            className='w-[70px] h-[70px] rounded-full bg-card/50 border border-border flex justify-center items-center group hover:bg-accent/20 transition-all duration-300 hover:scale-105 hover:border-accent/50 relative cursor-pointer hover:shadow-lg hover:shadow-accent/20'
+                                            link={project.github}
+                                            title='View Source Code'>
+                                            <BsGithub className='text-3xl text-foreground group-hover:text-accent' />
+                                        </ImportantLinks>
+                                        {/* <span className='text-xs text-muted-foreground font-medium'>Source Code</span> */}
+                                        <span className='text-[10px] text-accent/70'>Click to view ↗</span>
+                                    </motion.div>
+                                </div>
                             </div>
 
                         </div>

@@ -5,12 +5,16 @@ import { Button } from '@/components/ui/button';
 import { Download, FileText } from 'lucide-react';
 import { motion } from '@/lib/framer-motion';
 
-export function CVDownloadSimple() {
+interface CVDownloadSimpleProps {
+    filename?: string;
+}
+
+export function CVDownloadSimple({ filename = 'Brice_AVOM_CV.pdf' }: CVDownloadSimpleProps) {
     const downloadCV = () => {
         // Create a link element
         const link = document.createElement('a');
-        link.href = '/Brice_AVOM_CV.pdf';
-        link.download = 'Brice_AVOM_CV.pdf';
+        link.href = `/${filename}`;
+        link.download = filename;
         link.target = '_blank';
 
         // Trigger download

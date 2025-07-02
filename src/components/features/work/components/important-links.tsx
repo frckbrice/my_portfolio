@@ -8,7 +8,6 @@ import {
     TooltipProvider,
     TooltipTrigger
 } from "@/components/ui/tooltip";
-import Link from 'next/link';
 
 export interface ILinkToProjectProps {
     link: string;
@@ -19,10 +18,15 @@ export interface ILinkToProjectProps {
 
 export function ImportantLinks({ link, title, className, children }: ILinkToProjectProps) {
     return (
-        <Link href={link}>
+        <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={className}
+        >
             <TooltipProvider delayDuration={100}>
                 <Tooltip>
-                    <TooltipTrigger className={className}>
+                    <TooltipTrigger className="w-full h-full flex justify-center items-center">
                         {children}
                     </TooltipTrigger>
                     <TooltipContent>
@@ -30,6 +34,6 @@ export function ImportantLinks({ link, title, className, children }: ILinkToProj
                     </TooltipContent>
                 </Tooltip>
             </TooltipProvider>
-        </Link>
+        </a>
     );
 }

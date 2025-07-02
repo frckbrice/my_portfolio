@@ -107,7 +107,7 @@ export const projects: WorkType[] = [
         ],
         topics: ["mobile", "react-native", "cross-platform", "management"],
         image: "/assets/work/senwisetoolimage.jpeg",
-        live: "",
+        live: "https://play.google.com/store/apps/details?id=com.senwisetool.app",
         github: "https://github.com/frckbrice/ra-mobile-project"
     },
 ];
