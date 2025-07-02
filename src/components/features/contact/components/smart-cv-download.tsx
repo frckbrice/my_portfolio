@@ -49,7 +49,7 @@ export function SmartCVDownload() {
             document.body.removeChild(link);
         } else {
             // Fallback to dynamic CV generation
-            const cvWindow = window.open('/resume', '_blank');
+            const cvWindow = window.open('/', '_blank');
         }
     };
 
@@ -81,7 +81,7 @@ export function SmartCVDownload() {
                 </Button>
             </div>
             <p className="text-xs text-muted-foreground text-center">
-                {pdfExists ? 'Direct download available' : 'Opening CV page for download'}
+                {pdfExists ? 'Direct download available' : <p className='text-accent'>Go back to home page and download the CV</p>}
             </p>
         </motion.div>
     );
