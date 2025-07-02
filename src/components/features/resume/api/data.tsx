@@ -7,7 +7,6 @@ import {
     FaJs,
     FaReact,
     FaAngular,
-    FaNodeJs,
 
 } from "react-icons/fa";
 import {
@@ -18,7 +17,8 @@ import {
     SiSequelize,
     SiPrisma,
     SiMongoose,
-    SiDrizzle
+    SiDrizzle,
+    SiNodedotjs
 } from "react-icons/si";
 import {
     Search,
@@ -37,7 +37,7 @@ export const aboutMe: Partial<ExperienceType> = {
         },
         {
             fieldName: "Phone",
-            fieldValue: "(+237) 6 58 52 79 73",
+            fieldValue: "(+237) 6 58 52 79 73/ (+237) 6 674 85 23 04",
         },
         {
             fieldName: "Experience",
@@ -45,7 +45,7 @@ export const aboutMe: Partial<ExperienceType> = {
         },
         {
             fieldName: "LinkedIn",
-            fieldValue: "https://www.linkedin.com/in/avombrice/",
+            fieldValue: "https://www.linkedin.com/in/avombrice",
         },
         {
             fieldName: "Email",
@@ -129,7 +129,7 @@ export const skills: Partial<ExperienceType> = {
             name: "TypeScript",
         },
         {
-            icon: <FaNodeJs />,
+            icon: <SiNodedotjs />,
             name: "Node.js",
         },
         {
@@ -187,7 +187,7 @@ export const skills: Partial<ExperienceType> = {
 
         {
             icon: <SiDrizzle />,
-            name: "Sequelize",
+            name: "Drizzle ORM",
         },
         {
             icon: <SiPrisma />,

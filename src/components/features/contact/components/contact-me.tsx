@@ -28,8 +28,8 @@ import {
     SelectLabel
 } from "@/components/ui/select";
 
-// component
-
+// components
+import { SmartCVDownload } from './smart-cv-download';
 
 // local type
 import { ContactType, InputType } from '../api/type';
@@ -173,6 +173,20 @@ export function Contact({ infos, inputs }: IContactProps) {
                                     </motion.li>
                                 ))}
                             </ul>
+
+                            {/* CV Download Section */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.9, duration: 0.6 }}
+                                className="mt-8 pt-8 border-t border-border"
+                            >
+                                <h4 className="text-lg font-semibold text-foreground mb-4">Download My CV</h4>
+                                <p className="text-muted-foreground text-sm sm:text-base mb-4">
+                                    Get a copy of my detailed resume to learn more about my experience and skills.
+                                </p>
+                                <SmartCVDownload />
+                            </motion.div>
                         </div>
                     </motion.div>
 

@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://avombrice.com',
+    canonical: 'https://my-portfolio-xi-eight-70.vercel.app/',
   },
   openGraph: {
     title: "AVOM Brice - Full-Stack Software Engineer | React, Node.js, TypeScript Expert",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "AVOM Brice Portfolio",
-    url: "https://avombrice.com",
+    url: "https://my-portfolio-xi-eight-70.vercel.app/",
     images: [
       {
         url: "/og-image.jpg",
