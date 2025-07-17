@@ -26,26 +26,26 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        working-directory: my_portfolio
+        working-directory: .
 
       - name: Lint
         run: yarn lint || yarn run lint
-        working-directory: my_portfolio
+        working-directory: .
 
       - name: Run Unit Tests
         run: yarn test:unit || yarn run test:unit
-        working-directory: my_portfolio
+        working-directory: .
 
       - name: Run E2E Tests
         run: yarn test:e2e || yarn run test:e2e
-        working-directory: my_portfolio
+        working-directory: .
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
 
       - name: Build
         run: yarn build
-        working-directory: my_portfolio
+        working-directory: .
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
@@ -53,7 +53,7 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: my_portfolio
+          working-directory: .
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
