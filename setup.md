@@ -41,10 +41,7 @@ Edit `.eslintrc.json` to include Prettier:
 
 ```json
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
@@ -101,10 +98,11 @@ Add these scripts to your `package.json`:
 ---
 
 ## 7. Tips
+
 - Use your editor's Prettier extension for auto-formatting on save.
 - Adjust `.prettierrc` and ESLint rules to match your team's style.
 - Run `yarn lint --fix` to auto-fix some lint issues.
 
 ---
 
-**Now your project will always have clean, consistent code!** 
+**Now your project will always have clean, consistent code!**
