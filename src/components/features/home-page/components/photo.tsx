@@ -34,7 +34,7 @@ export function Photos() {
                      mix-blend-plus-darker absolute
                      '>
                     <Image
-                        src="/assets/images/avom_2.jpg"
+                        src="/assets/images/moi_2.jpeg"
                         alt="avom brice"
                         className='object-cover rounded-full border-none'
                         fill

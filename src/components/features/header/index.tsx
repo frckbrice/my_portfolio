@@ -11,7 +11,11 @@ const NavInterface = () => <Nav links={links} />;
 const MobileNavInterface = () => <MobileNav links={links} />;
 
 function HeaderInterface() {
-  return <Header ModeToggle={ModeToggle} Nav={NavInterface} MobileNav={MobileNavInterface} links={links} />
+  return <Header ModeToggle={ModeToggle}
+    Nav={NavInterface}
+    MobileNav={MobileNavInterface}
+    links={links}
+  />
 }
 
 export {

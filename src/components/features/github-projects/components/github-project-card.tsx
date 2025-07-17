@@ -97,7 +97,7 @@ export function GitHubProjectCard({ project, index }: GitHubProjectCardProps) {
                     {project.topics.slice(0, 3).map((topic, topicIndex) => (
                         <span
                             key={topicIndex}
-                            className="px-2 py-1 bg-accent/20 text-accent text-xs rounded-full"
+                            className="px-2 py-1 bg-accent/20 text-accent-foreground text-xs rounded-full"
                         >
                             {topic}
                         </span>

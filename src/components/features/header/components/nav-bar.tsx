@@ -27,7 +27,7 @@ export function Nav({ links }: INavProps) {
                     className={cn(
                         "text-2xl font-semibold",
                         pathName === path ? "text-accent border-b-2 border-accent" : "",
-                        "font-medium hover:text-accent transition-all")}
+                        "font-medium hover:text-accent transition-all text-[20px]")}
                     aria-current={pathName === path ? "page" : undefined}
                 >
                     {name}

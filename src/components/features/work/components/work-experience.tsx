@@ -4,10 +4,12 @@
 import * as React from 'react';
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import Image from 'next/image';
-
+import { useRef } from 'react';
 
 
 // type
@@ -82,7 +84,14 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                                     {project.topics.map((topic, topicIndex) => (
                                         <span
                                             key={topicIndex}
-                                            className='px-3 py-1 bg-green-500/20 text-green-500 text-sm rounded-full font-medium border border-green-500/30'
+                                            className='px-3 py-1
+                                             bg-green-500/20
+                                              text-green-900 
+                                              text-sm 
+                                              rounded-full 
+                                              font-medium
+                                              border
+                                               border-green-500/30'
                                         >
                                             {topic}
                                         </span>
@@ -114,7 +123,7 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                                             <BsArrowUpRight className='text-3xl text-foreground group-hover:text-accent' />
                                         </ImportantLinks>
                                         {/* <span className='text-xs text-muted-foreground font-medium'>Live Demo</span> */}
-                                        <span className='text-[10px] text-accent/70'>Click to view ↗</span>
+                                        <span className='text-[12px] text-green-700/70'>Click to view ↗</span>
                                     </motion.div> : null}
                                     {/* github */}
 
@@ -131,7 +140,7 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                                             <BsGithub className='text-3xl text-foreground group-hover:text-accent' />
                                         </ImportantLinks>
                                         {/* <span className='text-xs text-muted-foreground font-medium'>Source Code</span> */}
-                                        <span className='text-[10px] text-accent/70'>Click to view ↗</span>
+                                        <span className='text-[12px] text-green-700/70'>Click to view ↗</span>
                                     </motion.div>
                                 </div>
                             </div>
@@ -147,25 +156,54 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                             className='xl:h-[520px] mb-12'
                             onSlideChange={handleSlideChange}
                         >
-                            {works.map((work, index) => (
-                                <SwiperSlide key={index} className='w-full'>
-                                    <div className='h-[460px] relative group flex justify-center items-center bg-card/20 border border-border rounded-lg overflow-hidden'>
-                                        {/* overlay */}
-                                        <div className='absolute top-0 bottom-0 w-full h-full bg-background/10 z-10'></div>
-
-                                        {/* image */}
-                                        <div className='relative w-full h-full'>
-                                            <Image
-                                                src={work.image}
-                                                alt={work.title}
-                                                width={700}
-                                                height={400}
-                                                className="object-cover"
-                                            />
+                            {works.map((work, index) => {
+                                // Unique refs for navigation buttons
+                                const prevRef = useRef<HTMLDivElement>(null);
+                                const nextRef = useRef<HTMLDivElement>(null);
+                                return (
+                                    <SwiperSlide key={index} className='w-full'>
+                                        <div className='h-[460px] relative group flex justify-center items-center bg-card/20 border border-border rounded-lg overflow-hidden'>
+                                            {/* overlay */}
+                                            <div className='absolute top-0 bottom-0 w-full h-full bg-background/10 z-10'></div>
+                                            {/* images swiper */}
+                                            <div className='relative w-full h-full'>
+                                                <Swiper
+                                                    spaceBetween={10}
+                                                    slidesPerView={1}
+                                                    loop={true}
+                                                    pagination={{ clickable: true }}
+                                                    navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+                                                    onInit={(swiper) => {
+                                                        // @ts-ignore
+                                                        swiper.params.navigation.prevEl = prevRef.current;
+                                                        // @ts-ignore
+                                                        swiper.params.navigation.nextEl = nextRef.current;
+                                                        swiper.navigation.init();
+                                                        swiper.navigation.update();
+                                                    }}
+                                                    modules={[Navigation]}
+                                                    className='w-full h-full image-swiper'
+                                                >
+                                                    {work.images.map((img, imgIdx) => (
+                                                        <SwiperSlide key={imgIdx} className='w-full h-full flex items-center justify-center'>
+                                                            <Image
+                                                                src={img}
+                                                                alt={work.title + ' image ' + (imgIdx + 1)}
+                                                                width={700}
+                                                                height={400}
+                                                                className="object-cover w-full h-full"
+                                                            />
+                                                        </SwiperSlide>
+                                                    ))}
+                                                    {/* Custom navigation arrows for this Swiper */}
+                                                    <div ref={prevRef} className="swiper-button-prev !left-2 !z-20 !text-accent !bg-card/70 !rounded-full !w-10 !h-10 !flex !items-center !justify-center hover:!bg-accent/80 hover:!text-white transition absolute top-1/2 -translate-y-1/2 cursor-pointer" />
+                                                    <div ref={nextRef} className="swiper-button-next !right-2 !z-20 !text-accent !bg-card/70 !rounded-full !w-10 !h-10 !flex !items-center !justify-center hover:!bg-accent/80 hover:!text-white transition absolute top-1/2 -translate-y-1/2 cursor-pointer" />
+                                                </Swiper>
+                                            </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
+                                    </SwiperSlide>
+                                );
+                            })}
 
                             {/* swiper button: because we have use the hook useSwiper, the slide is no more working, but instead the button has taken the relay */}
                             <WorkSliderBtns />

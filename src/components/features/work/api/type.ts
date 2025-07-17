@@ -7,7 +7,7 @@ export interface WorkType {
         name: string
     }[],
     topics?: string[],
-    image: string,
+    images: string[],
     live: string,
     github: string
 }
