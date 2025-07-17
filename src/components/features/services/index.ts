@@ -1,3 +1,3 @@
-import ServiceInterface from "./components";
+import ServiceInterface from './components';
 
 export default ServiceInterface;

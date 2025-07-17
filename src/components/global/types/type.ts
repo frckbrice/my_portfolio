@@ -1,5 +1,5 @@
 export interface MobileLinkType {
-    name: string;
-    path: string;
-    icon?: string;
+  name: string;
+  path: string;
+  icon?: string;
 }

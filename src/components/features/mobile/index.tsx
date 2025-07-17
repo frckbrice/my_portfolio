@@ -1,5 +1,3 @@
-import { MobileNav } from "./components/mobile-nav";
+import { MobileNav } from './components/mobile-nav';
 
-export {
-    MobileNav
-}
+export { MobileNav };

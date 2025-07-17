@@ -5,12 +5,14 @@ This portfolio now supports both dark and light modes with smooth transitions an
 ## 🎨 Features
 
 ### Theme Switching
+
 - **Toggle Button**: Located in the header navigation
 - **System Preference**: Automatically detects user's system theme preference
 - **Manual Override**: Users can manually switch between themes
 - **Persistent**: Theme choice is saved in localStorage
 
 ### Visual Design
+
 - **Smooth Transitions**: 300ms transitions between themes
 - **Consistent Colors**: CSS custom properties for consistent theming
 - **Accessibility**: High contrast ratios in both modes
@@ -19,46 +21,49 @@ This portfolio now supports both dark and light modes with smooth transitions an
 ## 🛠️ Implementation
 
 ### CSS Variables
+
 The theme system uses CSS custom properties defined in `globals.css`:
 
 ```css
 :root {
-  --background: 0 0% 100%;        /* Light mode background */
-  --foreground: 20 14.3% 4.1%;   /* Light mode text */
-  --accent: 160 84% 39%;         /* Accent color (same in both) */
+  --background: 0 0% 100%; /* Light mode background */
+  --foreground: 20 14.3% 4.1%; /* Light mode text */
+  --accent: 160 84% 39%; /* Accent color (same in both) */
   /* ... more variables */
 }
 
 .dark {
-  --background: 20 14.3% 4.1%;   /* Dark mode background */
-  --foreground: 60 9.1% 97.8%;   /* Dark mode text */
+  --background: 20 14.3% 4.1%; /* Dark mode background */
+  --foreground: 60 9.1% 97.8%; /* Dark mode text */
   /* ... same variables with dark values */
 }
 ```
 
 ### Theme-Aware Classes
+
 Use these Tailwind classes for theme-aware styling:
 
 ```tsx
 // Text colors
-className="text-foreground"           // Primary text
-className="text-muted-foreground"     // Secondary text
-className="text-accent"               // Accent color
+className = 'text-foreground'; // Primary text
+className = 'text-muted-foreground'; // Secondary text
+className = 'text-accent'; // Accent color
 
 // Background colors
-className="bg-background"             // Primary background
-className="bg-card"                   // Card background
-className="bg-muted"                  // Muted background
+className = 'bg-background'; // Primary background
+className = 'bg-card'; // Card background
+className = 'bg-muted'; // Muted background
 
 // Borders
-className="border-border"             // Standard border
-className="border-accent"             // Accent border
+className = 'border-border'; // Standard border
+className = 'border-accent'; // Accent border
 
 // Transitions
-className="theme-transition"          // Smooth theme transition
+className = 'theme-transition'; // Smooth theme transition
 ```
 
 ### Components Updated
+
 All major components have been updated to support both themes:
 
 - ✅ **Header/Navigation** - Theme toggle button
@@ -73,6 +78,7 @@ All major components have been updated to support both themes:
 ## 🎯 Usage Examples
 
 ### Basic Theme-Aware Component
+
 ```tsx
 export function MyComponent() {
   return (
@@ -88,6 +94,7 @@ export function MyComponent() {
 ```
 
 ### Glass Morphism Effect
+
 ```tsx
 <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg">
   {/* Content */}
@@ -95,6 +102,7 @@ export function MyComponent() {
 ```
 
 ### Gradient Backgrounds
+
 ```tsx
 <div className="gradient-primary">  {/* Accent gradient */}
 <div className="gradient-secondary"> {/* Muted gradient */}
@@ -103,11 +111,13 @@ export function MyComponent() {
 ## 🔧 Customization
 
 ### Adding New Theme Colors
+
 1. Add CSS variables to `:root` and `.dark` in `globals.css`
 2. Use `hsl(var(--variable-name))` in Tailwind classes
 3. Update components to use new variables
 
 ### Custom Theme Classes
+
 ```css
 @layer utilities {
   .my-theme-class {
@@ -117,6 +127,7 @@ export function MyComponent() {
 ```
 
 ### Theme Hooks
+
 Use the custom hooks for advanced theme management:
 
 ```tsx
@@ -125,7 +136,7 @@ import { useThemeMode, useThemeClasses } from '@/hooks/use-theme';
 function MyComponent() {
   const { isDark, toggleTheme } = useThemeMode();
   const classes = useThemeClasses();
-  
+
   return (
     <div className={classes.glass}>
       <button onClick={toggleTheme}>
@@ -139,6 +150,7 @@ function MyComponent() {
 ## 🎨 Color Palette
 
 ### Light Mode
+
 - **Background**: Pure white (#FFFFFF)
 - **Foreground**: Dark gray (#1c1c22)
 - **Muted**: Light gray (#f5f5f5)
@@ -146,6 +158,7 @@ function MyComponent() {
 - **Border**: Light gray (#e5e5e5)
 
 ### Dark Mode
+
 - **Background**: Dark gray (#1c1c22)
 - **Foreground**: Light gray (#f5f5f5)
 - **Muted**: Medium gray (#2a2a2a)
@@ -162,12 +175,14 @@ function MyComponent() {
 ## 🔍 Testing
 
 ### Manual Testing
+
 1. Click theme toggle in header
 2. Check all components adapt properly
 3. Verify transitions are smooth
 4. Test on different screen sizes
 
 ### Accessibility Testing
+
 - High contrast ratios maintained
 - Color not the only indicator
 - Keyboard navigation works
@@ -176,6 +191,7 @@ function MyComponent() {
 ## 📱 Responsive Design
 
 The theme system works seamlessly across all devices:
+
 - **Desktop**: Full theme experience
 - **Tablet**: Optimized layouts
 - **Mobile**: Touch-friendly controls
@@ -194,4 +210,4 @@ The theme system works seamlessly across all devices:
 - [ ] Theme-specific animations
 - [ ] Reduced motion support
 - [ ] High contrast mode
-- [ ] Theme presets 
+- [ ] Theme presets

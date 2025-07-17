@@ -43,6 +43,10 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
 
+      - name: Build
+        run: yarn build
+        working-directory: my_portfolio
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
@@ -53,4 +57,4 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }} 
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

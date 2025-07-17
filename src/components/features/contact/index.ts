@@ -1,5 +1,3 @@
-import { ContactInterface } from "./components";
+import { ContactInterface } from './components';
 
-export {
-    ContactInterface
-}
+export { ContactInterface };

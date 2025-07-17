@@ -23,24 +23,30 @@ This feature automatically fetches and displays your GitHub projects in your por
 ## Configuration
 
 ### GitHub Username
+
 Update the username in `api/github-api.ts`:
+
 ```typescript
 const GITHUB_USERNAME = 'your-github-username';
 ```
 
 ### API Rate Limiting
+
 The GitHub API has rate limits for unauthenticated requests. For higher limits, you can:
+
 1. Add a GitHub token to your environment variables
 2. Use the local API route to cache responses
 
 ### Customization
 
 #### Styling
+
 - Modify `github-project-card.tsx` for card appearance
 - Update colors in `github-api.ts` for language colors
 - Adjust grid layout in `github-projects-section.tsx`
 
 #### Data Display
+
 - Change the number of projects displayed
 - Modify sorting criteria
 - Add/remove project information fields
@@ -61,4 +67,4 @@ The GitHub API has rate limits for unauthenticated requests. For higher limits, 
 - Network errors show retry button
 - API errors display user-friendly messages
 - Loading states prevent layout shifts
-- Fallback content for empty states 
+- Fallback content for empty states
