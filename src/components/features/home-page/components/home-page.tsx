@@ -1,19 +1,28 @@
 import React from 'react';
-// components
-import { TechHighlights } from './tech-highlights';
-import { Achievements } from './achievements';
-import { CTASection } from './cta-section';
-import { SEOAccessibilityPerformance } from './seo-accessibility-performance';
-import { PortfolioShowcase } from './portfolio-showcase';
-import { CVDownload } from './cv-download';
 
 export interface IHomepageProps {
   Socials: () => React.ReactElement;
   Photos: () => React.ReactElement;
   Stats: () => React.ReactElement;
+  TrustedCompanies: () => React.ReactElement;
+  TechHighlights: () => React.ReactElement;
+  Achievements: () => React.ReactElement;
+  SEOAccessibilityPerformance: () => React.ReactElement;
+  PortfolioShowcase: () => React.ReactElement;
+  CTASection: () => React.ReactElement;
+  CVDownload: () => React.ReactElement;
 }
 
-export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
+export function Homepage({
+  Socials, Photos, Stats,
+  TrustedCompanies,
+  TechHighlights,
+  Achievements,
+  SEOAccessibilityPerformance,
+  PortfolioShowcase,
+  CTASection,
+  CVDownload
+}: IHomepageProps) {
   return (
     <>
       <section className=" w-full">
@@ -21,9 +30,7 @@ export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8:pb-24">
             {/* text */}
             <div className=" text-center xl:text-left order-2 xl:order-none">
-              <span className="text-accent font-medium">
-                Full-Stack Software Engineer
-              </span>
+
               <h1 className=" h1 mb-6 ">
                 Hello! I'm <br />
                 <span className=" text-accent">AVOM Brice</span>
@@ -35,6 +42,7 @@ export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
                 React, React-native, angular2, Node.js, and cloud technologies.
                 Let's turn your ideas into exceptional digital experiences.
               </p>
+
               {/* button and socials */}
               <div className="flex flex-col gap-8 xl:flex-row items-center">
                 <CVDownload />
@@ -42,13 +50,18 @@ export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
                   <Socials />
                 </div>
               </div>
+
             </div>
             {/* image */}
             <div className=" order-1 xl:order-none mb-8 xl:mb-0">
               <Photos />
             </div>
           </div>
+          <h3 className="text-accent font-medium h2 mt-5">
+            Full-Stack Software Engineer
+          </h3>
         </div>
+
         {/* statistiques */}
         <Stats />
       </section>
@@ -64,6 +77,9 @@ export function Homepage({ Socials, Photos, Stats }: IHomepageProps) {
 
       {/* Portfolio Showcase Section */}
       <PortfolioShowcase />
+
+      {/* Trusted Companies Section */}
+      <TrustedCompanies />
 
       {/* Call to Action Section */}
       <CTASection />

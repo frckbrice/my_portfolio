@@ -8,12 +8,16 @@ import { GitHubProjectCard } from './github-project-card';
 import { services } from '../../services/api/data';
 import { X } from 'lucide-react';
 import Link from 'next/link';
+import { exclusionKeywords } from '../api/data';
 
 interface GitHubProjectsSectionProps {
   filter?: string;
+  isInWorkExperience?: boolean;
 }
 
-export function GitHubProjectsSection({ filter }: GitHubProjectsSectionProps) {
+
+
+export function GitHubProjectsSection({ filter, isInWorkExperience }: GitHubProjectsSectionProps) {
   const [projects, setProjects] = useState<GitHubProject[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -42,28 +46,7 @@ export function GitHubProjectsSection({ filter }: GitHubProjectsSectionProps) {
       // For more accuracy, exclude projects that clearly belong to other categories
       if (matchesCurrentFilter) {
         // Define exclusion keywords for each category
-        const exclusionKeywords = {
-          mobile: [
-            'backend',
-            'server',
-            'api',
-            'database',
-            'postgresql',
-            'mongodb',
-            'mysql',
-          ],
-          frontend: [
-            'backend',
-            'server',
-            'api',
-            'database',
-            'postgresql',
-            'mongodb',
-            'mysql',
-          ],
-          backend: ['frontend', 'ui', 'react', 'angular', 'vue', 'svelte'],
-          fullstack: [], // Fullstack can include everything
-        };
+
 
         const currentExclusions =
           exclusionKeywords[filter as keyof typeof exclusionKeywords] || [];
@@ -173,6 +156,8 @@ export function GitHubProjectsSection({ filter }: GitHubProjectsSectionProps) {
       transition={{ duration: 0.5 }}
       className="py-16 xl:px-0"
     >
+      {/* add separator between work experience and github projects */}
+      {isInWorkExperience && <div className="h-16 w-full my-16"></div>}
       <div className="container mx-auto">
         {/* Section Header */}
         <motion.div

@@ -13,7 +13,7 @@ export default function WorkExperiencePage() {
   return (
     <>
       <WorkInterface />
-      <GitHubProjectsSection />
+      <GitHubProjectsSection isInWorkExperience={true} />
     </>
   );
 }

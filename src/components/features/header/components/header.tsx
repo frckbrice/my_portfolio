@@ -11,7 +11,7 @@ export interface IHeaderProps {
   links: MobileLinkType[];
 }
 
-export function Header({ Nav, MobileNav }: IHeaderProps) {
+export function Header({ Nav, MobileNav, ModeToggle }: IHeaderProps) {
   return (
     <header
       className="py-4 xl:py-6 text-foreground bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50"
@@ -37,14 +37,14 @@ export function Header({ Nav, MobileNav }: IHeaderProps) {
           aria-label="Primary navigation"
         >
           <Nav />
-
+          {/* Theme toggle button (always visible in header) */}
+          <div className="ml-4 flex items-center">
+            <ModeToggle />
+          </div>
           {/* Mobile nav */}
           <div className="xl:hidden">
             <MobileNav />
           </div>
-
-          {/*TODO: change theme to be set later */}
-          {/* <ModeToggle /> */}
         </nav>
       </div>
     </header>

@@ -25,7 +25,7 @@ export function WorkSliderBtns({
       <button className={btnStyle} onClick={() => swiper.slidePrev()}>
         <PiCaretLeftBold className={iconStyle} />
       </button>
-      <button className={btnStyle} onClick={() => swiper.slidePrev()}>
+      <button className={btnStyle} onClick={() => swiper.slideNext()}>
         <PiCaretRightBold className={iconStyle} />
       </button>
     </div>

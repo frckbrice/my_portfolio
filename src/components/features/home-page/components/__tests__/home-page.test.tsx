@@ -9,6 +9,13 @@ describe('Homepage', () => {
         Socials={() => <div />}
         Photos={() => <div />}
         Stats={() => <div />}
+            TrustedCompanies={() => <div />}
+            TechHighlights={() => <div />}
+            Achievements={() => <div />}
+            SEOAccessibilityPerformance={() => <div />}
+            PortfolioShowcase={() => <div />}
+            CTASection={() => <div />}
+            CVDownload={() => <div />}
       />
     );
     expect(

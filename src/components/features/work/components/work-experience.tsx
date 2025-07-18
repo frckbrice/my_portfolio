@@ -82,7 +82,7 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
                   {/* Left: Project Info */}
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+                  <div className="w-full xl:w-[50%] xl:h-[560px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline num */}
               <div className="text-5xl leading-none font-extrabold text-transparent text-outline">
@@ -188,9 +188,9 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
           </div>
                   {/* Right: Project Images Carousel */}
           <div className="w-full xl:w-[50%]">
-                      <div className="xl:h-[520px] mb-12 relative flex flex-col items-center">
+                      <div className="xl:h-[620px] mb-12 relative flex flex-col items-center">
                           {/* Image carousel for current project */}
-                          <div className="h-[460px] w-full relative group flex justify-center items-center bg-card/20 border border-border rounded-lg overflow-hidden">
+                          <div className="h-[560px] w-full relative group flex justify-center items-center bg-card/20 border border-border rounded-lg overflow-hidden">
                               {/* overlay */}
                               <div className="absolute top-0 bottom-0 w-full h-full bg-background/10 z-10"></div>
                               {/* custom image carousel */}
@@ -212,7 +212,7 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                                           alt={project.title + ' image ' + (imageIndexes[projectIndex] + 1)}
                                           width={700}
                                           height={400}
-                                          className="object-contain w-full h-full max-h-[420px] max-w-full rounded-lg"
+                                          className="object-contain w-full h-full max-h-[500px] max-w-full rounded-lg"
                                       />
                                   </div>
                                   {/* Right arrow for images */}
