@@ -10,16 +10,16 @@ export async function POST(req: Request) {
         }
 
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            service: process.env.MAIL_SERVICE,
             auth: {
-                user: process.env.GMAIL_USER,
-                pass: process.env.GMAIL_PASS,
+                user: process.env.MAIL_USER,
+                pass: process.env.MAIL_PASS,
             },
         });
 
         const mailOptions = {
-            from: process.env.GMAIL_USER,
-            to: process.env.GMAIL_USER, // or your preferred recipient
+            from: process.env.MAIL_USER,
+            to: process.env.MAIL_USER, // or your preferred recipient
             subject: `New Contact Form Submission - ${service || 'General Inquiry'}`,
             text: `Name: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`,
             html: `<p><strong>Name:</strong> ${name}</p>
