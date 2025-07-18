@@ -200,6 +200,30 @@ export function Contact({ infos, inputs }: IContactProps) {
                 </p>
                 <SmartCVDownload />
               </motion.div>
+
+              {/* About/Why Work With Me Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.1, duration: 0.6 }}
+                className="mt-10 p-6 rounded-2xl border-l-4 border-accent bg-accent/5 shadow-sm"
+              >
+                <h4 className="text-xl font-bold text-accent mb-3 flex items-center gap-2">
+                  <span role="img" aria-label="lightbulb">💡</span> Why work with me?
+                </h4>
+                <p className="text-foreground mb-4">
+                  Innovative problem-solver with a passion for crafting high-performance, scalable web & mobile applications. Expertise in modern tech stacks, including <span className="font-semibold text-accent">React, React Native, Angular, Node.js</span>, and cloud platforms, to deliver seamless digital experiences. Proven ability to architect robust systems, optimize performance, and drive impactful solutions—from concept to deployment. Let’s build the future, one line of code at a time.
+                </p>
+                <ul className="mb-4 space-y-2 text-base text-muted-foreground">
+                  <li className="flex items-start gap-2"><span className="text-accent">✔</span> Full-stack proficiency – From UI/UX (React, Angular) to backend (Node.js) and cloud integrations.</li>
+                  <li className="flex items-start gap-2"><span className="text-accent">✔</span> Mobile-first mindset – Skilled in React Native for cross-platform excellence.</li>
+                  <li className="flex items-start gap-2"><span className="text-accent">✔</span> Performance-driven – Build scalable apps that handle real-world demands.</li>
+                  <li className="flex items-start gap-2"><span className="text-accent">✔</span> Collaborative & adaptable – Thrive in agile teams, startups, or enterprise environments.</li>
+                </ul>
+                <div className="flex items-center gap-2 text-lg font-semibold text-accent mt-2">
+                  <span role="img" aria-label="rocket">🚀</span> Let’s connect and create something extraordinary!
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
