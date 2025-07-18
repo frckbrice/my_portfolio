@@ -3,7 +3,6 @@
 // lib
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -39,9 +38,7 @@ export function Contact({ infos, inputs }: IContactProps) {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [submitStatus, setSubmitStatus] = React.useState<
-    'idle' | 'success' | 'error'
-  >('idle');
+  const [submitStatus, setSubmitStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
@@ -54,64 +51,22 @@ export function Contact({ infos, inputs }: IContactProps) {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-
     try {
-      // EmailJS configuration
-      // we need to set up EmailJS and get these IDs
-      const serviceId =
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_EMAILJS_SERVICE_ID';
-      const templateId =
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ||
-        'YOUR_EMAILJS_TEMPLATE_ID';
-      const publicKey =
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_EMAILJS_PUBLIC_KEY';
-
-      // Check if EmailJS is properly configured
-      if (
-        serviceId === 'YOUR_EMAILJS_SERVICE_ID' ||
-        templateId === 'YOUR_EMAILJS_TEMPLATE_ID' ||
-        publicKey === 'YOUR_EMAILJS_PUBLIC_KEY'
-      ) {
-        throw new Error(
-          'EmailJS not configured. Please set up EmailJS following the setup guide.'
-        );
-      }
-
-      const templateParams = {
-        to_email: 'bricefrkc@gmail.com',
-        from_name: formData.name,
-        from_email: formData.email,
-        service: formData.service || 'General Inquiry',
-        message: formData.message,
-        subject: `New Contact Form Submission - ${formData.service || 'General Inquiry'}`,
-      };
-
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        serviceId,
-        templateId,
-        templateParams,
-        publicKey
-      );
-
-      if (result.status === 200) {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
         setSubmitStatus('success');
-
-        // Reset form after a delay
         setTimeout(() => {
-          setFormData({
-            name: '',
-            email: '',
-            service: '',
-            message: '',
-          });
+          setFormData({ name: '', email: '', service: '', message: '' });
           setSubmitStatus('idle');
         }, 3000);
       } else {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Error sending email:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
