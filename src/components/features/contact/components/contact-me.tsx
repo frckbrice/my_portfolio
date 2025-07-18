@@ -38,7 +38,9 @@ export function Contact({ infos, inputs }: IContactProps) {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [submitStatus, setSubmitStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = React.useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
@@ -153,6 +155,8 @@ export function Contact({ infos, inputs }: IContactProps) {
                   Get a copy of my detailed resume to learn more about my
                   experience and skills.
                 </p>
+
+                {/* CV Download Button */}
                 <SmartCVDownload />
               </motion.div>
 
@@ -223,7 +227,7 @@ export function Contact({ infos, inputs }: IContactProps) {
               <h3 className="text-3xl font-bold text-foreground mb-2">
                 Let's work together
               </h3>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-8 ">
                 Ready to bring your ideas to life? Whether you need a full-stack
                 application, mobile app, or custom software solution, I'm here
                 to help. Let's discuss your project requirements and create
@@ -249,7 +253,7 @@ export function Contact({ infos, inputs }: IContactProps) {
                   animate={{ opacity: 1, y: 0 }}
                   className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg"
                 >
-                  <p className="text-red-600 font-medium">
+                  <p className="text-blue-600 font-medium">
                     ❌ There was an error sending your message. Please try again
                     or contact me directly at bricefrkc@gmail.com
                   </p>
@@ -264,7 +268,14 @@ export function Contact({ infos, inputs }: IContactProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.6 }}
                   >
+                    <label
+                      htmlFor="name"
+                      className="text-base font-medium text-muted-foreground"
+                    >
+                      Name
+                    </label>
                     <Input
+                      id="name"
                       type="text"
                       placeholder="Your Name"
                       value={formData.name}
@@ -277,7 +288,14 @@ export function Contact({ infos, inputs }: IContactProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
                   >
+                    <label
+                      htmlFor="email"
+                      className="text-base font-medium text-muted-foreground"
+                    >
+                      Email
+                    </label>
                     <Input
+                      id="email"
                       type="email"
                       placeholder="Your Email"
                       value={formData.email}
@@ -293,6 +311,12 @@ export function Contact({ infos, inputs }: IContactProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9, duration: 0.6 }}
                 >
+                  <label
+                    htmlFor="service"
+                    className="text-base font-medium text-muted-foreground"
+                  >
+                    Service
+                  </label>
                   <SelectServices
                     value={formData.service}
                     onValueChange={value => handleInputChange('service', value)}
@@ -305,9 +329,16 @@ export function Contact({ infos, inputs }: IContactProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.0, duration: 0.6 }}
                 >
+                  <label
+                    htmlFor="message"
+                    className="text-base font-medium text-muted-foreground"
+                  >
+                    Message
+                  </label>
                   <Textarea
+                    id="message"
                     placeholder="Tell me about your project, timeline, and any specific requirements you have..."
-                    className="min-h-[120px]"
+                    className="min-h-[120px] text-base"
                     value={formData.message}
                     onChange={e => handleInputChange('message', e.target.value)}
                     required

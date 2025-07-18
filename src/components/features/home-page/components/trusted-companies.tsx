@@ -52,6 +52,8 @@ function TrustedCompanies() {
                   alt={logo.alt}
                   className="object-contain h-48 w-48"
                   loading="lazy"
+                  width={100}
+                  height={100}
                   draggable={false}
                   style={{ background: 'white' }}
                 />

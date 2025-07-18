@@ -84,9 +84,21 @@ export function SmartCVDownload() {
         {pdfExists ? (
           'Direct download available'
         ) : (
-          <p className="text-accent">
-            Go back to home page and download the CV
-          </p>
+          <>
+            <p className="mt-6 text-center font-bold text-accent blink-animation">
+              Go back to home page to download the CV
+            </p>
+            <style jsx>{`
+              .blink-animation {
+                animation: blink 3s steps(2, start) infinite;
+              }
+              @keyframes blink {
+                to {
+                  visibility: hidden;
+                }
+              }
+            `}</style>
+          </>
         )}
       </p>
     </motion.div>

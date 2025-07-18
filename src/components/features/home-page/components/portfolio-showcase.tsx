@@ -240,10 +240,11 @@ export function PortfolioShowcase() {
             href="https://github.com/frckbrice/my_portfolio"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-4 transition-all duration-300 cursor-pointer group"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-accent text-primary font-bold shadow-lg hover:bg-accent/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 group text-lg"
+            style={{ minWidth: 220 }}
           >
-            <span>Explore the code on GitHub</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            <span className="mr-1">Explore the code on GitHub</span>
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>
