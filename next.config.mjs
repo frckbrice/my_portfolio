@@ -26,7 +26,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.rebasecodecamp.com',
       },
-    ]
+    ],
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

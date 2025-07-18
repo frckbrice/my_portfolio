@@ -14,14 +14,16 @@ export interface IHomepageProps {
 }
 
 export function Homepage({
-  Socials, Photos, Stats,
+  Socials,
+  Photos,
+  Stats,
   TrustedCompanies,
   TechHighlights,
   Achievements,
   SEOAccessibilityPerformance,
   PortfolioShowcase,
   CTASection,
-  CVDownload
+  CVDownload,
 }: IHomepageProps) {
   return (
     <>
@@ -30,7 +32,6 @@ export function Homepage({
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8:pb-24">
             {/* text */}
             <div className=" text-center xl:text-left order-2 xl:order-none">
-
               <h1 className=" h1 mb-6 ">
                 Hello! I'm <br />
                 <span className=" text-accent">AVOM Brice</span>
@@ -50,7 +51,6 @@ export function Homepage({
                   <Socials />
                 </div>
               </div>
-
             </div>
             {/* image */}
             <div className=" order-1 xl:order-none mb-8 xl:mb-0">

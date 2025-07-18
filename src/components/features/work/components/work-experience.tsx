@@ -30,41 +30,41 @@ export interface IWorkProps {
 }
 
 export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
-    // Track the current project index
-    const [projectIndex, setProjectIndex] = useState(0);
-    // Track current image index for each project
-    const [imageIndexes, setImageIndexes] = useState<number[]>(
-        works.map(() => 0)
-    );
+  // Track the current project index
+  const [projectIndex, setProjectIndex] = useState(0);
+  // Track current image index for each project
+  const [imageIndexes, setImageIndexes] = useState<number[]>(
+    works.map(() => 0)
+  );
 
-    // Project navigation handlers
-    const handlePrevProject = () => {
-        setProjectIndex(prev => (prev - 1 + works.length) % works.length);
+  // Project navigation handlers
+  const handlePrevProject = () => {
+    setProjectIndex(prev => (prev - 1 + works.length) % works.length);
   };
-    const handleNextProject = () => {
-        setProjectIndex(prev => (prev + 1) % works.length);
-    };
+  const handleNextProject = () => {
+    setProjectIndex(prev => (prev + 1) % works.length);
+  };
 
-    // Custom image carousel handlers
-    const handlePrevImage = () => {
-        setImageIndexes(prev => {
-            const newIndexes = [...prev];
-            const imagesLength = works[projectIndex].images.length;
-            newIndexes[projectIndex] =
-                (newIndexes[projectIndex] - 1 + imagesLength) % imagesLength;
-            return newIndexes;
-        });
-    };
-    const handleNextImage = () => {
-        setImageIndexes(prev => {
-            const newIndexes = [...prev];
-            const imagesLength = works[projectIndex].images.length;
-            newIndexes[projectIndex] = (newIndexes[projectIndex] + 1) % imagesLength;
-            return newIndexes;
-        });
-    };
+  // Custom image carousel handlers
+  const handlePrevImage = () => {
+    setImageIndexes(prev => {
+      const newIndexes = [...prev];
+      const imagesLength = works[projectIndex].images.length;
+      newIndexes[projectIndex] =
+        (newIndexes[projectIndex] - 1 + imagesLength) % imagesLength;
+      return newIndexes;
+    });
+  };
+  const handleNextImage = () => {
+    setImageIndexes(prev => {
+      const newIndexes = [...prev];
+      const imagesLength = works[projectIndex].images.length;
+      newIndexes[projectIndex] = (newIndexes[projectIndex] + 1) % imagesLength;
+      return newIndexes;
+    });
+  };
 
-    const project = works[projectIndex];
+  const project = works[projectIndex];
 
   return (
     <motion.div
@@ -81,8 +81,8 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-                  {/* Left: Project Info */}
-                  <div className="w-full xl:w-[50%] xl:h-[560px] flex flex-col xl:justify-between order-2 xl:order-none">
+          {/* Left: Project Info */}
+          <div className="w-full xl:w-[50%] xl:h-[560px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline num */}
               <div className="text-5xl leading-none font-extrabold text-transparent text-outline">
@@ -186,87 +186,92 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
               </div>
             </div>
           </div>
-                  {/* Right: Project Images Carousel */}
+          {/* Right: Project Images Carousel */}
           <div className="w-full xl:w-[50%]">
-                      <div className="xl:h-[620px] mb-12 relative flex flex-col items-center">
-                          {/* Image carousel for current project */}
-                          <div className="h-[560px] w-full relative group flex justify-center items-center bg-card/20 border border-border rounded-lg overflow-hidden">
-                              {/* overlay */}
-                              <div className="absolute top-0 bottom-0 w-full h-full bg-background/10 z-10"></div>
-                              {/* custom image carousel */}
-                              <div className="relative w-full h-full flex items-center justify-center">
-                                  {/* Left arrow for images */}
-                                  {project.images.length > 1 && (
-                                      <button
-                                          className="absolute left-2 z-20 text-accent bg-card/70 rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent/80 hover:text-white transition top-1/2 -translate-y-1/2 cursor-pointer"
-                                          onClick={handlePrevImage}
-                                          aria-label="Previous image"
-                                      >
-                                          <PiCaretLeftBold className="text-2xl" />
-                                      </button>
-                                  )}
-                                  {/* Image */}
-                                  <div className="w-full h-full flex items-center justify-center">
-                                      <Image
-                                          src={project.images[imageIndexes[projectIndex]]}
-                                          alt={project.title + ' image ' + (imageIndexes[projectIndex] + 1)}
-                                          width={700}
-                                          height={400}
-                                          className="object-contain w-full h-full max-h-[500px] max-w-full rounded-lg"
-                                      />
-                                  </div>
-                                  {/* Right arrow for images */}
-                                  {project.images.length > 1 && (
-                                      <button
-                                          className="absolute right-2 z-20 text-accent bg-card/70 rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent/80 hover:text-white transition top-1/2 -translate-y-1/2 cursor-pointer"
-                                          onClick={handleNextImage}
-                                          aria-label="Next image"
-                                      >
-                                          <PiCaretRightBold className="text-2xl" />
-                                      </button>
-                                  )}
-                                  {/* Image indicators */}
-                                  {project.images.length > 1 && (
-                                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-                                          {project.images.map((_, dotIdx) => (
-                                              <button
-                                                  key={dotIdx}
-                                                  className={`w-2 h-2 rounded-full transition border border-accent ${imageIndexes[projectIndex] === dotIdx
-                                                      ? 'bg-accent'
-                                                      : 'bg-card/70'
-                                                      }`}
-                                                  onClick={() =>
-                                                      setImageIndexes(prev => {
-                                                          const newIndexes = [...prev];
-                                                          newIndexes[projectIndex] = dotIdx;
-                                                          return newIndexes;
-                                                      })
-                                                  }
-                                                  aria-label={`Go to image ${dotIdx + 1}`}
-                                              />
-                                          ))}
-                                      </div>
-                                  )}
-                              </div>
-                          </div>
-                          {/* Project navigation arrows below the card */}
-                          <div className="flex gap-4 mt-6 justify-center items-center">
-                              <button
-                                  className="bg-accent hover:bg-accent/80 text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-md shadow-md"
-                                  onClick={handlePrevProject}
-                                  aria-label="Previous project"
-                              >
-                                  <PiCaretLeftBold />
-                              </button>
-                              <button
-                                  className="bg-accent hover:bg-accent/80 text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-md shadow-md"
-                                  onClick={handleNextProject}
-                                  aria-label="Next project"
-                              >
-                                  <PiCaretRightBold />
-                              </button>
-                          </div>
-                      </div>
+            <div className="xl:h-[620px] mb-12 relative flex flex-col items-center">
+              {/* Image carousel for current project */}
+              <div className="h-[560px] w-full relative group flex justify-center items-center bg-card/20 border border-border rounded-lg overflow-hidden">
+                {/* overlay */}
+                <div className="absolute top-0 bottom-0 w-full h-full bg-background/10 z-10"></div>
+                {/* custom image carousel */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                  {/* Left arrow for images */}
+                  {project.images.length > 1 && (
+                    <button
+                      className="absolute left-2 z-20 text-accent bg-card/70 rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent/80 hover:text-white transition top-1/2 -translate-y-1/2 cursor-pointer"
+                      onClick={handlePrevImage}
+                      aria-label="Previous image"
+                    >
+                      <PiCaretLeftBold className="text-2xl" />
+                    </button>
+                  )}
+                  {/* Image */}
+                  <div className="w-full h-full flex items-center justify-center">
+                    <Image
+                      src={project.images[imageIndexes[projectIndex]]}
+                      alt={
+                        project.title +
+                        ' image ' +
+                        (imageIndexes[projectIndex] + 1)
+                      }
+                      width={700}
+                      height={400}
+                      className="object-contain w-full h-full max-h-[500px] max-w-full rounded-lg"
+                    />
+                  </div>
+                  {/* Right arrow for images */}
+                  {project.images.length > 1 && (
+                    <button
+                      className="absolute right-2 z-20 text-accent bg-card/70 rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent/80 hover:text-white transition top-1/2 -translate-y-1/2 cursor-pointer"
+                      onClick={handleNextImage}
+                      aria-label="Next image"
+                    >
+                      <PiCaretRightBold className="text-2xl" />
+                    </button>
+                  )}
+                  {/* Image indicators */}
+                  {project.images.length > 1 && (
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                      {project.images.map((_, dotIdx) => (
+                        <button
+                          key={dotIdx}
+                          className={`w-2 h-2 rounded-full transition border border-accent ${
+                            imageIndexes[projectIndex] === dotIdx
+                              ? 'bg-accent'
+                              : 'bg-card/70'
+                          }`}
+                          onClick={() =>
+                            setImageIndexes(prev => {
+                              const newIndexes = [...prev];
+                              newIndexes[projectIndex] = dotIdx;
+                              return newIndexes;
+                            })
+                          }
+                          aria-label={`Go to image ${dotIdx + 1}`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+              {/* Project navigation arrows below the card */}
+              <div className="flex gap-4 mt-6 justify-center items-center">
+                <button
+                  className="bg-accent hover:bg-accent/80 text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-md shadow-md"
+                  onClick={handlePrevProject}
+                  aria-label="Previous project"
+                >
+                  <PiCaretLeftBold />
+                </button>
+                <button
+                  className="bg-accent hover:bg-accent/80 text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-md shadow-md"
+                  onClick={handleNextProject}
+                  aria-label="Next project"
+                >
+                  <PiCaretRightBold />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

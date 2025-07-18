@@ -15,9 +15,10 @@ interface GitHubProjectsSectionProps {
   isInWorkExperience?: boolean;
 }
 
-
-
-export function GitHubProjectsSection({ filter, isInWorkExperience }: GitHubProjectsSectionProps) {
+export function GitHubProjectsSection({
+  filter,
+  isInWorkExperience,
+}: GitHubProjectsSectionProps) {
   const [projects, setProjects] = useState<GitHubProject[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -46,7 +47,6 @@ export function GitHubProjectsSection({ filter, isInWorkExperience }: GitHubProj
       // For more accuracy, exclude projects that clearly belong to other categories
       if (matchesCurrentFilter) {
         // Define exclusion keywords for each category
-
 
         const currentExclusions =
           exclusionKeywords[filter as keyof typeof exclusionKeywords] || [];

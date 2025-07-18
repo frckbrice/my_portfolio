@@ -23,16 +23,16 @@
 //                                 body { margin: 0; }
 //                                 .no-print { display: none; }
 //                             }
-//                             body { 
-//                                 font-family: Arial, sans-serif; 
-//                                 margin: 20px; 
+//                             body {
+//                                 font-family: Arial, sans-serif;
+//                                 margin: 20px;
 //                                 background: white;
 //                                 color: black;
 //                                 line-height: 1.6;
 //                             }
-//                             .cv-content { 
-//                                 max-width: 800px; 
-//                                 margin: 0 auto; 
+//                             .cv-content {
+//                                 max-width: 800px;
+//                                 margin: 0 auto;
 //                                 padding: 20px;
 //                                 background: white;
 //                                 font-size: 14px;
@@ -998,7 +998,8 @@ export function CVDownload() {
           padding: '20mm',
           backgroundColor: 'white',
           color: '#333',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
           fontSize: '14px',
           lineHeight: '1.6',
         }}
@@ -1006,13 +1007,28 @@ export function CVDownload() {
         {/* Header Section */}
         <div className="header">
           <h1 className="name">Brice AVOM</h1>
-          <p className="title">Senior Full-Stack Developer & Mobile App Specialist</p>
+          <p className="title">
+            Senior Full-Stack Developer & Mobile App Specialist
+          </p>
           <div className="contact-info">
             <div className="contact-item">📍 Yaoundé, Cameroon</div>
             <div className="contact-item">📧 bricefrkc@gmail.com</div>
             <div className="contact-item">📱 +237 674 85 23 04</div>
-            <div className="contact-item">🔗 <a href="https://github.com/frckbrice" className="project-link">GitHub</a></div>
-            <div className="contact-item">💼 <a href="https://www.linkedin.com/in/avombrice/" className="project-link">LinkedIn</a></div>
+            <div className="contact-item">
+              🔗{' '}
+              <a href="https://github.com/frckbrice" className="project-link">
+                GitHub
+              </a>
+            </div>
+            <div className="contact-item">
+              💼{' '}
+              <a
+                href="https://www.linkedin.com/in/avombrice/"
+                className="project-link"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1020,7 +1036,14 @@ export function CVDownload() {
         <div className="section">
           <h2 className="section-title">Professional Summary</h2>
           <p className="summary">
-            Results-driven Senior Full-Stack Developer with 3+ years of proven expertise in building scalable web applications and mobile solutions. Specialized in modern JavaScript ecosystem, microservices architecture, and cross-platform development. Demonstrated track record of delivering high-performance applications across diverse industries, with strong emphasis on clean code principles, optimal user experience, and maintainable architecture. Experienced in leading development projects from conception to deployment.
+            Results-driven Senior Full-Stack Developer with 3+ years of proven
+            expertise in building scalable web applications and mobile
+            solutions. Specialized in modern JavaScript ecosystem, microservices
+            architecture, and cross-platform development. Demonstrated track
+            record of delivering high-performance applications across diverse
+            industries, with strong emphasis on clean code principles, optimal
+            user experience, and maintainable architecture. Experienced in
+            leading development projects from conception to deployment.
           </p>
         </div>
 
@@ -1032,12 +1055,30 @@ export function CVDownload() {
             <p className="company">Freelance & Contract Work</p>
             <p className="duration">2020 - Present | 3+ Years</p>
             <div className="description">
-              <div className="achievement">Led end-to-end development of 10+ web applications and mobile apps, serving 1000+ active users</div>
-              <div className="achievement">Architected and implemented microservices solutions using Node.js, reducing system response time by 40%</div>
-              <div className="achievement">Developed cross-platform mobile applications with React Native, achieving 95% code reuse between iOS and Android</div>
-              <div className="achievement">Integrated multiple payment gateways (Stripe, PayPal, Orange Money, MTN) processing $50K+ in transactions</div>
-              <div className="achievement">Collaborated with international clients to deliver custom solutions meeting specific business requirements</div>
-              <div className="achievement">Implemented CI/CD pipelines and automated testing, reducing deployment time by 60%</div>
+              <div className="achievement">
+                Led end-to-end development of 10+ web applications and mobile
+                apps, serving 1000+ active users
+              </div>
+              <div className="achievement">
+                Architected and implemented microservices solutions using
+                Node.js, reducing system response time by 40%
+              </div>
+              <div className="achievement">
+                Developed cross-platform mobile applications with React Native,
+                achieving 95% code reuse between iOS and Android
+              </div>
+              <div className="achievement">
+                Integrated multiple payment gateways (Stripe, PayPal, Orange
+                Money, MTN) processing $50K+ in transactions
+              </div>
+              <div className="achievement">
+                Collaborated with international clients to deliver custom
+                solutions meeting specific business requirements
+              </div>
+              <div className="achievement">
+                Implemented CI/CD pipelines and automated testing, reducing
+                deployment time by 60%
+              </div>
             </div>
           </div>
         </div>
@@ -1048,49 +1089,83 @@ export function CVDownload() {
 
           <div className="project-item">
             <h3 className="project-title">
-              <a href="https://github.com/frckbrice/ra-mobile-project" className="project-link">
+              <a
+                href="https://github.com/frckbrice/ra-mobile-project"
+                className="project-link"
+              >
                 RainForest Alliance - Cocoa Management Mobile App
               </a>
             </h3>
-            <p className="project-tech">React Native • TypeScript • AWS S3 • Payment APIs • Push Notifications</p>
+            <p className="project-tech">
+              React Native • TypeScript • AWS S3 • Payment APIs • Push
+              Notifications
+            </p>
             <p className="description">
-              Enterprise-grade mobile application for cocoa supply chain management, compliant with RainForest Alliance specifications. Features include farmer registration, harvest tracking, payment processing, and real-time data synchronization. Integrated multiple African payment gateways and cloud storage solutions.
+              Enterprise-grade mobile application for cocoa supply chain
+              management, compliant with RainForest Alliance specifications.
+              Features include farmer registration, harvest tracking, payment
+              processing, and real-time data synchronization. Integrated
+              multiple African payment gateways and cloud storage solutions.
             </p>
           </div>
 
           <div className="project-item">
             <h3 className="project-title">
-              <a href="https://github.com/frckbrice/real-time-collaborative-plateform" className="project-link">
+              <a
+                href="https://github.com/frckbrice/real-time-collaborative-plateform"
+                className="project-link"
+              >
                 Real-time Collaborative Platform
               </a>
             </h3>
-            <p className="project-tech">Next.js 14 • TypeScript • Supabase • WebSockets • Drizzle ORM</p>
+            <p className="project-tech">
+              Next.js 14 • TypeScript • Supabase • WebSockets • Drizzle ORM
+            </p>
             <p className="description">
-              Modern collaborative workspace with real-time features, user authentication, and database management. Implements live document editing, user presence indicators, and seamless data synchronization across multiple clients.
+              Modern collaborative workspace with real-time features, user
+              authentication, and database management. Implements live document
+              editing, user presence indicators, and seamless data
+              synchronization across multiple clients.
             </p>
           </div>
 
           <div className="project-item">
             <h3 className="project-title">
-              <a href="https://github.com/frckbrice/HotelMgt" className="project-link">
+              <a
+                href="https://github.com/frckbrice/HotelMgt"
+                className="project-link"
+              >
                 Hotel Management System (PWA)
               </a>
             </h3>
-            <p className="project-tech">Next.js 14 • TypeScript • Sanity CMS • Stripe • Service Workers</p>
+            <p className="project-tech">
+              Next.js 14 • TypeScript • Sanity CMS • Stripe • Service Workers
+            </p>
             <p className="description">
-              Full-featured hotel management system with booking engine, payment processing, and content management. Built as Progressive Web App with offline capabilities, achieving 95+ Lighthouse performance score.
+              Full-featured hotel management system with booking engine, payment
+              processing, and content management. Built as Progressive Web App
+              with offline capabilities, achieving 95+ Lighthouse performance
+              score.
             </p>
           </div>
 
           <div className="project-item">
             <h3 className="project-title">
-              <a href="https://github.com/frckbrice/Clean-code-arch-REST-API" className="project-link">
+              <a
+                href="https://github.com/frckbrice/Clean-code-arch-REST-API"
+                className="project-link"
+              >
                 E-commerce Backend API
               </a>
             </h3>
-            <p className="project-tech">Node.js • MongoDB • Clean Architecture • TypeScript • Express.js</p>
+            <p className="project-tech">
+              Node.js • MongoDB • Clean Architecture • TypeScript • Express.js
+            </p>
             <p className="description">
-              Scalable e-commerce backend following clean architecture principles. Features include order management, inventory tracking, user authentication, and comprehensive API documentation. Handles 1000+ concurrent users with optimized database queries.
+              Scalable e-commerce backend following clean architecture
+              principles. Features include order management, inventory tracking,
+              user authentication, and comprehensive API documentation. Handles
+              1000+ concurrent users with optimized database queries.
             </p>
           </div>
         </div>
@@ -1102,19 +1177,24 @@ export function CVDownload() {
             <div className="skill-category">
               <h3 className="skill-title">Frontend Development</h3>
               <div className="skill-item">
-                <span className="skill-label">Languages:</span> JavaScript (ES6+), TypeScript, HTML5, CSS3
+                <span className="skill-label">Languages:</span> JavaScript
+                (ES6+), TypeScript, HTML5, CSS3
               </div>
               <div className="skill-item">
-                <span className="skill-label">Frameworks:</span> React, Next.js, Angular 2
+                <span className="skill-label">Frameworks:</span> React, Next.js,
+                Angular 2
               </div>
               <div className="skill-item">
-                <span className="skill-label">State Mgmt:</span> Redux, Zustand, React Query, Context API
+                <span className="skill-label">State Mgmt:</span> Redux, Zustand,
+                React Query, Context API
               </div>
               <div className="skill-item">
-                <span className="skill-label">Styling:</span> Tailwind CSS, SCSS, Shadcn/ui
+                <span className="skill-label">Styling:</span> Tailwind CSS,
+                SCSS, Shadcn/ui
               </div>
               <div className="skill-item">
-                <span className="skill-label">Build Tools:</span> Vite, Webpack, Turbo
+                <span className="skill-label">Build Tools:</span> Vite, Webpack,
+                Turbo
               </div>
             </div>
 
@@ -1124,49 +1204,59 @@ export function CVDownload() {
                 <span className="skill-label">Runtime:</span> Node.js, Bun
               </div>
               <div className="skill-item">
-                <span className="skill-label">Frameworks:</span> Express.js, NestJS, Fastify
+                <span className="skill-label">Frameworks:</span> Express.js,
+                NestJS, Fastify
               </div>
               <div className="skill-item">
-                <span className="skill-label">Communication & APIs:</span> RESTful, GraphQL, WebSockets, gRPC
+                <span className="skill-label">Communication & APIs:</span>{' '}
+                RESTful, GraphQL, WebSockets, gRPC
               </div>
               <div className="skill-item">
-                <span className="skill-label">Architecture:</span> Microservices, Clean Architecture, Event-Driven Architecture, DDD, CQRS
+                <span className="skill-label">Architecture:</span>{' '}
+                Microservices, Clean Architecture, Event-Driven Architecture,
+                DDD, CQRS
               </div>
               <div className="skill-item">
-                <span className="skill-label">Languages:</span> TypeScript, JavaScript
+                <span className="skill-label">Languages:</span> TypeScript,
+                JavaScript
               </div>
               <div className="skill-item">
-                <span className="skill-label">Message Brokers:</span> Apache Kafka, RabbitMQ, Redis Pub/Sub
+                <span className="skill-label">Message Brokers:</span> Apache
+                Kafka, RabbitMQ, Redis Pub/Sub
               </div>
               <div className="skill-item">
-                <span className="skill-label">API Gateway:</span> API Gateway implementation, API versioning, API documentation
+                <span className="skill-label">API Gateway:</span> API Gateway
+                implementation, API versioning, API documentation
               </div>
             </div>
 
             <div className="skill-category">
               <h3 className="skill-title">Mobile Development</h3>
               <div className="skill-item">
-                <span className="skill-label">Framework:</span> React Native, Expo
+                <span className="skill-label">Framework:</span> React Native,
+                Expo
               </div>
               <div className="skill-item">
                 <span className="skill-label">Platforms:</span> iOS, Android
               </div>
               <div className="skill-item">
-                <span className="skill-label">Features:</span> Push Notifications (FCM, APN)
+                <span className="skill-label">Features:</span> Push
+                Notifications (FCM, APN)
               </div>
               <div className="skill-item">
                 <span className="skill-label">Storage:</span> MMKV, AsyncStorage
               </div>
               <div className="skill-item">
-                <span className="skill-label">Deployment:</span> Expo EAS, App Store, Google Play
+                <span className="skill-label">Deployment:</span> Expo EAS, App
+                Store, Google Play
               </div>
-
             </div>
 
             <div className="skill-category">
               <h3 className="skill-title">Database & Cloud</h3>
               <div className="skill-item">
-                <span className="skill-label">SQL:</span> PostgreSQL, MySQL, SQLite
+                <span className="skill-label">SQL:</span> PostgreSQL, MySQL,
+                SQLite
               </div>
               <div className="skill-item">
                 <span className="skill-label">NoSQL:</span> MongoDB, Redis
@@ -1175,48 +1265,60 @@ export function CVDownload() {
                 <span className="skill-label">BaaS:</span> Firebase, Supabase
               </div>
               <div className="skill-item">
-                <span className="skill-label">Cloud:</span> AWS S3, Vercel, Netlify, Cloudinary, Cloud Storage
+                <span className="skill-label">Cloud:</span> AWS S3, Vercel,
+                Netlify, Cloudinary, Cloud Storage
               </div>
               <div className="skill-item">
-                <span className="skill-label">ORMs:</span> Prisma, Drizzle, Mongoose, Sequelize
+                <span className="skill-label">ORMs:</span> Prisma, Drizzle,
+                Mongoose, Sequelize
               </div>
             </div>
 
             <div className="skill-category">
               <h3 className="skill-title">DevOps & Tools</h3>
               <div className="skill-item">
-                <span className="skill-label">Version Control:</span> Git, GitHub Actions
+                <span className="skill-label">Version Control:</span> Git,
+                GitHub Actions
               </div>
               <div className="skill-item">
-                <span className="skill-label">Containers:</span> Docker, Kubernetes
+                <span className="skill-label">Containers:</span> Docker,
+                Kubernetes
               </div>
               <div className="skill-item">
-                <span className="skill-label">CI/CD:</span> GitHub Actions, Vercel
+                <span className="skill-label">CI/CD:</span> GitHub Actions,
+                Vercel
               </div>
               <div className="skill-item">
-                <span className="skill-label">Monitoring:</span> Lighthouse, Sentry
+                <span className="skill-label">Monitoring:</span> Lighthouse,
+                Sentry
               </div>
               <div className="skill-item">
-                <span className="skill-label">Testing:</span> Jest, Cypress, Playwright, Vitest
+                <span className="skill-label">Testing:</span> Jest, Cypress,
+                Playwright, Vitest
               </div>
             </div>
 
             <div className="skill-category">
               <h3 className="skill-title">Integration & APIs</h3>
               <div className="skill-item">
-                <span className="skill-label">Payments:</span> Stripe, PayPal, Orange Money, MTN
+                <span className="skill-label">Payments:</span> Stripe, PayPal,
+                Orange Money, MTN
               </div>
               <div className="skill-item">
-                <span className="skill-label">Auth:</span> OAuth 2.0, JWT, NextAuth
+                <span className="skill-label">Auth:</span> OAuth 2.0, JWT,
+                NextAuth
               </div>
               <div className="skill-item">
-                <span className="skill-label">CMS:</span> Sanity.io, Strapi, Comvex
+                <span className="skill-label">CMS:</span> Sanity.io, Strapi,
+                Comvex
               </div>
               <div className="skill-item">
-                <span className="skill-label">APIs:</span> REST, GraphQL, WebSockets
+                <span className="skill-label">APIs:</span> REST, GraphQL,
+                WebSockets
               </div>
               <div className="skill-item">
-                <span className="skill-label">Third-party:</span> Google Maps, Twilio, SendGrid
+                <span className="skill-label">Third-party:</span> Google Maps,
+                Twilio, SendGrid
               </div>
             </div>
           </div>
@@ -1230,7 +1332,9 @@ export function CVDownload() {
             <p className="degree">Bachelor's in Computer Science</p>
             <p className="duration">2016 - 2017</p>
             <p className="description">
-              Specialized in software engineering, algorithms, and data structures. Completed advanced coursework in web development, database systems, and software architecture patterns.
+              Specialized in software engineering, algorithms, and data
+              structures. Completed advanced coursework in web development,
+              database systems, and software architecture patterns.
             </p>
           </div>
         </div>
@@ -1241,15 +1345,23 @@ export function CVDownload() {
           <div className="additional-info">
             <div className="info-category">
               <div className="info-title">React Native Development</div>
-              <div className="info-item">Advanced mobile app development with React Native and Expo (Udemy)</div>
+              <div className="info-item">
+                Advanced mobile app development with React Native and Expo
+                (Udemy)
+              </div>
             </div>
             <div className="info-category">
               <div className="info-title">Next.js 14 Masterclass</div>
-              <div className="info-item">Full-stack development with Next.js and TypeScript (Udemy)</div>
+              <div className="info-item">
+                Full-stack development with Next.js and TypeScript (Udemy)
+              </div>
             </div>
             <div className="info-category">
               <div className="info-title">Google Cloud Professional</div>
-              <div className="info-item">Cloud computing fundamentals and GCP services (Google Skill Boost)</div>
+              <div className="info-item">
+                Cloud computing fundamentals and GCP services (Google Skill
+                Boost)
+              </div>
             </div>
           </div>
         </div>
@@ -1260,7 +1372,9 @@ export function CVDownload() {
           <div className="languages-grid">
             <div className="language-item">
               <span className="language-name">English</span>
-              <span className="language-level">Professional Working Proficiency</span>
+              <span className="language-level">
+                Professional Working Proficiency
+              </span>
             </div>
             <div className="language-item">
               <span className="language-name">French</span>

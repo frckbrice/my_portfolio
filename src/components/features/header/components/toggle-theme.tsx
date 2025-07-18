@@ -4,7 +4,12 @@ import * as React from 'react';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@/components/ui/tooltip';
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from '@/components/ui/tooltip';
 
 export function ModeToggle() {
   const { setTheme, theme, resolvedTheme } = useTheme();
@@ -44,16 +49,18 @@ export function ModeToggle() {
             aria-label={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
           >
             <SunIcon
-              className={`h-6 w-6 transition-all duration-300 ${resolvedTheme === 'dark'
-                ? 'rotate-0 scale-100 text-yellow-400 drop-shadow-lg'
-                : 'rotate-90 scale-0 text-muted-foreground'
-                }`}
+              className={`h-6 w-6 transition-all duration-300 ${
+                resolvedTheme === 'dark'
+                  ? 'rotate-0 scale-100 text-yellow-400 drop-shadow-lg'
+                  : 'rotate-90 scale-0 text-muted-foreground'
+              }`}
             />
             <MoonIcon
-              className={`absolute h-6 w-6 transition-all duration-300 ${resolvedTheme === 'dark'
-                ? 'rotate-90 scale-0 text-muted-foreground'
-                : 'rotate-0 scale-100 text-blue-400 drop-shadow-lg'
-                }`}
+              className={`absolute h-6 w-6 transition-all duration-300 ${
+                resolvedTheme === 'dark'
+                  ? 'rotate-90 scale-0 text-muted-foreground'
+                  : 'rotate-0 scale-100 text-blue-400 drop-shadow-lg'
+              }`}
             />
             {/* Glowing ring */}
             <span className="absolute inset-0 rounded-full ring-2 ring-accent/40 animate-pulse pointer-events-none" />
