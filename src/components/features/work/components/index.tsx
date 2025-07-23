@@ -22,7 +22,11 @@ const LinksComponent = ({
   children,
 }: ILinkToProjectProps) => {
   return (
-    <ImportantLinks link={link} title={title} className={className}>
+    <ImportantLinks
+      link={link}
+      title={title}
+      className={className}
+    >
       {children}
     </ImportantLinks>
   );

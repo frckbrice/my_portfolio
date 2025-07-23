@@ -3,20 +3,16 @@
 // lbraries
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import Image from 'next/image';
-import { useRef } from 'react';
 import { useState } from 'react';
 import { PiCaretLeftBold, PiCaretRightBold } from 'react-icons/pi';
 
 // type
 import { WorkType } from '../api/type';
 import { ILinkToProjectProps } from './important-links';
-import { Tooltip, TooltipTrigger } from '@/components/ui/tooltip';
 
 export interface IWorkProps {
   works: WorkType[];
@@ -77,27 +73,36 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
           ease: 'easeIn',
         },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-center py-4 xl:py-8 xl:px-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           {/* Left: Project Info */}
           <div className="w-full xl:w-[50%] xl:h-[560px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
+            <div className="flex flex-col gap-[18px] h-[50%]">
               {/* outline num */}
               <div className="text-5xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
-              <h2 className="text-[42px] font-bold leading-none text-foreground group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
-              </h2>
+              <h3 className="text-2xl sm:text-4xl font-bold leading-none text-foreground group-hover:text-accent transition-all duration-500 capitalize">
+                <span className="text-accent">Category:</span> &nbsp;
+                {project.category}
+              </h3>
               <p className="text-[20px] font-bold leading-none text-foreground group-hover:text-accent transition-all duration-500 capitalize">
                 <span className="text-accent">Title:</span> &nbsp;
                 {project.title}
               </p>
 
               {/* project description */}
-              <p className="text-muted-foreground">{project.description}</p>
+              <p className="text-muted-foreground 
+              text-justify 
+              leading-5
+              text-base sm:text-lg xl:text-xl 
+              px-2 sm:px-0
+              sm:text-justify
+              ">
+                {project.description}
+              </p>
 
               {/* stack */}
               <ul className="flex gap-4 flex-wrap">
@@ -134,7 +139,12 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
               {/* border */}
               <div className="border border-border"></div>
               {/* button */}
-              <div className="space-y-3 p-4 bg-gradient-to-r from-accent/5 to-accent/10 rounded-lg border border-accent/20 w-fit">
+              <div className="space-y-3 p-4 bg-gradient-to-r 
+              from-accent/5 to-accent/10 
+              rounded-lg border border-accent/20 
+              w-full md:w-fit
+              sm:px-4
+              ">
                 <p className="text-sm text-accent font-semibold flex items-center gap-2">
                   <span className="w-2 h-2 bg-accent rounded-full"></span>
                   Project Links:
@@ -150,14 +160,15 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                       transition={{ delay: 0.8, duration: 0.5 }}
                     >
                       <ImportantLinks
-                        className="w-[70px] h-[70px] rounded-full bg-card/50 border border-border flex justify-center items-center group hover:bg-accent/20 transition-all duration-300 hover:scale-105 hover:border-accent/50 relative cursor-pointer hover:shadow-lg hover:shadow-accent/20"
+                        className="w-[70px] h-[70px] 
+                        rounded-full bg-card/50 border border-border flex justify-center items-center group hover:bg-accent/20 transition-all duration-300 hover:scale-105 hover:border-accent/50 relative cursor-pointer hover:shadow-lg hover:shadow-accent/20"
                         link={project.live}
                         title="View Live Demo"
                       >
                         <BsArrowUpRight className="text-3xl text-foreground group-hover:text-accent" />
                       </ImportantLinks>
                       {/* <span className='text-xs text-muted-foreground font-medium'>Live Demo</span> */}
-                      <span className="text-[12px] text-green-700/70">
+                      <span className="hidden sm:block text-[12px] text-green-700/70">
                         Click to view ↗
                       </span>
                     </motion.div>
@@ -178,7 +189,7 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                       <BsGithub className="text-3xl text-foreground group-hover:text-accent" />
                     </ImportantLinks>
                     {/* <span className='text-xs text-muted-foreground font-medium'>Source Code</span> */}
-                    <span className="text-[12px] text-green-700/70">
+                    <span className="hidden sm:block text-[12px] text-green-700/70">
                       Click to view ↗
                     </span>
                   </motion.div>
@@ -187,10 +198,27 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
             </div>
           </div>
           {/* Right: Project Images Carousel */}
-          <div className="w-full xl:w-[50%]">
-            <div className="xl:h-[620px] mb-12 relative flex flex-col items-center">
+          <div className="w-full xl:w-[50%] flex items-center justify-center">
+            <div className="w-full max-w-[95vw] sm:max-w-[500px] 
+            xl:max-w-[600px] 
+            mb-8 xl:mb-12 
+            relative flex flex-col items-center
+            sm:px-4
+            ">
               {/* Image carousel for current project */}
-              <div className="h-[560px] w-full relative group flex justify-center items-center bg-card/20 border border-border rounded-lg overflow-hidden">
+              <div className="w-full h-[80vw] 
+               max-h-[500px] 
+               sm:h-[60vw] 
+               sm:max-h-[700px] 
+               xl:max-h-[500px] 
+               xl:h-[560px]
+               sm:bg-green-50
+               relative group flex 
+               justify-center items-center 
+               bg-card/20 border border-border 
+               rounded-lg overflow-hidden
+               sm:px-4
+               ">
                 {/* overlay */}
                 <div className="absolute top-0 bottom-0 w-full h-full bg-background/10 z-10"></div>
                 {/* custom image carousel */}
@@ -214,9 +242,11 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                         ' image ' +
                         (imageIndexes[projectIndex] + 1)
                       }
-                      width={700}
-                      height={400}
-                      className="object-contain w-full h-full max-h-[500px] max-w-full rounded-lg"
+                      width={800}
+                      height={500}
+                      className="object-contain
+                       w-full h-full 
+                       rounded-lg"
                     />
                   </div>
                   {/* Right arrow for images */}
@@ -255,7 +285,7 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                 </div>
               </div>
               {/* Project navigation arrows below the card */}
-              <div className="flex gap-4 mt-6 justify-center items-center">
+              <div className="flex gap-4 mt-4 xl:mt-6 justify-center items-center">
                 <button
                   className="bg-accent hover:bg-accent/80 text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-md shadow-md"
                   onClick={handlePrevProject}

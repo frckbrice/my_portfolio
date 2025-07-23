@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/tooltip';
 
 export function ModeToggle() {
-  const { setTheme, theme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -44,7 +44,7 @@ export function ModeToggle() {
             variant="outline"
             size="icon"
             onClick={handleThemeChange}
-            className="w-12 h-12 p-0 border-2 border-accent shadow-lg bg-gradient-to-br from-accent/80 to-accent/40 hover:from-accent/100 hover:to-accent/60 focus:ring-4 focus:ring-accent/40 transition-all duration-300 relative overflow-hidden group flex items-center justify-center"
+            className="w-7 h-7 sm:w-8 sm:h-8 p-0 border-2 border-accent shadow-lg bg-gradient-to-br from-accent/80 to-accent/40 hover:from-accent/100 hover:to-accent/60 focus:ring-4 focus:ring-accent/40 transition-all duration-300 relative overflow-hidden group flex items-center justify-center"
             title={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
             aria-label={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
           >

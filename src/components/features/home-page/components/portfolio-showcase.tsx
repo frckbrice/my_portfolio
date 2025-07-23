@@ -94,7 +94,7 @@ export function PortfolioShowcase() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.7 }}
-      className="py-20 bg-gradient-to-b from-muted/10 to-background"
+      className="sm:py-10 xl:py-20 bg-gradient-to-b from-muted/10 to-background"
     >
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -102,12 +102,12 @@ export function PortfolioShowcase() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="text-center mb-16"
+          className="text-center mb-10 xl:mb-16"
         >
           <h2 className="text-4xl xl:text-5xl font-bold text-foreground mb-6">
             This Portfolio <span className="text-accent">Demonstrates</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto text-justify xl:text-left">
             Every aspect of this portfolio showcases real-world implementation
             of modern web development best practices. From SEO optimization to
             accessibility compliance and performance excellence.

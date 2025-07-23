@@ -74,19 +74,19 @@ export function TechHighlights() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="py-20 bg-gradient-to-b from-transparent to-muted/20 dark:to-muted/10"
+      className="xl:py-20 bg-gradient-to-b from-transparent to-muted/20 dark:to-muted/10"
     >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 xl:mb-16"
         >
           <h2 className="text-4xl xl:text-5xl font-bold text-foreground mb-6">
             Technical <span className="text-accent">Excellence</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto text-justify xl:text-center">
             Combining deep technical expertise with creative problem-solving to
             deliver exceptional digital solutions
           </p>

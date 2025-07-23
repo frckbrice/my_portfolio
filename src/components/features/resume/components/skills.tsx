@@ -30,7 +30,10 @@ export function Skills({ skills }: IskillsProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-4xl xl:text-5xl font-bold text-foreground bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent leading-tight"
+          className="text-3xl sm:text-4xl  xl:text-5xl font-bold
+           text-foreground bg-gradient-to-r 
+           from-foreground to-muted-foreground 
+           bg-clip-text  leading-tight"
         >
           {skills.title}
         </motion.h3>
@@ -40,7 +43,9 @@ export function Skills({ skills }: IskillsProps) {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="w-full  xl:mx-0 "
         >
-          <p className="text-muted-foreground text-lg xl:text-xl leading-relaxed text-center xl:text-left">
+          <p className="text-muted-foreground
+           text-lg xl:text-xl 
+           leading-relaxed  xl:text-left text-justify px-4">
             {skills.description}
           </p>
         </motion.div>
@@ -68,7 +73,7 @@ export function Skills({ skills }: IskillsProps) {
                     {item.icon}
                   </div>
                   <div className="text-center space-y-2">
-                    <p className="text-sm xl:text-base font-bold text-foreground group-hover:text-accent transition-colors duration-300 leading-tight">
+                    <p className="text-sm xl:text-base font-bold text-foreground group-hover:text-accent transition-colors duration-300 leading-tight text-justify">
                       {item.name}
                     </p>
                   </div>
@@ -78,11 +83,11 @@ export function Skills({ skills }: IskillsProps) {
                   className="bg-card border border-border shadow-lg p-4"
                 >
                   <div className="text-center space-y-2">
-                    <p className="text-lg font-bold text-foreground">
+                    <p className="text-lg font-bold text-foreground text-justify">
                       {item.name}
                     </p>
                     {item.description && (
-                      <p className="text-sm text-muted-foreground max-w-48 leading-relaxed">
+                      <p className="text-sm text-muted-foreground max-w-48 leading-relaxed text-justify">
                         {item.description}
                       </p>
                     )}

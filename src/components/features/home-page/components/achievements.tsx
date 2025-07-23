@@ -37,19 +37,19 @@ export function Achievements() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.4 }}
-      className="py-20"
+      className="sm:py-10   "
     >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 xl:mb-16"
         >
           <h2 className="text-4xl xl:text-5xl font-bold text-foreground mb-6">
             Key <span className="text-accent">Achievements</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto text-justify xl:text-center">
             Proven track record of delivering exceptional results and driving
             innovation
           </p>

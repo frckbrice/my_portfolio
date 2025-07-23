@@ -1090,7 +1090,7 @@ export function CVDownload() {
           <div className="project-item">
             <h3 className="project-title">
               <a
-                href="https://github.com/frckbrice/ra-mobile-project"
+                href="https://github.com/frckbrice/rainforest-alliance-mobile-app"
                 className="project-link"
               >
                 RainForest Alliance - Cocoa Management Mobile App
@@ -1112,7 +1112,7 @@ export function CVDownload() {
           <div className="project-item">
             <h3 className="project-title">
               <a
-                href="https://github.com/frckbrice/real-time-collaborative-plateform"
+                href="https://github.com/frckbrice/collaborative-platform"
                 className="project-link"
               >
                 Real-time Collaborative Platform

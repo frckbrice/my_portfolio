@@ -173,7 +173,7 @@ export function Contact({ infos, inputs }: IContactProps) {
                   </span>{' '}
                   Why work with me?
                 </h4>
-                <p className="text-foreground mb-4">
+                <p className="text-foreground mb-4 text-justify  ">
                   Innovative problem-solver with a passion for crafting
                   high-performance, scalable web & mobile applications.
                   Expertise in modern tech stacks, including{' '}
@@ -187,20 +187,20 @@ export function Contact({ infos, inputs }: IContactProps) {
                   code at a time.
                 </p>
                 <ul className="mb-4 space-y-2 text-base text-muted-foreground">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 text-justify ">
                     <span className="text-accent">✔</span> Full-stack
                     proficiency – From UI/UX (React, Angular) to backend
                     (Node.js) and cloud integrations.
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 text-justify ">
                     <span className="text-accent">✔</span> Mobile-first mindset
-                    – Skilled in React Native for cross-platform excellence.
+                    – Skilled in React Native & Expo for cross-platform excellence.
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 text-justify ">
                     <span className="text-accent">✔</span> Performance-driven –
                     Build scalable apps that handle real-world demands.
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 text-justify ">
                     <span className="text-accent">✔</span> Collaborative &
                     adaptable – Thrive in agile teams, startups, or enterprise
                     environments.
@@ -227,7 +227,7 @@ export function Contact({ infos, inputs }: IContactProps) {
               <h3 className="text-3xl font-bold text-foreground mb-2">
                 Let's work together
               </h3>
-              <p className="text-muted-foreground mb-8 ">
+              <p className="text-muted-foreground mb-8 text-justify">
                 Ready to bring your ideas to life? Whether you need a full-stack
                 application, mobile app, or custom software solution, I'm here
                 to help. Let's discuss your project requirements and create

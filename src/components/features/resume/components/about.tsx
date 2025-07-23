@@ -100,7 +100,10 @@ export function About({ aboutMe }: IAboutProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-4xl xl:text-5xl font-bold  bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent leading-tight"
+          className="text-3xl sm:text-4xl xl:text-5xl font-bold
+           text-foreground bg-gradient-to-r 
+           from-foreground to-muted-foreground 
+           bg-clip-text  leading-tight"
         >
           {aboutMe.title}
         </motion.h3>
@@ -110,7 +113,9 @@ export function About({ aboutMe }: IAboutProps) {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="w-full  xl:mx-0"
         >
-          <p className="text-muted-foreground text-lg xl:text-xl leading-relaxed text-center xl:text-left">
+          <p className="text-muted-foreground 
+          text-lg xl:text-xl leading-relaxed 
+           xl:text-left text-justify px-4">
             {aboutMe.description}
           </p>
         </motion.div>

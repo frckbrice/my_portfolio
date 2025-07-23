@@ -11,7 +11,7 @@ export function CTASection() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.5 }}
-      className="py-20 gradient-primary"
+      className="sm:py-10  gradient-primary"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -24,7 +24,7 @@ export function CTASection() {
             Ready to Build Something{' '}
             <span className="text-accent">Amazing?</span>
           </h2>
-          <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+          <p className="text-muted-foreground text-lg mb-8 leading-relaxed text-justify xl:text-center">
             Let's collaborate to bring your ideas to life. Whether you need a
             new website, mobile app, or complex software solution, I'm here to
             help you succeed.

@@ -17,6 +17,8 @@ import {
   SiMongoose,
   SiDrizzle,
   SiNodedotjs,
+  SiGit,
+  SiDocker,
 } from 'react-icons/si';
 import { Search, Accessibility, Zap } from 'lucide-react';
 
@@ -207,6 +209,15 @@ export const skills: Partial<ExperienceType> = {
     {
       icon: <FaCss3 />,
       name: 'CSS3',
+    },
+    {
+      // git
+      icon: <SiGit />,
+      name: 'Git',
+    },
+    {
+      icon: <SiDocker />,
+      name: 'Docker',
     },
   ],
 };

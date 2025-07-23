@@ -154,10 +154,11 @@ export function GitHubProjectsSection({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="py-16 xl:px-0"
+      className="py-4 sm:py-10 pb-16"
     >
       {/* add separator between work experience and github projects */}
-      {isInWorkExperience && <div className="h-16 w-full my-16"></div>}
+      {isInWorkExperience && <div className=" w-full my-10"></div>}
+
       <div className="container mx-auto">
         {/* Section Header */}
         <motion.div
@@ -170,7 +171,8 @@ export function GitHubProjectsSection({
             {filterInfo ? `${filterInfo.title} ` : ''}
             <span className="text-accent">Projects</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground 
+          text-lg max-w-2xl mx-auto text-justify ">
             {filterInfo
               ? `Projects related to ${filterInfo.title.toLowerCase()}`
               : 'A showcase of my latest repositories and contributions. Each project demonstrates different technologies and problem-solving approaches.'}

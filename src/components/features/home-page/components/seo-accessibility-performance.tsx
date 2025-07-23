@@ -95,7 +95,7 @@ export function SEOAccessibilityPerformance() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="py-20 bg-gradient-to-b from-background to-muted/20"
+      className="sm:py-10 xl:py-20 bg-gradient-to-b from-background to-muted/20"
     >
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -103,12 +103,12 @@ export function SEOAccessibilityPerformance() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 xl:mb-16"
         >
           <h2 className="text-4xl xl:text-5xl font-bold text-foreground mb-6">
             Modern Web <span className="text-accent">Excellence</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto text-justify xl:text-center">
             This portfolio demonstrates advanced expertise in SEO,
             accessibility, and performance optimization - the three pillars of
             modern web development that ensure your digital presence reaches its

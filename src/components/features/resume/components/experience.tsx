@@ -27,7 +27,10 @@ export function Experience({ experience }: IExperienceProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-4xl xl:text-5xl font-bold text-foreground bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent leading-tight"
+          className="text-3xl sm:text-4xl xl:text-5xl font-bold
+           text-foreground bg-gradient-to-r 
+           from-foreground to-muted-foreground 
+           bg-clip-text  leading-tight"
         >
           {experience.title}
         </motion.h3>
@@ -37,7 +40,9 @@ export function Experience({ experience }: IExperienceProps) {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="w-full  xl:mx-0"
         >
-          <p className="text-muted-foreground text-lg xl:text-xl leading-relaxed text-center xl:text-left">
+          <p className="text-muted-foreground text-lg 
+          sm:text-xl leading-relaxed  
+          sm:text-left text-justify px-4">
             {experience.description}
           </p>
         </motion.div>
@@ -90,7 +95,7 @@ export function Experience({ experience }: IExperienceProps) {
                     {/* Description if available */}
                     {item.description && (
                       <div className="pt-2">
-                        <p className="text-muted-foreground leading-relaxed text-base xl:text-lg">
+                        <p className="text-muted-foreground leading-relaxed text-base xl:text-lg text-justify">
                           {item.description}
                         </p>
                       </div>
