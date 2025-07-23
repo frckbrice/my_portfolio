@@ -102,11 +102,7 @@ The portfolio is designed to be easily customizable:
 
 ## Licence
 
-private
-
-## 📄 License
-
-private
+ISC
 
 
 ## 🤝 Contact
