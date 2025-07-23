@@ -32,7 +32,7 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 - **Prettier**
 - **ESLint**
 - **TypeScript**
-- **Vites**
+- **Vitest**
 - **playright**
 - **.gitignore**
 
