@@ -35,7 +35,8 @@ export function Homepage({
               <h1 className="text-[24px] sm:text-3xl xl:text-4xl font-semibold mb-6">
                 Hello! I'm <span className="text-accent">AVOM Brice</span>
                 <span className="block sm:hidden font-medium text-[24px] sm:text-3xl xl:text-4xl">
-                  <br />Full-Stack Software Engineer
+                  <br />
+                  Full-Stack Software Engineer
                 </span>
               </h1>
               <p className="text-justify max-w-[500px] mb-6 sm:mb-8 text-muted-foreground pb-4">
