@@ -40,9 +40,11 @@ export function Experience({ experience }: IExperienceProps) {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="w-full  xl:mx-0"
         >
-          <p className="text-muted-foreground text-lg 
+          <p
+            className="text-muted-foreground text-lg 
           sm:text-xl leading-relaxed  
-          sm:text-left text-justify px-4">
+          sm:text-left text-justify px-4"
+          >
             {experience.description}
           </p>
         </motion.div>

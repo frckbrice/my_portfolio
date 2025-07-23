@@ -32,15 +32,19 @@ export function Homepage({
           <div className="flex flex-col xl:flex-row items-center justify-between ">
             {/* text */}
             <div className="text-center xl:text-left order-2 xl:order-none">
-              <h1 className="text-[24px] sm:text-3xl xl:text-4xl font-semibold mb-6 ">
+              <div className="text-[24px] sm:text-3xl xl:text-4xl font-semibold mb-6 ">
                 Hello! I'm <br />
                 <span className="text-accent">AVOM Brice</span>
                 <h3 className="sm:hidden font-medium text-[24px] sm:text-3xl xl:text-4xl">
                   Full-Stack Software Engineer
                 </h3>
-              </h1>
+              </div>
               <p className="text-justify max-w-[500px] mb-6 sm:mb-8 text-muted-foreground pb-4">
-                Passionate full-stack developer with expertise in modern web technologies. I specialize in building scalable, high-performance applications using JavaScript/TypeScript, React, React-native, angular2, Node.js, and cloud technologies. Let's turn your ideas into exceptional digital experiences.
+                Passionate full-stack developer with expertise in modern web
+                technologies. I specialize in building scalable,
+                high-performance applications using JavaScript/TypeScript,
+                React, React-native, angular2, Node.js, and cloud technologies.
+                Let's turn your ideas into exceptional digital experiences.
               </p>
               {/* button and socials */}
               <div className=" flex flex-col gap-6 xl:flex-row items-center">

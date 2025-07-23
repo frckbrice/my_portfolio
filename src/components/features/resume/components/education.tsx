@@ -39,9 +39,11 @@ export function Education({ education }: IEducationProps) {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="w-full  xl:mx-0 max-w-[768px]"
         >
-          <p className="text-muted-foreground 
+          <p
+            className="text-muted-foreground 
             text-lg xl:text-xl leading-relaxed 
-          xl:text-left text-justify px-4">
+          xl:text-left text-justify px-4"
+          >
             {education.description}
           </p>
         </motion.div>

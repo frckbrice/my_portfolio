@@ -16,9 +16,7 @@ export function Stats({ statData }: IStatsProps) {
   return (
     <section className="py-10 xl:py-20">
       <div className="container mx-auto">
-        <div
-          className="grid grid-cols-2 gap-4 max-w-[90vw] mx-auto xl:mx-w-none xl:flex xl:flex-row xl:flex-wrap xl:gap-6"
-        >
+        <div className="grid grid-cols-2 gap-4 max-w-[90vw] mx-auto xl:mx-w-none xl:flex xl:flex-row xl:flex-wrap xl:gap-6">
           {statData.map(({ num, text }, index) => (
             <div
               key={index}

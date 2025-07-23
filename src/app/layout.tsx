@@ -5,7 +5,11 @@ import './globals.css';
 /** Components */
 import { HeaderInterface } from '@/components/features/header';
 import { ThemeProvider as ThemeClientProvider } from '@/app/theme-provider';
-import { PageTransition, StairTransionInterface } from '@/components/global';
+import {
+  PageTransition,
+  StairTransionInterface,
+  AccessibilityFab,
+} from '@/components/global';
 import Footer from '@/components/features/footer';
 
 const jetBrainsMono = JetBrains_Mono({
@@ -134,6 +138,7 @@ export default function RootLayout({
           <HeaderInterface />
           <StairTransionInterface />
           <PageTransition>{children}</PageTransition>
+          <AccessibilityFab />
           <Footer />
         </ThemeClientProvider>
       </body>

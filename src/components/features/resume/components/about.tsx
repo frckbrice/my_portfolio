@@ -113,9 +113,11 @@ export function About({ aboutMe }: IAboutProps) {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="w-full  xl:mx-0"
         >
-          <p className="text-muted-foreground 
+          <p
+            className="text-muted-foreground 
           text-lg xl:text-xl leading-relaxed 
-           xl:text-left text-justify px-4">
+           xl:text-left text-justify px-4"
+          >
             {aboutMe.description}
           </p>
         </motion.div>

@@ -171,8 +171,10 @@ export function GitHubProjectsSection({
             {filterInfo ? `${filterInfo.title} ` : ''}
             <span className="text-accent">Projects</span>
           </h2>
-          <p className="text-muted-foreground 
-          text-lg max-w-2xl mx-auto text-justify ">
+          <p
+            className="text-muted-foreground 
+          text-lg max-w-2xl mx-auto text-justify "
+          >
             {filterInfo
               ? `Projects related to ${filterInfo.title.toLowerCase()}`
               : 'A showcase of my latest repositories and contributions. Each project demonstrates different technologies and problem-solving approaches.'}

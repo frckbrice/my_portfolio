@@ -45,7 +45,7 @@ function TrustedCompanies() {
             {companyLogos.concat(companyLogos).map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 flex items-center justify-center h-32 w-56 md:h-40 md:w-72 bg-white/95 rounded-xl shadow-lg border border-border overflow-hidden"
+                className="flex-shrink-0 flex items-center justify-center h-32 w-56 md:h-40 md:w-72 bg-card rounded-xl shadow-lg border border-border overflow-hidden theme-transition"
               >
                 <Image
                   src={logo.src}
@@ -55,7 +55,7 @@ function TrustedCompanies() {
                   width={100}
                   height={100}
                   draggable={false}
-                  style={{ background: 'white' }}
+                  style={{ background: 'transparent' }}
                 />
               </div>
             ))}

@@ -94,13 +94,15 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
               </p>
 
               {/* project description */}
-              <p className="text-muted-foreground 
+              <p
+                className="text-muted-foreground 
               text-justify 
               leading-5
               text-base sm:text-lg xl:text-xl 
               px-2 sm:px-0
               sm:text-justify
-              ">
+              "
+              >
                 {project.description}
               </p>
 
@@ -139,12 +141,14 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
               {/* border */}
               <div className="border border-border"></div>
               {/* button */}
-              <div className="space-y-3 p-4 bg-gradient-to-r 
+              <div
+                className="space-y-3 p-4 bg-gradient-to-r 
               from-accent/5 to-accent/10 
               rounded-lg border border-accent/20 
               w-full md:w-fit
               sm:px-4
-              ">
+              "
+              >
                 <p className="text-sm text-accent font-semibold flex items-center gap-2">
                   <span className="w-2 h-2 bg-accent rounded-full"></span>
                   Project Links:
@@ -199,14 +203,17 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
           </div>
           {/* Right: Project Images Carousel */}
           <div className="w-full xl:w-[50%] flex items-center justify-center">
-            <div className="w-full max-w-[95vw] sm:max-w-[500px] 
+            <div
+              className="w-full max-w-[95vw] sm:max-w-[500px] 
             xl:max-w-[600px] 
             mb-8 xl:mb-12 
             relative flex flex-col items-center
             sm:px-4
-            ">
+            "
+            >
               {/* Image carousel for current project */}
-              <div className="w-full h-[80vw] 
+              <div
+                className="w-full h-[80vw] 
                max-h-[500px] 
                sm:h-[60vw] 
                sm:max-h-[700px] 
@@ -218,7 +225,8 @@ export function Work({ works, WorkSliderBtns, ImportantLinks }: IWorkProps) {
                bg-card/20 border border-border 
                rounded-lg overflow-hidden
                sm:px-4
-               ">
+               "
+              >
                 {/* overlay */}
                 <div className="absolute top-0 bottom-0 w-full h-full bg-background/10 z-10"></div>
                 {/* custom image carousel */}

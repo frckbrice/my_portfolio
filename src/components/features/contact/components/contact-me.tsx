@@ -194,7 +194,8 @@ export function Contact({ infos, inputs }: IContactProps) {
                   </li>
                   <li className="flex items-start gap-2 text-justify ">
                     <span className="text-accent">✔</span> Mobile-first mindset
-                    – Skilled in React Native & Expo for cross-platform excellence.
+                    – Skilled in React Native & Expo for cross-platform
+                    excellence.
                   </li>
                   <li className="flex items-start gap-2 text-justify ">
                     <span className="text-accent">✔</span> Performance-driven –
