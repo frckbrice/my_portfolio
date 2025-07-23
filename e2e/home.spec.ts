@@ -5,7 +5,7 @@ test('home page loads and shows main heading and profile image', async ({
 }) => {
   await page.goto('/');
   await expect(
-    page.getByRole('heading', { name: /hello! i'm/i })
+    page.getByRole('heading', { name: /Hello! I'm/i })
   ).toBeVisible();
   await expect(page.locator('img[alt="avom brice"]')).toBeVisible();
 });
