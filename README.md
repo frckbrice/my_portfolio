@@ -14,6 +14,7 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Next.js 15+** - React framework with App Router
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
@@ -22,6 +23,7 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 - **Lucide React** - Beautiful icons
 
 ### Development Tools
+
 - **ESLint** - Code linting
 - **PostCSS** - CSS processing
 - **Yarn** - Package manager
@@ -29,15 +31,13 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 - **GitHub** - Code hosting
 
 ### Code Quality
+
 - **Prettier**
 - **ESLint**
 - **TypeScript**
 - **Vitest**
 - **playright**
 - **.gitignore**
-
-
-
 
 ## 📁 Project Structure
 
@@ -55,23 +55,27 @@ src/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - Yarn package manager
 
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/my-portfolio_update.git
 cd my-portfolio_update/my_portfolio
 ```
 
 2. Install dependencies
+
 ```bash
 yarn install
 ```
 
 3. Run the development server
+
 ```bash
 yarn dev
 ```
@@ -105,7 +109,6 @@ The portfolio is designed to be easily customizable:
 ## Licence
 
 ISC
-
 
 ## 🤝 Contact
 

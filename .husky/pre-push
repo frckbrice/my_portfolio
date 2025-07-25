@@ -1,0 +1,2 @@
+#!/bin/sh
+yarn lint && yarn prettier:check && yarn test:unit

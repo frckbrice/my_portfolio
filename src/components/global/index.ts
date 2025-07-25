@@ -1,8 +1,5 @@
-import { PageTransition } from "./transition";
-import { StairTransionInterface } from "./transition";
+import { PageTransition } from './transition';
+import { StairTransionInterface } from './transition';
 
-
-export {
-    PageTransition,
-    StairTransionInterface,
-}
+export { PageTransition, StairTransionInterface };
+export * from './accessibility';

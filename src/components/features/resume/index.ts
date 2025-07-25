@@ -1,5 +1,3 @@
-import { ResumeInterface } from "./components";
+import { ResumeInterface } from './components';
 
-export {
-    ResumeInterface
-};
+export { ResumeInterface };

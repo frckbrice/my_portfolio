@@ -1,113 +1,167 @@
-import { WorkType } from "./type";
+import { WorkType } from './type';
 
 export const projects: WorkType[] = [
-    {
-        num: "01",
-        category: "Full-Stack",
-        title: "Real-time Collaborative Platform",
-        description: "A sophisticated real-time collaboration tool that enables teams to work together seamlessly. Features include live cursor sharing, real-time document editing, and instant synchronization across multiple workspaces. Built with modern web technologies for optimal performance and user experience.",
-        stack: [
-            {
-                name: "Next.js 14"
-            },
-            {
-                name: "TypeScript"
-            },
-            {
-                name: "Tailwind CSS"
-            },
-            {
-                name: "Supabase"
-            },
-            {
-                name: "Drizzle ORM"
-            },
-            {
-                name: "Stripe"
-            }
-        ],
-        topics: ["fullstack", "real-time", "collaboration", "web-app"],
-        image: "/assets/work/mock1.svg",
-        live: "",
-        github: "https://github.com/frckbrice/real-time-collaborative-plateform"
-    },
-    {
-        num: "02",
-        category: "Backend",
-        title: "E-commerce Backend with Clean Architecture",
-        description: "A robust, framework-agnostic e-commerce backend built with clean architecture principles. Features include comprehensive testing, database independence, and high reusability across different platforms. Implements SOLID principles and design patterns for maintainable, scalable code.",
-        stack: [
-            {
-                name: "JavaScript"
-            },
-            {
-                name: "Node.js"
-            },
-            {
-                name: "MongoDB"
-            },
-        ],
-        topics: ["backend", "e-commerce", "clean-architecture", "api"],
-        image: "/assets/work/mock3.svg",
-        live: "",
-        github: "https://github.com/frckbrice/E-Crce-backend-with_clean_code_arch"
-    },
-    {
-        num: "03",
-        category: "Full-Stack",
-        title: "Digital Marketplace Platform",
-        description: "A comprehensive digital marketplace where users can create accounts, list products, and process secure payments. Features include user authentication, product management, payment processing with Stripe, and a responsive admin dashboard for platform management.",
-        stack: [
-            {
-                name: "Next.js"
-            },
-            {
-                name: "TypeScript"
-            },
-            {
-                name: "Supabase"
-            },
-            {
-                name: "Prisma ORM"
-            },
-            {
-                name: "Stripe"
-            },
-        ],
-        topics: ["fullstack", "marketplace", "e-commerce", "payment"],
-        image: "/assets/work/mock2.svg",
-        live: "",
-        github: "https://github.com/frckbrice/digital-market-place"
-    },
-    {
-        num: "04",
-        category: "Mobile",
-        title: "Cross-Platform Mobile App for RainForest durability cocoa management",
-        description: "A React Native mobile application designed for cocoa company to manage their cocoa farms and farmers and team collaboration. Features include offline functionality, push notifications, real-time updates, and seamless synchronization across devices and also have a web admin dashboard for managing the app.",
-        stack: [
-            {
-                name: "React Native"
-            },
-            {
-                name: "TypeScript"
-            },
-            {
-                name: "Expo"
-            },
-            {
-                name: "Zustand"
-            }
-            ,
-            {
-                name: "MMKV"
-            },
-            {
-                name: "AWS S3"
-            },
-        ],
-        topics: ["mobile", "react-native", "cross-platform", "management"],
-        image: "/assets/work/senwisetoolimage.jpeg",
-        live: "",
-        github: "https://github.com/frckbrice/ra-mobile-project"
-    },
+  {
+    num: '01',
+    category: 'Full-Stack',
+    title: 'Real-time Collaborative Platform',
+    description:
+      'A sophisticated real-time collaboration tool that enables teams to work together seamlessly. Features include live cursor sharing, real-time document editing, and instant synchronization across multiple workspaces. Built with modern web technologies for optimal performance and user experience.',
+    stack: [
+      { name: 'Next.js 14' },
+      { name: 'TypeScript' },
+      { name: 'Tailwind CSS' },
+      { name: 'Supabase' },
+      { name: 'Drizzle ORM' },
+      { name: 'Stripe' },
+    ],
+    topics: [
+      'fullstack',
+      'real-time',
+      'collaboration',
+      'web-app',
+      'stripe',
+      'quill-editor',
+    ],
+    images: [
+      '/assets/work/realtime/realtime_1.png',
+      '/assets/work/realtime/realtime_2.png',
+      '/assets/work/realtime/realtime_3.png',
+      '/assets/work/realtime/realtime_4.png',
+      '/assets/work/realtime/realtime_5.png',
+      '/assets/work/realtime/realtime_6.png',
+      '/assets/work/realtime/realtime_7.png',
+      '/assets/work/realtime/realtime_8.png',
+      '/assets/work/realtime/realtime_9.png',
+      '/assets/work/realtime/realtime_10.png',
+      '/assets/work/realtime/realtime_11.png',
+      '/assets/work/realtime/realtime_12.png',
+      '/assets/work/realtime/realtime_13.png',
+      '/assets/work/realtime/realtime_14.png',
+      //   '/assets/work/realtime/realtime_15.png',
+      //   '/assets/work/realtime/realtime_16.png',
+    ],
+    live: 'https://collaborative-platform-sepia.vercel.app',
+    github: 'https://github.com/frckbrice/collaborative-platform',
+  },
+  {
+    num: '02',
+    category: 'Backend',
+    title: 'E-commerce Backend with Clean Architecture',
+    description:
+      'A robust, framework-agnostic e-commerce backend built with clean architecture principles. Features include comprehensive testing, database independence, and high reusability across different platforms. Implements SOLID principles and design patterns for maintainable, scalable code.',
+    stack: [
+      { name: 'JavaScript' },
+      { name: 'Node.js' },
+      { name: 'MongoDB' },
+      { name: 'Express.js' },
+      //   { name: 'Jest' },
+      { name: 'MongoClient' },
+      //   { name: 'Docker' },
+      //   { name: 'Jest' },
+    ],
+    topics: ['backend', 'e-commerce', 'clean-architecture', 'Rest-api'],
+    images: ['/assets/images/clean-code_arch.jpeg'],
+    live: '',
+    github: 'https://github.com/frckbrice/E-Crce-backend-with_clean_code_arch',
+  },
+  {
+    num: '03',
+    category: 'Frontend',
+    title: 'discover museums around the world',
+    description:
+      'A web application that allows users to discover museums around the world. It is built with Next.js, TypeScript, shadcn/ui, and tailwind css, and @tanstack/react-query. this is a Frontend application that allows users to discover museums around the world.',
+    stack: [
+      { name: 'Next.js' },
+      { name: 'TypeScript' },
+      { name: 'Shadcn/ui' },
+      { name: '@tanstack/react-query' },
+      { name: 'Tailwind css' },
+      { name: 'SEO' },
+      { name: 'Web Accessibility' },
+      { name: 'Performance Optimization' },
+      { name: 'Responsive Design' },
+      { name: 'Security' },
+    ],
+    topics: ['frontend', 'museum', 'world', 'web-app'],
+    images: [
+      '/assets/work/museum/museum_1.png',
+      '/assets/work/museum/museum_2.png',
+      '/assets/work/museum/museum_3.png',
+    ],
+    live: 'https://museumcall.com/',
+    github: 'https://github.com/frckbrice/discover-museums-around-the-world',
+  },
+  {
+    num: '04',
+    category: 'Mobile',
+    title:
+      'Cross-Platform Mobile App for RainForest durability cocoa management',
+    description:
+      'A React Native mobile application designed for cocoa company to manage their cocoa farms and farmers and team collaboration. Features include offline functionality, push notifications, real-time updates, and seamless synchronization across devices and also have a web admin dashboard for managing the app.',
+    stack: [
+      { name: 'React Native' },
+      { name: 'TypeScript' },
+      { name: 'Expo' },
+      { name: 'Zustand' },
+      { name: 'MMKV' },
+      { name: 'AWS S3' },
+    ],
+    topics: ['mobile', 'react-native', 'cross-platform', 'management'],
+    images: ['/assets/work/senwisetoolimage.jpeg'],
+    live: 'https://play.google.com/store/search?q=senwisetool&c=apps',
+    github: 'https://github.com/frckbrice/ra-mobile-project',
+  },
+  {
+    num: '05',
+    category: 'Full-stack',
+    title: 'school website',
+    description: `
+        A Full-stack web application that helps schools showcase their academic activities and also allow a school to manage their students inquiries, applications, display their marks and teachers to add marks in the grade report and also the manager to have more broad digital access to the school data and student information.
+        It is built with Next.js, TypeScript, shadcn/ui, and tailwind css, and @tanstack/react-query for frontend and the backend is built with Next.js api routes, Node.js, Express.js, and postgres for the database.
+        This is a
+        `,
+    stack: [
+      { name: 'Next.js 15 and Api Routes' },
+      { name: 'TypeScript' },
+      { name: 'Shadcn/ui' },
+      { name: '@tanstack/react-query' },
+      { name: 'Node.js' },
+      { name: 'Postgres' },
+      { name: 'Drizzle ORM' },
+      { name: 'Orange CRM' },
+      { name: 'MTN MoMo' },
+      { name: 'Google Mail' },
+      //   { name: 'Google Maps' },
+      //   { name: 'Google Calendar' },
+      //   { name: 'Google Drive' },
+    ],
+    topics: [
+      'fullstack',
+      'school',
+      'management',
+      'web-app',
+      'ORange Money',
+      'MTN Momor',
+    ],
+    images: [
+      '/assets/work/school/gbhs_1.png',
+      '/assets/work/school/gbhs_2.png',
+      '/assets/work/school/gbhs_10.png',
+      '/assets/work/school/gbhs_11.png',
+      '/assets/work/school/gbhs_12.png',
+      '/assets/work/school/gbhs_13.png',
+      '/assets/work/school/gbhs_14.png',
+      '/assets/work/school/gbhs_15.png',
+      '/assets/work/school/gbhs_16.png',
+      '/assets/work/school/gbhs_17.png',
+      '/assets/work/school/gbhs_18.png',
+      '/assets/work/school/gbhs_19.png',
+      '/assets/work/school/gbhs_22.png',
+      '/assets/work/school/gbhs_23.png',
+      '/assets/work/school/gbhs_25.png',
+    ],
+    live: 'https://school-website-one.vercel.app/',
+    github: 'https://github.com/frckbrice/school-website',
+  },
 ];

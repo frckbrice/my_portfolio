@@ -1,5 +1,3 @@
-import { WorkInterface } from "./components";
+import { WorkInterface } from './components';
 
-export {
-    WorkInterface,
-}
+export { WorkInterface };

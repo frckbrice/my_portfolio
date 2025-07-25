@@ -1,7 +1,7 @@
 export interface ServiceType {
-    num: string;
-    title: string;
-    description: string;
-    href: string;
-    filterKeywords?: string[];
+  num: string;
+  title: string;
+  description: string;
+  href: string;
+  filterKeywords?: string[];
 }
