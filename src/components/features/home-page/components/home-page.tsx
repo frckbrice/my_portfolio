@@ -67,29 +67,29 @@ export function Homepage({
         <Stats />
       </section>
       {/* Technical Highlights Section */}
-      <div className="pt-8 xl:pt-20">
-        <TechHighlights />
-      </div>
+      {/* <div className="pt-8 xl:pt-20"> */}
+      <TechHighlights />
+      {/* </div> */}
       {/* Achievements Section */}
       <div className="pt-8 xl:pt-20">
         <Achievements />
       </div>
       {/* SEO, Accessibility & Performance Section */}
-      <div className="pt-8 xl:pt-20">
-        <SEOAccessibilityPerformance />
-      </div>
+      {/* <div className="pt-8 xl:pt-20"> */}
+      <SEOAccessibilityPerformance />
+      {/* </div> */}
       {/* Portfolio Showcase Section */}
-      <div className="pt-8 xl:pt-20">
-        <PortfolioShowcase />
-      </div>
+      {/* <div className="pt-8 xl:pt-20"> */}
+      <PortfolioShowcase />
+      {/* </div> */}
       {/* Trusted Companies Section */}
-      <div className="pt-8 xl:pt-20">
-        <TrustedCompanies />
-      </div>
+      {/* <div className="pt-8 xl:pt-20"> */}
+      <TrustedCompanies />
+      {/* </div> */}
       {/* Call to Action Section */}
-      <div className="pt-8 xl:pt-20">
-        <CTASection />
-      </div>
+      {/* <div className="pt-8 xl:pt-20"> */}
+      <CTASection />
+      {/* </div> */}
     </>
   );
 }
