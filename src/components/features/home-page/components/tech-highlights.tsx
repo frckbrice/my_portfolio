@@ -74,7 +74,7 @@ export function TechHighlights() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="xl:py-20 bg-gradient-to-b from-transparent to-muted/20 dark:to-muted/10"
+      className=" bg-gradient-to-b from-transparent to-muted/20 dark:to-muted/10"
     >
       <div className="container mx-auto px-4">
         <motion.div
