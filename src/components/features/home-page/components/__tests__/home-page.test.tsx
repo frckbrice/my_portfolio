@@ -16,6 +16,7 @@ describe('Homepage', () => {
         PortfolioShowcase={() => <div />}
         CTASection={() => <div />}
         CVDownload={() => <div />}
+        HobbiesInterests={() => <div />}
       />
     );
     expect(
