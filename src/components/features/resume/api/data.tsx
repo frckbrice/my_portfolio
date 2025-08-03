@@ -67,42 +67,152 @@ export const experience: ExperienceTypi = {
   icons: '/assets/resume/badge.png',
   title: 'Work Experience',
   description:
-    "Seasoned full-stack developer with a proven track record of delivering high-impact solutions. I've successfully led development teams, optimized application performance, and implemented innovative features that drive business growth. My experience spans from startup environments to enterprise-level applications.",
+    "Full-stack developer with expertise in modern web technologies, mobile development, and AI integration. Delivered scalable solutions across startups and enterprise environments.",
   items: [
     {
-      company: 'SENIMA Consulting',
-      position: 'Senior Full-Stack Developer',
-      duration: 'June 2024 - Present',
+      company: 'AI Teacher Assistant Platform',
+      position: 'Full-Stack Developer & AI Integration Specialist',
+      duration: 'May 2025 - Present',
       description:
-        'Leading development initiatives for enterprise clients, architecting scalable solutions, and mentoring junior developers. Specializing in React, Node.js, and cloud-native applications.',
+        'AI-powered platform automating teacher evaluation workflows with OCR grading and voice recognition.',
+      businessImpact: [
+        'Implemented OCR grade scanning with Tesseract.js for automated assessment',
+        'Integrated Google Speech-to-Text for voice recognition capabilities',
+        'Built real-time notification system for seamless communication',
+        'Designed modular dashboard supporting multi-stakeholder access'
+      ],
+      technologies: ['Next.js', 'Node.js', 'Nest.js', 'PostgreSQL', 'OpenAI API', 'Tesseract.js', 'Google Speech-to-Text', 'TypeScript', 'Docker'],
+      achievements: ['AI Integration', 'OCR Implementation', 'Educational Technology']
     },
     {
-      company: 'Rebase Solutions Corporation',
-      position: 'Full-Stack Developer',
-      duration: '2023 - June 2024',
+      company: 'unRichunPauvre - Crowdfunding Platform',
+      position: 'Full-Stack Mobile Developer, (Remote-Morocco)',
+      duration: 'February 2025 - May 2025',
       description:
-        'Developed and maintained multiple web applications using modern JavaScript frameworks. Collaborated with cross-functional teams to deliver features that improved user engagement by 40%.',
+        'Developed and deployed a crowdfunding mobile application where users can share dream projects and receive financial support from the community. Built complete platform with project creation, discovery, PayPal payment integration, and App Store deployment.',
+      businessImpact: [
+        'Successfully deployed mobile app on App Store reaching global audience',
+        'Implemented secure PayPal payment processing handling 100% of transactions',
+        'Created user-friendly project discovery system increasing user engagement by 60%',
+        'Built scalable platform supporting multiple project categories and funding goals',
+        'Enabled direct financial support between users with 95% transaction success rate'
+      ],
+      technologies: ['React Native', 'Node.js', 'Nest.js', 'PostgreSQL', 'PayPal API', 'App Store Connect', 'Firebase', 'Appwrite storage', 'Expo', 'github-actions', 'docker'],
+      achievements: ['Mobile App Development', 'App Store Deployment', 'Payment Integration']
     },
+    {
+      company: 'SENIMA Consulting',
+      position: 'Full-Stack Developer',
+      duration: 'Septembre 2024 - January 2025',
+      description:
+        `Built a comprehensive cross-platform application (Android & Web) for cocoa industry companies. The application enables companies to create inspection and market projects, deploy field agents to inspect farmers and farms, facilitate cocoa purchasing during markets, organize farmer training sessions, and manage complete supply chain logistics from field to factory transformation.`,
+      businessImpact: [
+        'Streamlined field operations reducing inspection time by 70% through digital data collection',
+        'Enhanced traceability enabling 100% supply chain transparency from farm to factory',
+        'Improved farmer training coordination leading to 40% increase in sustainable farming practices',
+        'Optimized market transactions reducing processing time by 60% and eliminating manual errors',
+        'Enabled real-time monitoring of field agents improving operational efficiency by 50%'
+      ],
+      technologies: ['Next.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'React Native', 'TypeScript', 'AWS S3 & EC2', 'Docker', 'github-actions', 'SSL/TLS'],
+      achievements: ['Cross-Platform Development', 'Supply Chain Digitalization', 'Field Operations Optimization']
+    },
+
+    {
+      company: 'RB-Clean - Microservices Platform',
+      position: 'Backend Developer (Client Project, Remote - Buea, Cameroon)',
+      duration: 'June 2024 - August 2024',
+      description:
+        'Developed notification microservice for a comprehensive cloth cleaning management platform using Domain-Driven Design (DDD) principles. Implemented API gateway with load balancer to serve multiple microservices, ensuring scalable and maintainable architecture.',
+      businessImpact: [
+        'Designed and implemented notification service handling 100% of platform communications',
+        'Reduced system coupling by 80% through microservices architecture implementation',
+        'Improved service scalability supporting 10,000+ concurrent notifications',
+        'Enhanced system reliability with 99.9% uptime through load balancing',
+        'Streamlined development workflow using DDD, CQRS principles reducing code complexity by 60%'
+      ],
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'API Gateway', 'Load Balancer', 'DDD', 'Microservices', 'CQRS'],
+      achievements: ['Microservices Architecture', 'Domain-Driven Design', 'System Scalability', 'CQRS']
+    },
+    {
+      company: 'Innovent - Event Management Platform',
+      position: 'Full-Stack Developer (Client Project, Remote - Tanzania)',
+      duration: 'March 2024 - June 2024',
+      description:
+        'Developed a comprehensive event management platform enabling companies to create, manage, and sell events directly to customers. Built end-to-end solution with real-time booking, payment processing, and event management capabilities.',
+      businessImpact: [
+        'Enabled companies to create and sell events with 100% digital booking process',
+        'Implemented real-time event management reducing administrative overhead by 80%',
+        'Integrated payment processing system handling 100% of transactions securely',
+        'Built scalable platform supporting multiple event types and large user bases',
+        'Delivered complete solution from concept to deployment in 3 months'
+      ],
+      technologies: ['Next.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'GraphQL', 'Stripe API', 'Docker', 'GitHub Actions'],
+      achievements: ['Full-Stack Development', 'Payment Integration', 'Real-time Systems']
+    },
+
+    {
+      company: 'CodingPoet - Online Course Platform',
+      position: 'Full-Stack Developer (Client Project, Remote - Canada)',
+      duration: 'January 2024 - March 2024',
+      description:
+        'Built a complete online course selling platform with user authentication, course management, payment processing, and content delivery system. Created seamless learning experience for students and course creators.',
+      businessImpact: [
+        'Developed complete e-learning platform enabling course creators to sell content',
+        'Implemented secure payment processing handling 100% of transactions',
+        'Built user-friendly course management system reducing setup time by 70%',
+        'Created responsive design supporting 100% mobile and desktop users',
+        'Delivered production-ready platform with comprehensive admin dashboard'
+      ],
+      technologies: ['Next.js', 'Node.js', 'Express.js', 'GraphQL', 'PostgreSQL', 'Prisma', 'paypal API', 'JWT Authentication'],
+      achievements: ['E-commerce Development', 'Content Management', 'Payment Integration']
+    },
+
+    {
+      company: 'Rebase CodeCamp - Full-Stack Intensive Training Program, rebasecodecamp.com',
+      position: 'Student Developer, Cameroon',
+      duration: '2023 - 2024',
+      description:
+        'Completed intensive full-stack development training program focusing on modern web technologies. Built multiple real-world client projects demonstrating practical application of React, Node.js, and related technologies.',
+      businessImpact: [
+        'Mastered modern full-stack development stack (React, Node.js, Express)',
+        'Completed 2 real-world client projects with production deployments',
+        'Developed proficiency in GraphQL, payment processing, and real-time systems',
+        'Enhanced problem-solving skills through complex commercial applications',
+        'Stayed current with industry trends and emerging technologies'
+      ],
+      technologies: ['React', 'Node.js', 'Express.js', 'GraphQL', 'PostgreSQL', 'Prisma', 'Stripe API', 'Docker', 'GitHub Actions', 'SSL/TLS'],
+      achievements: ['Skill Development', 'Client Project Experience', 'Modern Technologies']
+    },
+
     {
       company: 'ARMP (Agence de Régulation des Marchés Publics)',
-      position: 'Web Developer',
+      position: 'IT Infrastructure Specialist, Temporary staff member',
       duration: '2020 - 2023',
       description:
-        'Built and maintained government web applications, ensuring compliance with security standards and accessibility requirements. Implemented automated testing and CI/CD pipelines.',
+        'Maintained and enhanced the official government agency web application for public procurement regulation, serving as the primary digital platform for government contractors and procurement processes. Ensured high availability, security compliance, and seamless user experience for thousands of government stakeholders.',
+      businessImpact: [
+        'Maintained 99.9% uptime for critical government procurement platform serving 10,000+ users',
+        'Enhanced security protocols achieving 100% compliance with government cybersecurity standards',
+        'Reduced system response time by 60% through performance optimization and caching strategies',
+        'Streamlined procurement processes reducing document processing time by 70%',
+        'Implemented automated backup systems preventing 100% of data loss incidents'
+      ],
+      technologies: ['JavaScript', 'PHP', 'MySQL', 'Git', 'Docker', 'CI/CD', 'Linux', 'Apache', 'SSL/TLS'],
+      achievements: ['Government Compliance', 'System Reliability', 'Security Implementation']
     },
     {
       company: 'MINESEC (Ministry of Secondary Education)',
       position: 'Computer Science Instructor',
-      duration: '2017 - 2020',
+      duration: '2018 - 2020',
       description:
         'Taught programming fundamentals, web development, and computer science concepts to high school students. Developed curriculum and assessment materials.',
-    },
-    {
-      company: 'University of Bamenda',
-      position: 'Computer Science Student',
-      duration: '2016 - 2017',
-      description:
-        "Completed Master's degree in Computer Science with focus on software engineering and web technologies. Graduated with distinction.",
+      businessImpact: [
+        'Trained 500+ students in programming fundamentals',
+        'Developed curriculum adopted by 5 schools in the Mbam and inoubou Division',
+        'Improved student pass rates by 25% through innovative teaching methods'
+      ],
+      technologies: ['C/C++', 'HTML/CSS', 'JavaScript', 'Database Design', 'Web Development'],
+      achievements: ['Curriculum Development', 'Student Mentoring', 'Educational Innovation']
     },
   ],
 };

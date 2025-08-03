@@ -33,7 +33,7 @@ export function Photos() {
                      "
         >
           <Image
-            src="/assets/images/moi_2.jpeg"
+            src="/assets/images/moi_3.jpeg"
             alt="avom brice"
             className="object-cover rounded-full border-none"
             fill

@@ -1,7 +1,7 @@
 // libraries
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Building2, ArrowRight } from 'lucide-react';
+import { Calendar, MapPin, Building2, ArrowRight, TrendingUp, Code, Award } from 'lucide-react';
 
 import { ScrollArea } from '@/components/ui/scroll-area';
 // type
@@ -51,7 +51,7 @@ export function Experience({ experience }: IExperienceProps) {
       </div>
 
       {/* Experience Cards */}
-      <ScrollArea className="h-[500px] xl:h-[600px] pr-4">
+      <ScrollArea className="h-[500px] xl:h-[800px] pr-4">
         <div className="space-y-8">
           {experience.items.map((item, index) => (
             <motion.div
@@ -97,17 +97,77 @@ export function Experience({ experience }: IExperienceProps) {
                     {/* Description if available */}
                     {item.description && (
                       <div className="pt-2">
-                        <p className="text-muted-foreground leading-relaxed text-base xl:text-lg text-justify">
+                        <p className="text-muted-foreground leading-relaxed text-base xl:text-md text-justify">
                           {item.description}
                         </p>
+                      </div>
+                    )}
+
+                    {/* Business Impact Section */}
+                    {item.businessImpact && item.businessImpact.length > 0 && (
+                      <div className="pt-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <TrendingUp className="w-5 h-5 text-green-500" />
+                          <h4 className="text-lg font-semibold text-foreground">Business Impact</h4>
+                        </div>
+                        <ul className="space-y-2">
+                          {item.businessImpact.map((impact, impactIndex) => (
+                            <li key={impactIndex} className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="text-sm text-muted-foreground leading-relaxed">
+                                {impact}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Technologies Section */}
+                    {item.technologies && item.technologies.length > 0 && (
+                      <div className="pt-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Code className="w-5 h-5 text-blue-500" />
+                          <h4 className="text-lg font-semibold text-foreground">Technologies</h4>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {item.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="px-3 py-1 bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-medium rounded-full border border-blue-500/20"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Key Achievements Section */}
+                    {item.achievements && item.achievements.length > 0 && (
+                      <div className="pt-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Award className="w-5 h-5 text-yellow-500" />
+                          <h4 className="text-lg font-semibold text-foreground">Key Achievements</h4>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {item.achievements.map((achievement, achievementIndex) => (
+                            <span
+                              key={achievementIndex}
+                              className="px-3 py-1 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 text-xs font-medium rounded-full border border-yellow-500/20"
+                            >
+                              {achievement}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
 
                   {/* Arrow indicator */}
-                  <div className="hidden xl:flex items-center justify-center w-8 h-8 bg-accent/10 rounded-full group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  {/* <div className="hidden xl:flex items-center justify-center w-8 h-8 bg-accent/10 rounded-full group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
                     <ArrowRight className="w-4 h-4 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
