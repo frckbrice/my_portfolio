@@ -67,7 +67,7 @@ export const experience: ExperienceTypi = {
   icons: '/assets/resume/badge.png',
   title: 'Work Experience',
   description:
-    "Full-stack developer with expertise in modern web technologies, mobile development, and AI integration. Delivered scalable solutions across startups and enterprise environments.",
+    'Full-stack developer with expertise in modern web technologies, mobile development, and AI integration. Delivered scalable solutions across startups and enterprise environments.',
   items: [
     {
       company: 'AI Teacher Assistant Platform',
@@ -79,10 +79,24 @@ export const experience: ExperienceTypi = {
         'Implemented OCR grade scanning with Tesseract.js for automated assessment',
         'Integrated Google Speech-to-Text for voice recognition capabilities',
         'Built real-time notification system for seamless communication',
-        'Designed modular dashboard supporting multi-stakeholder access'
+        'Designed modular dashboard supporting multi-stakeholder access',
       ],
-      technologies: ['Next.js', 'Node.js', 'Nest.js', 'PostgreSQL', 'OpenAI API', 'Tesseract.js', 'Google Speech-to-Text', 'TypeScript', 'Docker'],
-      achievements: ['AI Integration', 'OCR Implementation', 'Educational Technology']
+      technologies: [
+        'Next.js',
+        'Node.js',
+        'Nest.js',
+        'PostgreSQL',
+        'OpenAI API',
+        'Tesseract.js',
+        'Google Speech-to-Text',
+        'TypeScript',
+        'Docker',
+      ],
+      achievements: [
+        'AI Integration',
+        'OCR Implementation',
+        'Educational Technology',
+      ],
     },
     {
       company: 'unRichunPauvre - Crowdfunding Platform',
@@ -95,26 +109,56 @@ export const experience: ExperienceTypi = {
         'Implemented secure PayPal payment processing handling 100% of transactions',
         'Created user-friendly project discovery system increasing user engagement by 60%',
         'Built scalable platform supporting multiple project categories and funding goals',
-        'Enabled direct financial support between users with 95% transaction success rate'
+        'Enabled direct financial support between users with 95% transaction success rate',
       ],
-      technologies: ['React Native', 'Node.js', 'Nest.js', 'PostgreSQL', 'PayPal API', 'App Store Connect', 'Firebase', 'Appwrite storage', 'Expo', 'github-actions', 'docker'],
-      achievements: ['Mobile App Development', 'App Store Deployment', 'Payment Integration']
+      technologies: [
+        'React Native',
+        'Node.js',
+        'Nest.js',
+        'PostgreSQL',
+        'PayPal API',
+        'App Store Connect',
+        'Firebase',
+        'Appwrite storage',
+        'Expo',
+        'github-actions',
+        'docker',
+      ],
+      achievements: [
+        'Mobile App Development',
+        'App Store Deployment',
+        'Payment Integration',
+      ],
     },
     {
       company: 'SENIMA Consulting',
       position: 'Full-Stack Developer',
       duration: 'Septembre 2024 - January 2025',
-      description:
-        `Built a comprehensive cross-platform application (Android & Web) for cocoa industry companies. The application enables companies to create inspection and market projects, deploy field agents to inspect farmers and farms, facilitate cocoa purchasing during markets, organize farmer training sessions, and manage complete supply chain logistics from field to factory transformation.`,
+      description: `Built a comprehensive cross-platform application (Android & Web) for cocoa industry companies. The application enables companies to create inspection and market projects, deploy field agents to inspect farmers and farms, facilitate cocoa purchasing during markets, organize farmer training sessions, and manage complete supply chain logistics from field to factory transformation.`,
       businessImpact: [
         'Streamlined field operations reducing inspection time by 70% through digital data collection',
         'Enhanced traceability enabling 100% supply chain transparency from farm to factory',
         'Improved farmer training coordination leading to 40% increase in sustainable farming practices',
         'Optimized market transactions reducing processing time by 60% and eliminating manual errors',
-        'Enabled real-time monitoring of field agents improving operational efficiency by 50%'
+        'Enabled real-time monitoring of field agents improving operational efficiency by 50%',
       ],
-      technologies: ['Next.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'React Native', 'TypeScript', 'AWS S3 & EC2', 'Docker', 'github-actions', 'SSL/TLS'],
-      achievements: ['Cross-Platform Development', 'Supply Chain Digitalization', 'Field Operations Optimization']
+      technologies: [
+        'Next.js',
+        'Nest.js',
+        'PostgreSQL',
+        'Prisma',
+        'React Native',
+        'TypeScript',
+        'AWS S3 & EC2',
+        'Docker',
+        'github-actions',
+        'SSL/TLS',
+      ],
+      achievements: [
+        'Cross-Platform Development',
+        'Supply Chain Digitalization',
+        'Field Operations Optimization',
+      ],
     },
 
     {
@@ -128,10 +172,27 @@ export const experience: ExperienceTypi = {
         'Reduced system coupling by 80% through microservices architecture implementation',
         'Improved service scalability supporting 10,000+ concurrent notifications',
         'Enhanced system reliability with 99.9% uptime through load balancing',
-        'Streamlined development workflow using DDD, CQRS principles reducing code complexity by 60%'
+        'Streamlined development workflow using DDD, CQRS principles reducing code complexity by 60%',
       ],
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'API Gateway', 'Load Balancer', 'DDD', 'Microservices', 'CQRS'],
-      achievements: ['Microservices Architecture', 'Domain-Driven Design', 'System Scalability', 'CQRS']
+      technologies: [
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Redis',
+        'Docker',
+        'Kubernetes',
+        'API Gateway',
+        'Load Balancer',
+        'DDD',
+        'Microservices',
+        'CQRS',
+      ],
+      achievements: [
+        'Microservices Architecture',
+        'Domain-Driven Design',
+        'System Scalability',
+        'CQRS',
+      ],
     },
     {
       company: 'Innovent - Event Management Platform',
@@ -144,10 +205,24 @@ export const experience: ExperienceTypi = {
         'Implemented real-time event management reducing administrative overhead by 80%',
         'Integrated payment processing system handling 100% of transactions securely',
         'Built scalable platform supporting multiple event types and large user bases',
-        'Delivered complete solution from concept to deployment in 3 months'
+        'Delivered complete solution from concept to deployment in 3 months',
       ],
-      technologies: ['Next.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'GraphQL', 'Stripe API', 'Docker', 'GitHub Actions'],
-      achievements: ['Full-Stack Development', 'Payment Integration', 'Real-time Systems']
+      technologies: [
+        'Next.js',
+        'Node.js',
+        'Express.js',
+        'PostgreSQL',
+        'Prisma',
+        'GraphQL',
+        'Stripe API',
+        'Docker',
+        'GitHub Actions',
+      ],
+      achievements: [
+        'Full-Stack Development',
+        'Payment Integration',
+        'Real-time Systems',
+      ],
     },
 
     {
@@ -161,14 +236,28 @@ export const experience: ExperienceTypi = {
         'Implemented secure payment processing handling 100% of transactions',
         'Built user-friendly course management system reducing setup time by 70%',
         'Created responsive design supporting 100% mobile and desktop users',
-        'Delivered production-ready platform with comprehensive admin dashboard'
+        'Delivered production-ready platform with comprehensive admin dashboard',
       ],
-      technologies: ['Next.js', 'Node.js', 'Express.js', 'GraphQL', 'PostgreSQL', 'Prisma', 'paypal API', 'JWT Authentication'],
-      achievements: ['E-commerce Development', 'Content Management', 'Payment Integration']
+      technologies: [
+        'Next.js',
+        'Node.js',
+        'Express.js',
+        'GraphQL',
+        'PostgreSQL',
+        'Prisma',
+        'paypal API',
+        'JWT Authentication',
+      ],
+      achievements: [
+        'E-commerce Development',
+        'Content Management',
+        'Payment Integration',
+      ],
     },
 
     {
-      company: 'Rebase CodeCamp - Full-Stack Intensive Training Program, rebasecodecamp.com',
+      company:
+        'Rebase CodeCamp - Full-Stack Intensive Training Program, rebasecodecamp.com',
       position: 'Student Developer, Cameroon',
       duration: '2023 - 2024',
       description:
@@ -178,10 +267,25 @@ export const experience: ExperienceTypi = {
         'Completed 2 real-world client projects with production deployments',
         'Developed proficiency in GraphQL, payment processing, and real-time systems',
         'Enhanced problem-solving skills through complex commercial applications',
-        'Stayed current with industry trends and emerging technologies'
+        'Stayed current with industry trends and emerging technologies',
       ],
-      technologies: ['React', 'Node.js', 'Express.js', 'GraphQL', 'PostgreSQL', 'Prisma', 'Stripe API', 'Docker', 'GitHub Actions', 'SSL/TLS'],
-      achievements: ['Skill Development', 'Client Project Experience', 'Modern Technologies']
+      technologies: [
+        'React',
+        'Node.js',
+        'Express.js',
+        'GraphQL',
+        'PostgreSQL',
+        'Prisma',
+        'Stripe API',
+        'Docker',
+        'GitHub Actions',
+        'SSL/TLS',
+      ],
+      achievements: [
+        'Skill Development',
+        'Client Project Experience',
+        'Modern Technologies',
+      ],
     },
 
     {
@@ -195,10 +299,24 @@ export const experience: ExperienceTypi = {
         'Enhanced security protocols achieving 100% compliance with government cybersecurity standards',
         'Reduced system response time by 60% through performance optimization and caching strategies',
         'Streamlined procurement processes reducing document processing time by 70%',
-        'Implemented automated backup systems preventing 100% of data loss incidents'
+        'Implemented automated backup systems preventing 100% of data loss incidents',
       ],
-      technologies: ['JavaScript', 'PHP', 'MySQL', 'Git', 'Docker', 'CI/CD', 'Linux', 'Apache', 'SSL/TLS'],
-      achievements: ['Government Compliance', 'System Reliability', 'Security Implementation']
+      technologies: [
+        'JavaScript',
+        'PHP',
+        'MySQL',
+        'Git',
+        'Docker',
+        'CI/CD',
+        'Linux',
+        'Apache',
+        'SSL/TLS',
+      ],
+      achievements: [
+        'Government Compliance',
+        'System Reliability',
+        'Security Implementation',
+      ],
     },
     {
       company: 'MINESEC (Ministry of Secondary Education)',
@@ -209,10 +327,20 @@ export const experience: ExperienceTypi = {
       businessImpact: [
         'Trained 500+ students in programming fundamentals',
         'Developed curriculum adopted by 5 schools in the Mbam and inoubou Division',
-        'Improved student pass rates by 25% through innovative teaching methods'
+        'Improved student pass rates by 25% through innovative teaching methods',
       ],
-      technologies: ['C/C++', 'HTML/CSS', 'JavaScript', 'Database Design', 'Web Development'],
-      achievements: ['Curriculum Development', 'Student Mentoring', 'Educational Innovation']
+      technologies: [
+        'C/C++',
+        'HTML/CSS',
+        'JavaScript',
+        'Database Design',
+        'Web Development',
+      ],
+      achievements: [
+        'Curriculum Development',
+        'Student Mentoring',
+        'Educational Innovation',
+      ],
     },
   ],
 };

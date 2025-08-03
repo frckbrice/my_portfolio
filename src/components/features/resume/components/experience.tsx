@@ -1,7 +1,15 @@
 // libraries
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Building2, ArrowRight, TrendingUp, Code, Award } from 'lucide-react';
+import {
+  Calendar,
+  MapPin,
+  Building2,
+  ArrowRight,
+  TrendingUp,
+  Code,
+  Award,
+} from 'lucide-react';
 
 import { ScrollArea } from '@/components/ui/scroll-area';
 // type
@@ -108,11 +116,16 @@ export function Experience({ experience }: IExperienceProps) {
                       <div className="pt-4">
                         <div className="flex items-center gap-2 mb-3">
                           <TrendingUp className="w-5 h-5 text-green-500" />
-                          <h4 className="text-lg font-semibold text-foreground">Business Impact</h4>
+                          <h4 className="text-lg font-semibold text-foreground">
+                            Business Impact
+                          </h4>
                         </div>
                         <ul className="space-y-2">
                           {item.businessImpact.map((impact, impactIndex) => (
-                            <li key={impactIndex} className="flex items-start gap-2">
+                            <li
+                              key={impactIndex}
+                              className="flex items-start gap-2"
+                            >
                               <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
                               <span className="text-sm text-muted-foreground leading-relaxed">
                                 {impact}
@@ -128,7 +141,9 @@ export function Experience({ experience }: IExperienceProps) {
                       <div className="pt-4">
                         <div className="flex items-center gap-2 mb-3">
                           <Code className="w-5 h-5 text-blue-500" />
-                          <h4 className="text-lg font-semibold text-foreground">Technologies</h4>
+                          <h4 className="text-lg font-semibold text-foreground">
+                            Technologies
+                          </h4>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {item.technologies.map((tech, techIndex) => (
@@ -148,17 +163,21 @@ export function Experience({ experience }: IExperienceProps) {
                       <div className="pt-4">
                         <div className="flex items-center gap-2 mb-3">
                           <Award className="w-5 h-5 text-yellow-500" />
-                          <h4 className="text-lg font-semibold text-foreground">Key Achievements</h4>
+                          <h4 className="text-lg font-semibold text-foreground">
+                            Key Achievements
+                          </h4>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          {item.achievements.map((achievement, achievementIndex) => (
-                            <span
-                              key={achievementIndex}
-                              className="px-3 py-1 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 text-xs font-medium rounded-full border border-yellow-500/20"
-                            >
-                              {achievement}
-                            </span>
-                          ))}
+                          {item.achievements.map(
+                            (achievement, achievementIndex) => (
+                              <span
+                                key={achievementIndex}
+                                className="px-3 py-1 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 text-xs font-medium rounded-full border border-yellow-500/20"
+                              >
+                                {achievement}
+                              </span>
+                            )
+                          )}
                         </div>
                       </div>
                     )}
