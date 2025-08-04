@@ -38,6 +38,10 @@ jobs:
           echo "VERCEL_TOKEN from secrets: $([ -n "${{ secrets.VERCEL_TOKEN }}" ] && echo "YES" || echo "NO")"
           echo "VERCEL_ORG_ID from secrets: $([ -n "${{ secrets.VERCEL_ORG_ID }}" ] && echo "YES" || echo "NO")"
           echo "VERCEL_PROJECT_ID from secrets: $([ -n "${{ secrets.VERCEL_PROJECT_ID }}" ] && echo "YES" || echo "NO")"
+          
+          # Remove any existing .vercel directory to prevent conflicts
+          rm -rf .vercel || true
+          echo "Removed .vercel directory if it existed"
 
       - name: Lint
         run: yarn lint || yarn run lint
@@ -66,6 +70,11 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
+
+      - name: Clean Vercel cache before deployment
+        run: |
+          rm -rf .vercel || true
+          echo "Cleaned .vercel directory before deployment"
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
