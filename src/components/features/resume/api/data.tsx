@@ -74,7 +74,7 @@ export const experience: ExperienceTypi = {
       position: 'Full-Stack Developer & AI Integration Specialist',
       duration: 'May 2025 - Present',
       description:
-        'AI-powered platform automating teacher evaluation workflows with OCR grading and voice recognition.',
+        'AI-powered platform automating teacher evaluation workflows, and administrative processes with OCR grading and voice recognition.',
       businessImpact: [
         'Implemented OCR grade scanning with Tesseract.js for automated assessment',
         'Integrated Google Speech-to-Text for voice recognition capabilities',
@@ -82,15 +82,26 @@ export const experience: ExperienceTypi = {
         'Designed modular dashboard supporting multi-stakeholder access',
       ],
       technologies: [
+        'TypeScript',
         'Next.js',
         'Node.js',
         'Nest.js',
+        'React Native',
+        'Expo',
+        'App Store Connect',
+        'Firebase',
+        'Cloudinary',
+        'github-actions',
+        'docker',
+        'SSL/TLS',
         'PostgreSQL',
         'OpenAI API',
         'Tesseract.js',
         'Google Speech-to-Text',
-        'TypeScript',
-        'Docker',
+        'Google Drive API',
+        'Google Cloud Vision API',
+        'Google Form API',
+        'Google Sheets API',
       ],
       achievements: [
         'AI Integration',
@@ -99,8 +110,8 @@ export const experience: ExperienceTypi = {
       ],
     },
     {
-      company: 'unRichunPauvre - Crowdfunding Platform',
-      position: 'Full-Stack Mobile Developer, (Remote-Morocco)',
+      company: 'unRichunPauvre - Crowdfunding Platform, Remote - Morocco',
+      position: 'Full-Stack Mobile Developer',
       duration: 'February 2025 - May 2025',
       description:
         'Developed and deployed a crowdfunding mobile application where users can share dream projects and receive financial support from the community. Built complete platform with project creation, discovery, PayPal payment integration, and App Store deployment.',
@@ -133,7 +144,7 @@ export const experience: ExperienceTypi = {
     {
       company: 'SENIMA Consulting',
       position: 'Full-Stack Developer',
-      duration: 'Septembre 2024 - January 2025',
+      duration: 'Septembre 2024 - March 2025',
       description: `Built a comprehensive cross-platform application (Android & Web) for cocoa industry companies. The application enables companies to create inspection and market projects, deploy field agents to inspect farmers and farms, facilitate cocoa purchasing during markets, organize farmer training sessions, and manage complete supply chain logistics from field to factory transformation.`,
       businessImpact: [
         'Streamlined field operations reducing inspection time by 70% through digital data collection',
@@ -162,8 +173,8 @@ export const experience: ExperienceTypi = {
     },
 
     {
-      company: 'RB-Clean - Microservices Platform',
-      position: 'Backend Developer (Client Project, Remote - Buea, Cameroon)',
+      company: 'RB-Clean - Microservices Platform, Remote - Buea, Cameroon',
+      position: 'Backend Developer (Client Project)',
       duration: 'June 2024 - August 2024',
       description:
         'Developed notification microservice for a comprehensive cloth cleaning management platform using Domain-Driven Design (DDD) principles. Implemented API gateway with load balancer to serve multiple microservices, ensuring scalable and maintainable architecture.',
@@ -195,8 +206,8 @@ export const experience: ExperienceTypi = {
       ],
     },
     {
-      company: 'Innovent - Event Management Platform',
-      position: 'Full-Stack Developer (Client Project, Remote - Tanzania)',
+      company: 'Innovent - Event Management Platform, Remote - Tanzania',
+      position: 'Full-Stack Developer (Client Project)',
       duration: 'March 2024 - June 2024',
       description:
         'Developed a comprehensive event management platform enabling companies to create, manage, and sell events directly to customers. Built end-to-end solution with real-time booking, payment processing, and event management capabilities.',
