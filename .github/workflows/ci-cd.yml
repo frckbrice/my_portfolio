@@ -49,11 +49,6 @@ jobs:
           echo "VERCEL_ORG_ID is set: $([ -n "$VERCEL_ORG_ID" ] && echo "YES" || echo "NO")"
           echo "VERCEL_PROJECT_ID is set: $([ -n "$VERCEL_PROJECT_ID" ] && echo "YES" || echo "NO")"
 
-          # Show the first few characters of each variable for debugging
-          echo "VERCEL_TOKEN starts with: ${VERCEL_TOKEN:0:4}..."
-          echo "VERCEL_ORG_ID: $VERCEL_ORG_ID"
-          echo "VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID"
-
       - name: Lint
         run: yarn lint || yarn run lint
 
