@@ -38,7 +38,7 @@ jobs:
           echo "VERCEL_TOKEN from secrets: $([ -n "${{ secrets.VERCEL_TOKEN }}" ] && echo "YES" || echo "NO")"
           echo "VERCEL_ORG_ID from secrets: $([ -n "${{ secrets.VERCEL_ORG_ID }}" ] && echo "YES" || echo "NO")"
           echo "VERCEL_PROJECT_ID from secrets: $([ -n "${{ secrets.VERCEL_PROJECT_ID }}" ] && echo "YES" || echo "NO")"
-          
+
           # Remove any existing .vercel directory to prevent conflicts
           rm -rf .vercel || true
           echo "Removed .vercel directory if it existed"
