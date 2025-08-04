@@ -103,7 +103,7 @@ export function SEOAccessibilityPerformance() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mb-10 xl:mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl xl:text-5xl font-bold text-foreground mb-6">
             Modern Web <span className="text-accent">Excellence</span>
