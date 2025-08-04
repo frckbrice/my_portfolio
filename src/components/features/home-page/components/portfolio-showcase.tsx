@@ -109,7 +109,6 @@ export function PortfolioShowcase() {
           </h2>
 
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto text-justify ">
-
             Every aspect of this portfolio showcases real-world implementation
             of modern web development best practices. From SEO optimization to
             accessibility compliance and performance excellence.
