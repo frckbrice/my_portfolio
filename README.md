@@ -35,6 +35,8 @@ A modern, responsive portfolio website showcasing my expertise in full-stack web
 - **Prettier**
 - **ESLint**
 - **TypeScript**
+- **Vitest**
+- **playright**
 - **.gitignore**
 
 ## 📁 Project Structure
