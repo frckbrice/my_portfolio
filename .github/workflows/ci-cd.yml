@@ -32,22 +32,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Load environment variables from .env
+      - name: Check GitHub Secrets for Vercel
         run: |
-          # Read .env file and export variables
-          set -a
-          source .env
-          set +a
-
-          # Set GitHub environment variables
-          echo "VERCEL_TOKEN=$VERCEL_TOKEN" >> $GITHUB_ENV
-          echo "VERCEL_ORG_ID=$VERCEL_ORG_ID" >> $GITHUB_ENV
-          echo "VERCEL_PROJECT_ID=$VERCEL_PROJECT_ID" >> $GITHUB_ENV
-
-          # Debug: Check if variables are set (without exposing values)
-          echo "VERCEL_TOKEN is set: $([ -n "$VERCEL_TOKEN" ] && echo "YES" || echo "NO")"
-          echo "VERCEL_ORG_ID is set: $([ -n "$VERCEL_ORG_ID" ] && echo "YES" || echo "NO")"
-          echo "VERCEL_PROJECT_ID is set: $([ -n "$VERCEL_PROJECT_ID" ] && echo "YES" || echo "NO")"
+          # Debug: Check if GitHub secrets are set
+          echo "VERCEL_TOKEN from secrets: $([ -n "${{ secrets.VERCEL_TOKEN }}" ] && echo "YES" || echo "NO")"
+          echo "VERCEL_ORG_ID from secrets: $([ -n "${{ secrets.VERCEL_ORG_ID }}" ] && echo "YES" || echo "NO")"
+          echo "VERCEL_PROJECT_ID from secrets: $([ -n "${{ secrets.VERCEL_PROJECT_ID }}" ] && echo "YES" || echo "NO")"
 
       - name: Lint
         run: yarn lint || yarn run lint
@@ -80,12 +70,8 @@ jobs:
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
-          vercel-token: ${{ env.VERCEL_TOKEN }}
-          vercel-org-id: ${{ env.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ env.VERCEL_PROJECT_ID }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
-        env:
-          VERCEL_TOKEN: ${{ env.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ env.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ env.VERCEL_PROJECT_ID }}
-        if: env.VERCEL_TOKEN != ''
+
