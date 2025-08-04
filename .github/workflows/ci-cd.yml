@@ -34,10 +34,25 @@ jobs:
 
       - name: Load environment variables from .env
         run: |
-          export $(cat .env | xargs)
+          # Read .env file and export variables
+          set -a
+          source .env
+          set +a
+          
+          # Set GitHub environment variables
           echo "VERCEL_TOKEN=$VERCEL_TOKEN" >> $GITHUB_ENV
           echo "VERCEL_ORG_ID=$VERCEL_ORG_ID" >> $GITHUB_ENV
           echo "VERCEL_PROJECT_ID=$VERCEL_PROJECT_ID" >> $GITHUB_ENV
+          
+          # Debug: Check if variables are set (without exposing values)
+          echo "VERCEL_TOKEN is set: $([ -n "$VERCEL_TOKEN" ] && echo "YES" || echo "NO")"
+          echo "VERCEL_ORG_ID is set: $([ -n "$VERCEL_ORG_ID" ] && echo "YES" || echo "NO")"
+          echo "VERCEL_PROJECT_ID is set: $([ -n "$VERCEL_PROJECT_ID" ] && echo "YES" || echo "NO")"
+          
+          # Show the first few characters of each variable for debugging
+          echo "VERCEL_TOKEN starts with: ${VERCEL_TOKEN:0:4}..."
+          echo "VERCEL_ORG_ID: $VERCEL_ORG_ID"
+          echo "VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID"
 
       - name: Lint
         run: yarn lint || yarn run lint
@@ -78,3 +93,4 @@ jobs:
           VERCEL_TOKEN: ${{ env.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ env.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ env.VERCEL_PROJECT_ID }}
+        if: env.VERCEL_TOKEN != ''
