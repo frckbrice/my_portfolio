@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://avombrice.vercel.dev/</loc>
+    <loc>https://maebrieporfolio.vercel.app/</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://avombrice.vercel.dev/services</loc>
+    <loc>https://maebrieporfolio.vercel.app/services</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avombrice.vercel.dev/work-experience</loc>
+    <loc>https://maebrieporfolio.vercel.app/work-experience</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avombrice.vercel.dev/github-projects</loc>
+    <loc>https://maebrieporfolio.vercel.app/github-projects</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://avombrice.vercel.dev/resume</loc>
+    <loc>https://maebrieporfolio.vercel.app/resume</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

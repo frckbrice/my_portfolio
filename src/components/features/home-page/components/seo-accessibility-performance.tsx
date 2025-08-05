@@ -210,7 +210,7 @@ export function SEOAccessibilityPerformance() {
               >
                 <Link
                   href="/work-experience"
-                  className="inline-block px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300"
+                  className="inline-block px-8 py-3 text-white bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300"
                 >
                   View My Work
                 </Link>
@@ -221,7 +221,7 @@ export function SEOAccessibilityPerformance() {
               >
                 <Link
                   href="/contact"
-                  className="inline-block px-8 py-3 bg-card/50 text-foreground font-semibold rounded-lg border border-border hover:bg-card hover:border-accent/50 transition-all duration-300"
+                  className="inline-block px-8 py-3 bg-green-200/50 text-foreground font-semibold rounded-lg border border-border hover:bg-card hover:border-accent/50 transition-all duration-300"
                 >
                   Get In Touch
                 </Link>

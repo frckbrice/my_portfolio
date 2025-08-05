@@ -7,6 +7,9 @@ export interface ResumeInputType {
   position: string;
   duration: string;
   description: string;
+  businessImpact?: string[];
+  technologies?: string[];
+  achievements?: string[];
   icon: React.ReactElement;
   name: string;
   institution: string;

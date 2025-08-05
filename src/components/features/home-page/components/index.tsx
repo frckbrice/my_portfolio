@@ -12,6 +12,7 @@ import { SEOAccessibilityPerformance } from './seo-accessibility-performance';
 import { PortfolioShowcase } from './portfolio-showcase';
 import { CTASection } from './cta-section';
 import { CVDownload } from './cv-download';
+import { HobbiesInterests } from './hobbies-interests';
 
 export function SocialInterface() {
   return (
@@ -40,6 +41,7 @@ export function HomepageInterface() {
       PortfolioShowcase={PortfolioShowcase}
       CTASection={CTASection}
       CVDownload={CVDownload}
+      HobbiesInterests={HobbiesInterests}
     />
   );
 }

@@ -11,6 +11,7 @@ export interface IHomepageProps {
   PortfolioShowcase: () => React.ReactElement;
   CTASection: () => React.ReactElement;
   CVDownload: () => React.ReactElement;
+  HobbiesInterests: () => React.ReactElement;
 }
 
 export function Homepage({
@@ -24,6 +25,7 @@ export function Homepage({
   PortfolioShowcase,
   CTASection,
   CVDownload,
+  HobbiesInterests,
 }: IHomepageProps) {
   return (
     <>
@@ -64,32 +66,29 @@ export function Homepage({
           </h3>
         </div>
         {/* statistiques */}
-        <Stats />
+        {/* <Stats /> */}
       </section>
-      {/* Technical Highlights Section */}
-      {/* <div className="pt-8 xl:pt-20"> */}
+
+      {/* Technical Highlights Section - Core Skills */}
       <TechHighlights />
-      {/* </div> */}
-      {/* Achievements Section */}
-      <div className="pt-8 xl:pt-20">
-        <Achievements />
-      </div>
-      {/* SEO, Accessibility & Performance Section */}
-      {/* <div className="pt-8 xl:pt-20"> */}
-      <SEOAccessibilityPerformance />
-      {/* </div> */}
-      {/* Portfolio Showcase Section */}
-      {/* <div className="pt-8 xl:pt-20"> */}
-      <PortfolioShowcase />
-      {/* </div> */}
-      {/* Trusted Companies Section */}
-      {/* <div className="pt-8 xl:pt-20"> */}
+
+      {/* Achievements Section - Quantified Results */}
+      <Achievements />
+
+      {/* Portfolio Showcase Section - Work Examples */}
+      {/* <PortfolioShowcase /> */}
+
+      {/* Trusted Companies Section - Social Proof */}
       <TrustedCompanies />
-      {/* </div> */}
-      {/* Call to Action Section */}
-      {/* <div className="pt-8 xl:pt-20"> */}
+
+      {/* SEO, Accessibility & Performance Section - Additional Expertise */}
+      <SEOAccessibilityPerformance />
+
+      {/* Hobbies & Interests Section - Personality & Culture Fit */}
+      <HobbiesInterests />
+
+      {/* Call to Action Section - Contact & Next Steps */}
       <CTASection />
-      {/* </div> */}
     </>
   );
 }

@@ -26,7 +26,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
 .env
 
 # vercel
@@ -113,3 +112,4 @@ jspm_packages/
 
 ACCESSIBILITY_SEO_GUIDE.md
 EMAILJS_SETUP.md
+THEME_GUIDE.md
