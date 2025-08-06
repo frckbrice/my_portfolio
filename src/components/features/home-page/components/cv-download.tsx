@@ -17,7 +17,7 @@ export function CVDownload() {
                 <!DOCTYPE html>
                 <html>
                     <head>
-                        <title>Brice AVOM - Senior Full-Stack Developer</title>
+                        <title>Brice AVOM -  Full-Stack Developer</title>
                         <style>
                             @media print {
                                 body { margin: 0; }
@@ -293,7 +293,7 @@ export function CVDownload() {
         <div className="header">
           <h1 className="name">Brice AVOM</h1>
           <p className="title">
-            Senior Full-Stack Developer & Mobile App Specialist
+            Full-Stack Developer & Mobile App Specialist
           </p>
           <div className="contact-info">
             <div className="contact-item">📍 Yaoundé, Cameroon</div>
@@ -370,7 +370,7 @@ export function CVDownload() {
           </div>
 
           <div className="experience-item">
-            <h3 className="job-title">Senior Full-Stack Mobile Developer</h3>
+            <h3 className="job-title"> Full-Stack Mobile Developer</h3>
             <p className="company">
               unRichunPauvre - Crowdfunding Platform (Remote - Morocco)
             </p>
@@ -400,7 +400,7 @@ export function CVDownload() {
           </div>
 
           <div className="experience-item">
-            <h3 className="job-title">Senior Full-Stack Developer</h3>
+            <h3 className="job-title"> Full-Stack Developer</h3>
             <p className="company">SENIMA Consulting (Yaoundé, Cameroon)</p>
             <p className="duration">September 2024 - March 2025</p>
             <div className="description">
