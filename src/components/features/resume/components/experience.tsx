@@ -50,8 +50,8 @@ export function Experience({ experience }: IExperienceProps) {
         >
           <p
             className="text-muted-foreground text-lg 
-          sm:text-xl leading-relaxed  
-          sm:text-left text-justify px-4"
+           leading-relaxed  
+           text-justify px-4 "
           >
             {experience.description}
           </p>

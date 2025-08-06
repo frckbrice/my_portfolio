@@ -67,7 +67,7 @@ export const experience: ExperienceTypi = {
   icons: '/assets/resume/badge.png',
   title: 'Professional Experience',
   description:
-    'Senior Full-Stack Developer with 4+ years of experience delivering scalable web and mobile applications. Specialized in modern JavaScript/TypeScript ecosystems, microservices architecture, and AI integration. Proven track record of leading end-to-end development projects for international clients.',
+    'Senior Full-Stack Developer with 3+ years of experience delivering scalable web and mobile applications. Specialized in modern JavaScript/TypeScript ecosystems, microservices architecture, and AI integration. Proven track record of leading end-to-end development projects for local and international clients.',
   items: [
     {
       company: 'AI Teacher Assistant Platform',
