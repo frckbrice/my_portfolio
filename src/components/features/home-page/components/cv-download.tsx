@@ -292,9 +292,7 @@ export function CVDownload() {
         {/* Header Section */}
         <div className="header">
           <h1 className="name">Brice AVOM</h1>
-          <p className="title">
-            Full-Stack Developer & Mobile App Specialist
-          </p>
+          <p className="title">Full-Stack Developer & Mobile App Specialist</p>
           <div className="contact-info">
             <div className="contact-item">📍 Yaoundé, Cameroon</div>
             <div className="contact-item">📧 bricefrkc@gmail.com</div>
@@ -338,8 +336,7 @@ export function CVDownload() {
           <h2 className="section-title">Professional Experience</h2>
           <div className="experience-item">
             <h3 className="job-title">
-              {' '}
-              Full-Stack Developer & AI Integration Specialist{' '}
+              Full-Stack Developer & AI Integration Specialist
             </h3>
             <p className="company">
               AI Teacher Assistant Platform (Remote - Garoua, Cameroon)
