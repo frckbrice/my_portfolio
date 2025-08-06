@@ -1036,14 +1036,13 @@ export function CVDownload() {
         <div className="section">
           <h2 className="section-title">Professional Summary</h2>
           <p className="summary">
-            Results-driven Senior Full-Stack Developer with 3+ years of proven
-            expertise in building scalable web applications and mobile
-            solutions. Specialized in modern JavaScript ecosystem, microservices
+            Results-driven Full-Stack Developer with 3 years of proven expertise
+            in building scalable web applications and mobile solutions.
+            Specialized in modern JavaScript ecosystem, microservices
             architecture, and cross-platform development. Demonstrated track
             record of delivering high-performance applications across diverse
             industries, with strong emphasis on clean code principles, optimal
-            user experience, and maintainable architecture. Experienced in
-            leading development projects from conception to deployment.
+            user experience, and maintainable architecture.
           </p>
         </div>
 
@@ -1090,22 +1089,20 @@ export function CVDownload() {
           <div className="project-item">
             <h3 className="project-title">
               <a
-                href="https://github.com/frckbrice/rainforest-alliance-mobile-app"
+                href="https://github.com/frckbrice/my_portfolio"
                 className="project-link"
               >
-                RainForest Alliance - Cocoa Management Mobile App
+                my_portfolio
               </a>
             </h3>
             <p className="project-tech">
-              React Native • TypeScript • AWS S3 • Payment APIs • Push
-              Notifications
+              React Native • Git • TypeScript • docker • Github Actions •
+              TailwindCss • Vitest • playright
             </p>
             <p className="description">
-              Enterprise-grade mobile application for cocoa supply chain
-              management, compliant with RainForest Alliance specifications.
-              Features include farmer registration, harvest tracking, payment
-              processing, and real-time data synchronization. Integrated
-              multiple African payment gateways and cloud storage solutions.
+              A modern, responsive portfolio website showcasing my expertise in
+              full-stack web development, mobile development, and software
+              engineering.
             </p>
           </div>
 
@@ -1119,7 +1116,9 @@ export function CVDownload() {
               </a>
             </h3>
             <p className="project-tech">
-              Next.js 14 • TypeScript • Supabase • WebSockets • Drizzle ORM
+              Next.js 15 • Git •TypeScript • Supabase • WebSockets • Drizzle ORM
+              • github-actions • stripe payment • TailwindCSS • quilljs •
+              PostgreSQL
             </p>
             <p className="description">
               Modern collaborative workspace with real-time features, user
@@ -1132,14 +1131,15 @@ export function CVDownload() {
           <div className="project-item">
             <h3 className="project-title">
               <a
-                href="https://github.com/frckbrice/HotelMgt"
+                href="https://github.com/frckbrice/Hotel-Management-app"
                 className="project-link"
               >
                 Hotel Management System (PWA)
               </a>
             </h3>
             <p className="project-tech">
-              Next.js 14 • TypeScript • Sanity CMS • Stripe • Service Workers
+              Next.js 15+ • Git • TypeScript • Sanity CMS • Stripe • Service
+              Workers • Stripe Payment • nextAuth • TailwindCSS • github-actions
             </p>
             <p className="description">
               Full-featured hotel management system with booking engine, payment
@@ -1155,14 +1155,16 @@ export function CVDownload() {
                 href="https://github.com/frckbrice/Clean-code-arch-REST-API"
                 className="project-link"
               >
-                E-commerce Backend API
+                Clean Code Architecture REST API - Example Project
               </a>
             </h3>
             <p className="project-tech">
-              Node.js • MongoDB • Clean Architecture • TypeScript • Express.js
+              Node.js • Git • MongoDB • Clean Architecture • TypeScript •
+              Express.js • Jest • Supertest • Docker • github-actions • API
+              Versioning
             </p>
             <p className="description">
-              Scalable e-commerce backend following clean architecture
+              An example of a scalable backend following clean architecture
               principles. Features include order management, inventory tracking,
               user authentication, and comprehensive API documentation. Handles
               1000+ concurrent users with optimized database queries.
@@ -1278,7 +1280,6 @@ export function CVDownload() {
               <h3 className="skill-title">DevOps & Tools</h3>
               <div className="skill-item">
                 <span className="skill-label">Version Control:</span> Git,
-                GitHub Actions
               </div>
               <div className="skill-item">
                 <span className="skill-label">Containers:</span> Docker,
@@ -1295,6 +1296,10 @@ export function CVDownload() {
               <div className="skill-item">
                 <span className="skill-label">Testing:</span> Jest, Cypress,
                 Playwright, Vitest
+              </div>
+              <div className="skill-item">
+                <span className="skill-label">Collaboration:</span> Github,
+                Jira, Notion, Slack, Discord, Microsoft Teams.
               </div>
             </div>
 
