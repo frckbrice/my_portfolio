@@ -189,7 +189,7 @@ export const experience: ExperienceTypi = {
         'Node.js',
         'TypeScript',
         'NestJS',
-        'Kafka',                      
+        'Kafka',
         'Docker',
         'Kubernetes',
         'PostgreSQL',
