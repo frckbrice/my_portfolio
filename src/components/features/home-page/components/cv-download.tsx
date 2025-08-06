@@ -1,723 +1,8 @@
-// 'use client';
-
-// import React, { useRef } from 'react';
-// import { Button } from '@/components/ui/button';
-// import { Download, FileText, Printer } from 'lucide-react';
-// import { motion } from '@/lib/framer-motion';
-
-// export function CVDownload() {
-//   const cvRef = useRef<HTMLDivElement>(null);
-
-//   const openCVForPrint = () => {
-//     if (!cvRef.current) return;
-
-//     const cvWindow = window.open('', '_blank');
-//     if (cvWindow) {
-//       cvWindow.document.write(`
-//                 <!DOCTYPE html>
-//                 <html>
-//                     <head>
-//                         <title>Brice AVOM - CV</title>
-//                         <style>
-//                             @media print {
-//                                 body { margin: 0; }
-//                                 .no-print { display: none; }
-//                             }
-//                             body {
-//                                 font-family: Arial, sans-serif;
-//                                 margin: 20px;
-//                                 background: white;
-//                                 color: black;
-//                                 line-height: 1.6;
-//                             }
-//                             .cv-content {
-//                                 max-width: 800px;
-//                                 margin: 0 auto;
-//                                 padding: 20px;
-//                                 background: white;
-//                                 font-size: 14px;
-//                             }
-//                             .print-button {
-//                                 position: fixed;
-//                                 top: 20px;
-//                                 right: 20px;
-//                                 padding: 10px 20px;
-//                                 background: #007bff;
-//                                 color: white;
-//                                 border: none;
-//                                 border-radius: 5px;
-//                                 cursor: pointer;
-//                                 font-size: 16px;
-//                             }
-//                             .print-button:hover {
-//                                 background: #0056b3;
-//                             }
-//                             h1 { font-size: 32px; font-weight: bold; margin: 0; color: #333; }
-//                             h2 { font-size: 20px; font-weight: bold; color: #333; border-bottom: 2px solid #333; padding-bottom: 8px; margin-bottom: 15px; margin-top: 25px; }
-//                             h3 { font-size: 16px; font-weight: bold; color: #444; margin: 0 0 8px 0; }
-//                             p { margin: 4px 0; font-size: 14px; }
-//                             .contact-info { font-size: 14px; color: #666; }
-//                             .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
-//                             .skill-category h3 { font-size: 16px; font-weight: bold; color: #555; margin-bottom: 8px; }
-//                             .skill-category p { font-size: 13px; margin: 0; line-height: 1.5; }
-//                             .project { margin-bottom: 15px; }
-//                             .project h3 { font-size: 16px; font-weight: bold; color: #444; margin: 0 0 5px 0; }
-//                             .project h3 a { color: #007bff; text-decoration: none; }
-//                             .project h3 a:hover { text-decoration: underline; }
-//                             .project p { font-size: 13px; margin: 0; color: #666; line-height: 1.4; }
-//                             .languages-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
-//                             .language-item { margin-bottom: 8px; }
-//                             .language-name { font-weight: bold; color: #555; }
-//                             .language-level { color: #666; font-style: italic; }
-//                             .certification { margin-bottom: 12px; }
-//                             .certification h4 { font-size: 15px; font-weight: bold; color: #444; margin: 0 0 3px 0; }
-//                             .certification p { font-size: 13px; margin: 0; color: #666; }
-//                             .section { margin-bottom: 25px; }
-//                             .header-section { text-align: center; margin-bottom: 25px; border-bottom: 3px solid #333; padding-bottom: 20px; }
-//                             .summary-text { text-align: justify; margin: 0; font-size: 14px; line-height: 1.6; }
-//                         </style>
-//                     </head>
-//                     <body>
-//                         <button class="print-button no-print" onclick="window.print()">
-//                             🖨️ Print CV
-//                         </button>
-//                         <div class="cv-content">
-//                             ${cvRef.current.innerHTML}
-//                         </div>
-//                         <script>
-//                             // Auto-print after a short delay
-//                             setTimeout(() => {
-//                                 if (confirm('Would you like to print your CV now?')) {
-//                                     window.print();
-//                                 }
-//                             }, 1000);
-//                         </script>
-//                     </body>
-//                 </html>
-//             `);
-//       cvWindow.document.close();
-//     }
-//   };
-
-//   return (
-//     <>
-//       {/* Hidden CV for display */}
-//       <div
-//         ref={cvRef}
-//         className="hidden"
-//         style={{
-//           width: '210mm',
-//           minHeight: '297mm',
-//           padding: '20mm',
-//           backgroundColor: 'white',
-//           color: 'black',
-//           fontFamily: 'Arial, sans-serif',
-//           fontSize: '14px',
-//           lineHeight: '1.6',
-//         }}
-//       >
-//         {/* Header Section */}
-//         <div className="header-section">
-//           <h1
-//             style={{
-//               fontSize: '32px',
-//               fontWeight: 'bold',
-//               margin: '0',
-//               color: '#333',
-//             }}
-//           >
-//             Brice AVOM
-//           </h1>
-//           <p style={{ fontSize: '20px', margin: '8px 0', color: '#666' }}>
-//             Full-Stack Developer & Mobile App Developer
-//           </p>
-//           <div style={{ fontSize: '14px', color: '#666' }}>
-//             <p style={{ margin: '4px 0' }}>📍 Cameroon</p>
-//             <p style={{ margin: '4px 0' }}>📧 bricefrkc@gmail.com</p>
-//             <p style={{ margin: '4px 0' }}>🔗 github.com/frckbrice</p>
-//             {/* add linkedIn link */}
-//             <p style={{ margin: '4px 0' }}>
-//               🔗 <a href="https://www.linkedin.com/in/avombrice/" target="_blank" rel="noopener noreferrer">linkedin.com/in/avom-brice</a>
-//             </p>
-//             <p style={{ margin: '4px 0' }}>📱 +237 674 85 23 04 / +237 658 52 79 73</p>
-//           </div>
-//         </div>
-
-//         {/* Professional Summary */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             PROFESSIONAL SUMMARY
-//           </h2>
-//           <p className="summary-text">
-//             Full-Stack Developer with 3+ years of experience building scalable web applications and mobile solutions using modern technologies. Specialized in microservices architecture, real-time applications, and cross-platform mobile development. Demonstrated success delivering high-performance applications across diverse industries, with strong focus on clean code principles, design patterns, and maintainable architecture.
-//           </p>
-//         </div>
-
-//         {/* Technical Skills */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             TECHNICAL SKILLS
-//           </h2>
-//           <div
-//             style={{
-//               display: 'grid',
-//               gridTemplateColumns: '1fr 1fr',
-//               gap: '20px',
-//             }}
-//           >
-//             <div>
-//               <h3
-//                 style={{
-//                   fontSize: '16px',
-//                   fontWeight: 'bold',
-//                   color: '#555',
-//                   marginBottom: '8px',
-//                   textDecoration: 'underline',
-//                 }}
-//               >
-//                 Frontend Development
-//               </h3>
-
-//               <div style={{ fontSize: '13px', lineHeight: '1.5' }}>
-//                 <div style={{ marginBottom: '6px' }}>
-//                   <strong style={{ color: '#333' }}>Languages:</strong> JavaScript (ES6+), TypeScript, HTML5, CSS3
-//                 </div>
-
-//                 <div style={{ marginBottom: '6px' }}>
-//                   <strong style={{ color: '#333' }}>Frameworks & Libraries:</strong> React, Next.js, Angular 2, React Query
-//                 </div>
-
-//                 <div style={{ marginBottom: '6px' }}>
-//                   <strong style={{ color: '#333' }}>Styling & UI:</strong> Tailwind CSS, Shadcn/ui, SCSS
-//                 </div>
-
-//                 <div style={{ marginBottom: '6px' }}>
-//                   <strong style={{ color: '#333' }}>State Management:</strong> Redux, Zustand, React context API, React Query.
-//                 </div>
-
-//                 <div style={{ marginBottom: '6px' }}>
-//                   <strong style={{ color: '#333' }}>Build Tools:</strong> Vite, Webpack.
-//                 </div>
-
-//                 <div style={{ marginBottom: '0' }}>
-//                   <strong style={{ color: '#333' }}>Testing:</strong> Vitest, React Testing Library, Playwright, Jest, Cypress.
-//                 </div>
-//               </div>
-//             </div>
-//             <div>
-//               <h3
-//                 style={{
-//                   fontSize: '16px',
-//                   fontWeight: 'bold',
-//                   color: '#555',
-//                   marginBottom: '8px',
-//                   textDecoration: 'underline',
-//                 }}
-//               >
-//                 Backend Development
-//               </h3>
-//               <p style={{ margin: '0', fontSize: '13px', lineHeight: '1.5' }}>
-//                 Node.js, Express.js, NestJS, TypeScript, RESTful APIs, GraphQL,
-//                 Microservices Architecture
-//               </p>
-//             </div>
-//             <div>
-//               <h3
-//                 style={{
-//                   fontSize: '16px',
-//                   fontWeight: 'bold',
-//                   color: '#555',
-//                   marginBottom: '8px',
-//                   textDecoration: 'underline',
-//                 }}
-//               >
-//                 Mobile Development
-//               </h3>
-//               <p style={{ margin: '0', fontSize: '13px', lineHeight: '1.5' }}>
-//                 React Native, Expo, Android, iOS, FCM, APN, MMKV, Expo
-//                 EAS/Workflow, Mobile App Deployment
-//               </p>
-//             </div>
-//             <div>
-//               <h3
-//                 style={{
-//                   fontSize: '16px',
-//                   fontWeight: 'bold',
-//                   color: '#555',
-//                   marginBottom: '8px',
-//                   textDecoration: 'underline',
-//                 }}
-//               >
-//                 Databases & Cloud
-//               </h3>
-//               <p style={{ margin: '0', fontSize: '13px', lineHeight: '1.5' }}>
-//                 MongoDB, PostgreSQL, MySQL, SQLite, Redis, Firebase, Supabase,
-//                 AWS S3, Cloud Storage
-//               </p>
-//             </div>
-//             <div>
-//               <h3
-//                 style={{
-//                   fontSize: '16px',
-//                   fontWeight: 'bold',
-//                   color: '#555',
-//                   marginBottom: '8px',
-//                   textDecoration: 'underline',
-//                 }}
-//               >
-//                 DevOps & Tools
-//               </h3>
-//               <p style={{ margin: '0', fontSize: '13px', lineHeight: '1.5' }}>
-//                 Git, Docker, Kubernetes, CI/CD, Vercel, Heroku, Netlify,
-//                 Cloudflare, Nginx, Apache
-//               </p>
-//             </div>
-//             <div>
-//               <h3
-//                 style={{
-//                   fontSize: '16px',
-//                   fontWeight: 'bold',
-//                   color: '#555',
-//                   marginBottom: '8px',
-//                   textDecoration: 'underline',
-//                 }}
-//               >
-//                 Payment & APIs
-//               </h3>
-//               <p style={{ margin: '0', fontSize: '13px', lineHeight: '1.5' }}>
-//                 Stripe API, PayPal, Orange Money API, MTN Mobile Money API,
-//                 Third-party API Integration
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Languages */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             LANGUAGES
-//           </h2>
-//           <div
-//             style={{
-//               display: 'grid',
-//               gridTemplateColumns: '1fr 1fr',
-//               gap: '15px',
-//             }}
-//           >
-//             <div className="language-item">
-//               <span className="language-name">English</span> -{' '}
-//               <span className="language-level">
-//                 Professional Working Proficiency
-//               </span>
-//             </div>
-//             <div className="language-item">
-//               <span className="language-name">French</span> -{' '}
-//               <span className="language-level">Native Proficiency</span>
-//             </div>
-//             <div className="language-item">
-//               <span className="language-name">Cameroonian Pidgin</span> -{' '}
-//               <span className="language-level">Native Proficiency</span>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Key Projects */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             KEY PROJECTS
-//           </h2>
-//           <div style={{ marginBottom: '15px' }}>
-//             <h3
-//               style={{
-//                 fontSize: '16px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 5px 0',
-//               }}
-//             >
-//               <a
-//                 href="https://github.com/frckbrice/real-time-collaborative-plateform"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 Real-time Collaborative Platform
-//               </a>
-//             </h3>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 margin: '0',
-//                 color: '#666',
-//                 lineHeight: '1.4',
-//               }}
-//             >
-//               Next.js 14, TypeScript, Supabase, Supabase Auth, Supabase
-//               Realtime, Drizzle ORM, Real-time collaboration features, User
-//               authentication, Database management
-//             </p>
-//           </div>
-//           <div style={{ marginBottom: '15px' }}>
-//             <h3
-//               style={{
-//                 fontSize: '16px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 5px 0',
-//               }}
-//             >
-//               <a
-//                 href="https://github.com/frckbriceClean-code-arch-REST-API"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 E-commerce Backend
-//               </a>
-//             </h3>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 margin: '0',
-//                 color: '#666',
-//                 lineHeight: '1.4',
-//               }}
-//             >
-//               Node.js, MongoDB, Clean Architecture, TypeScript, Express.js,
-//               RESTful APIs, Payment integration, Order management system
-//             </p>
-//           </div>
-//           <div style={{ marginBottom: '15px' }}>
-//             <h3
-//               style={{
-//                 fontSize: '16px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 5px 0',
-//               }}
-//             >
-//               <a
-//                 href="https://github.com/frckbrice/ra-mobile-project"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 Mobile App for Cocoa Management (RainForest Alliance)
-//               </a>
-//             </h3>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 margin: '0',
-//                 color: '#666',
-//                 lineHeight: '1.4',
-//               }}
-//             >
-//               React Native, Expo, TypeScript, AWS S3, Orange Money API, MTN
-//               Mobile Money API, PayPal Payment Gateway, FCM, APN, MMKV,
-//               Compliance with RainForest Alliance specifications
-//             </p>
-//           </div>
-//           <div style={{ marginBottom: '15px' }}>
-//             <h3
-//               style={{
-//                 fontSize: '16px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 5px 0',
-//               }}
-//             >
-//               <a
-//                 href="https://github.com/frckbrice/HotelMgt"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 Full-stack Web Application for Hotel Management
-//               </a>
-//             </h3>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 margin: '0',
-//                 color: '#666',
-//                 lineHeight: '1.4',
-//               }}
-//             >
-//               Next.js 14, TypeScript, Sanity.io CMS, Service Worker, Next-auth,
-//               Stripe API, TailwindCSS, Progressive Web App (PWA), Booking
-//               system, Payment processing
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Work Experience */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             WORK EXPERIENCE
-//           </h2>
-//           <div style={{ marginBottom: '15px' }}>
-//             <h3
-//               style={{
-//                 fontSize: '16px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 5px 0',
-//               }}
-//             >
-//               Full-Stack Developer - Freelance
-//             </h3>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 margin: '0',
-//                 color: '#666',
-//                 fontStyle: 'italic',
-//               }}
-//             >
-//               2020 - Present
-//             </p>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 margin: '8px 0 0 0',
-//                 color: '#666',
-//                 lineHeight: '1.4',
-//               }}
-//             >
-//               • Developed and maintained full-stack web applications using
-//               React, Next.js, and Node.js
-//               <br />
-//               • Built mobile applications with React Native and Expo for iOS and
-//               Android platforms
-//               <br />
-//               • Implemented payment gateways and third-party API integrations
-//               <br />• Collaborated with clients to understand requirements and
-//               deliver scalable solutions
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Certifications */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             CERTIFICATIONS & TRAINING
-//           </h2>
-//           <div className="certification">
-//             <h4
-//               style={{
-//                 fontSize: '15px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 3px 0',
-//               }}
-//             >
-//               React Native Development - Udemy
-//             </h4>
-//             <p style={{ fontSize: '13px', margin: '0', color: '#666' }}>
-//               Advanced mobile app development with React Native and Expo
-//             </p>
-//           </div>
-//           <div className="certification">
-//             <h4
-//               style={{
-//                 fontSize: '15px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 3px 0',
-//               }}
-//             >
-//               Next.js 14 Masterclass - Udemy
-//             </h4>
-//             <p style={{ fontSize: '13px', margin: '0', color: '#666' }}>
-//               Full-stack development with Next.js, TypeScript, and modern web
-//               technologies
-//             </p>
-//           </div>
-//           <div className="certification">
-//             <h4
-//               style={{
-//                 fontSize: '15px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 3px 0',
-//               }}
-//             >
-//               Professional Cloud Developer - Google Skill Boost
-//             </h4>
-//             <p style={{ fontSize: '13px', margin: '0', color: '#666' }}>
-//               Cloud computing fundamentals and GCP services
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Education */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             EDUCATION
-//           </h2>
-//           <div>
-//             <h3
-//               style={{
-//                 fontSize: '16px',
-//                 fontWeight: 'bold',
-//                 color: '#444',
-//                 margin: '0 0 5px 0',
-//               }}
-//             >
-//               University of Bamenda
-//             </h3>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 color: '#666',
-//                 margin: '0',
-//                 fontStyle: 'italic',
-//               }}
-//             >
-//               Computer Science | 2016 - 2017
-//             </p>
-//             <p
-//               style={{
-//                 fontSize: '13px',
-//                 color: '#666',
-//                 margin: '8px 0 0 0',
-//                 lineHeight: '1.4',
-//               }}
-//             >
-//               Focused on software engineering, algorithms, data structures, and
-//               computer systems. Completed projects in web development and
-//               database management.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Additional Information */}
-//         <div className="section">
-//           <h2
-//             style={{
-//               fontSize: '20px',
-//               fontWeight: 'bold',
-//               color: '#333',
-//               borderBottom: '2px solid #333',
-//               paddingBottom: '8px',
-//               marginBottom: '15px',
-//             }}
-//           >
-//             ADDITIONAL INFORMATION
-//           </h2>
-//           <div style={{ fontSize: '13px', color: '#666', lineHeight: '1.5' }}>
-//             <p style={{ margin: '4px 0' }}>
-//               • <strong>Agile Methodologies:</strong> Scrum, Kanban, Sprint
-//               Planning
-//             </p>
-//             <p style={{ margin: '4px 0' }}>
-//               • <strong>Version Control:</strong> Git, GitHub, Git Actions
-//             </p>
-//             <p style={{ margin: '4px 0' }}>
-//               • <strong>Testing:</strong> Jest, Cypress
-//             </p>
-//             <p style={{ margin: '4px 0' }}>
-//               • <strong>Performance:</strong> Lighthouse, Core Web Vitals, SEO
-//               optimization
-//             </p>
-//             <p style={{ margin: '4px 0' }}>
-//               • <strong>Security:</strong> OAuth 2.0, JWT, HTTPS, Data
-//               encryption
-//             </p>
-//             <p style={{ margin: '4px 0' }}>
-//               • <strong>Soft Skills:</strong> Problem-solving, Team
-//               collaboration, Communication, Time management
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Download Button */}
-//       <motion.div
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ delay: 0.8, duration: 0.6 }}
-//         className="flex justify-center"
-//       >
-//         <Button
-//           onClick={openCVForPrint}
-//           size="lg"
-//           className="bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-300 font-semibold group"
-//         >
-//           <FileText className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-//           View & Print CV
-//           <Printer className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-300" />
-//         </Button>
-//       </motion.div>
-//     </>
-//   );
-// }
-
 'use client';
 
 import React, { useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Download, FileText, Printer } from 'lucide-react';
+import { FileText, Printer } from 'lucide-react';
 import { motion } from '@/lib/framer-motion';
 
 export function CVDownload() {
@@ -1036,13 +321,15 @@ export function CVDownload() {
         <div className="section">
           <h2 className="section-title">Professional Summary</h2>
           <p className="summary">
-            Results-driven Full-Stack Developer with 3 years of proven expertise
-            in building scalable web applications and mobile solutions.
-            Specialized in modern JavaScript ecosystem, microservices
-            architecture, and cross-platform development. Demonstrated track
-            record of delivering high-performance applications across diverse
-            industries, with strong emphasis on clean code principles, optimal
-            user experience, and maintainable architecture.
+            Full-Stack Developer with 3+ years of experience delivering scalable
+            web and mobile applications. Specialized in modern
+            JavaScript/TypeScript ecosystems, microservices architecture, and AI
+            integration. Proven track record of leading end-to-end development
+            projects for international clients across diverse industries
+            including education, fintech, e-commerce, and government sectors.
+            Expert in React Native, Next.js, Node.js, and cloud technologies
+            with strong emphasis on performance optimization, security best
+            practices, and maintainable architecture.
           </p>
         </div>
 
@@ -1050,33 +337,184 @@ export function CVDownload() {
         <div className="section">
           <h2 className="section-title">Professional Experience</h2>
           <div className="experience-item">
-            <h3 className="job-title">Senior Full-Stack Developer</h3>
-            <p className="company">Freelance & Contract Work</p>
-            <p className="duration">2020 - Present | 3+ Years</p>
+            <h3 className="job-title">
+              {' '}
+              Full-Stack Developer & AI Integration Specialist{' '}
+            </h3>
+            <p className="company">
+              AI Teacher Assistant Platform (Remote - Garoua, Cameroon)
+            </p>
+            <p className="duration">May 2025 - Present</p>
             <div className="description">
               <div className="achievement">
-                Led end-to-end development of 10+ web applications and mobile
-                apps, serving 1000+ active users
+                Leading development of AI-powered educational platform serving
+                1000+ concurrent users with 99.9% uptime
               </div>
               <div className="achievement">
-                Architected and implemented microservices solutions using
-                Node.js, reducing system response time by 40%
+                Implemented OCR grade scanning system reducing manual assessment
+                time by 80% using Tesseract.js
               </div>
               <div className="achievement">
-                Developed cross-platform mobile applications with React Native,
-                achieving 95% code reuse between iOS and Android
+                Integrated Google Speech-to-Text API enabling voice-based
+                interactions for accessibility
               </div>
               <div className="achievement">
-                Integrated multiple payment gateways (Stripe, PayPal, Orange
-                Money, MTN) processing $50K+ in transactions
+                Architected modular dashboard supporting multi-stakeholder
+                access (teachers, students, parents)
               </div>
               <div className="achievement">
-                Collaborated with international clients to deliver custom
-                solutions meeting specific business requirements
+                Built real-time notification system with Firebase and
+                implemented AI-powered chatbot framework
+              </div>
+            </div>
+          </div>
+
+          <div className="experience-item">
+            <h3 className="job-title">Senior Full-Stack Mobile Developer</h3>
+            <p className="company">
+              unRichunPauvre - Crowdfunding Platform (Remote - Morocco)
+            </p>
+            <p className="duration">February 2025 - May 2025</p>
+            <div className="description">
+              <div className="achievement">
+                Successfully deployed mobile app on App Store achieving global
+                market reach
               </div>
               <div className="achievement">
-                Implemented CI/CD pipelines and automated testing, reducing
-                deployment time by 60%
+                Implemented secure PayPal payment processing handling $50K+ in
+                transactions with 100% success rate
+              </div>
+              <div className="achievement">
+                Designed user-friendly project discovery system increasing user
+                engagement by 60%
+              </div>
+              <div className="achievement">
+                Built scalable platform supporting multiple project categories
+                and funding goals
+              </div>
+              <div className="achievement">
+                Enabled direct financial support between users with 95%
+                transaction success rate
+              </div>
+            </div>
+          </div>
+
+          <div className="experience-item">
+            <h3 className="job-title">Senior Full-Stack Developer</h3>
+            <p className="company">SENIMA Consulting (Yaoundé, Cameroon)</p>
+            <p className="duration">September 2024 - March 2025</p>
+            <div className="description">
+              <div className="achievement">
+                Led development of comprehensive cross-platform application for
+                cocoa industry digitalization
+              </div>
+              <div className="achievement">
+                Streamlined field operations reducing inspection time by 70%
+                through digital data collection
+              </div>
+              <div className="achievement">
+                Enhanced traceability enabling 100% supply chain transparency
+                from farm to factory
+              </div>
+              <div className="achievement">
+                Optimized market transactions reducing processing time by 60%
+                and eliminating manual errors
+              </div>
+              <div className="achievement">
+                Enabled real-time monitoring of field agents improving
+                operational efficiency by 50%
+              </div>
+            </div>
+          </div>
+
+          <div className="experience-item">
+            <h3 className="job-title">
+              Backend Developer & Microservices Specialist
+            </h3>
+            <p className="company">
+              RB-Clean - Microservices Platform (Remote - Buea, Cameroon)
+            </p>
+            <p className="duration">June 2024 - August 2024</p>
+            <div className="description">
+              <div className="achievement">
+                Architected notification microservice handling 100% of platform
+                communications
+              </div>
+              <div className="achievement">
+                Reduced system coupling by 80% through microservices
+                architecture implementation
+              </div>
+              <div className="achievement">
+                Improved service scalability supporting 10,000+ concurrent
+                notifications
+              </div>
+              <div className="achievement">
+                Enhanced system reliability with 99.9% uptime through load
+                balancing
+              </div>
+              <div className="achievement">
+                Streamlined development workflow using DDD, CQRS principles
+                reducing code complexity by 60%
+              </div>
+            </div>
+          </div>
+
+          <div className="experience-item">
+            <h3 className="job-title">Full-Stack Developer</h3>
+            <p className="company">
+              Innovent - Event Management Platform (Remote - Tanzania)
+            </p>
+            <p className="duration">March 2024 - June 2024</p>
+            <div className="description">
+              <div className="achievement">
+                Developed comprehensive event management platform enabling 100%
+                digital booking process
+              </div>
+              <div className="achievement">
+                Implemented real-time event management reducing administrative
+                overhead by 80%
+              </div>
+              <div className="achievement">
+                Integrated payment processing system handling 100% of
+                transactions securely
+              </div>
+              <div className="achievement">
+                Built scalable platform supporting multiple event types and
+                large user bases
+              </div>
+              <div className="achievement">
+                Delivered complete solution from concept to deployment in 3
+                months
+              </div>
+            </div>
+          </div>
+
+          <div className="experience-item">
+            <h3 className="job-title">Full-Stack Developer</h3>
+            <p className="company">
+              CodingPoet - Online Course Platform (Remote - Canada)
+            </p>
+            <p className="duration">January 2024 - March 2024</p>
+            <div className="description">
+              <div className="achievement">
+                Built complete e-learning platform enabling course creators to
+                sell content
+              </div>
+              <div className="achievement">
+                Implemented secure payment processing handling 100% of
+                transactions
+              </div>
+              <div className="achievement">
+                Built user-friendly course management system reducing setup time
+                by 70%
+              </div>
+              <div className="achievement">
+                Created responsive design supporting 100% mobile and desktop
+                users
+              </div>
+              <div className="achievement">
+                Delivered production-ready platform with comprehensive admin
+                dashboard
               </div>
             </div>
           </div>
@@ -1155,7 +593,7 @@ export function CVDownload() {
                 href="https://github.com/frckbrice/Clean-code-arch-REST-API"
                 className="project-link"
               >
-                Clean Code Architecture REST API - Example Project
+                Clean Code Architecture REST API - Products management Project
               </a>
             </h3>
             <p className="project-tech">
