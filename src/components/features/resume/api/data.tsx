@@ -335,11 +335,11 @@ export const education: ExperienceTypi = {
   icons: '/assets/resume/cap.png',
   title: 'Education',
   description:
-    "Master's degree in Computer Science with specialization in software engineering and web development. Strong academic foundation in algorithms, data structures, and modern programming paradigms.",
+    "Bachelors in Computer Engineering with specialization in software engineering and web development. Strong academic foundation in algorithms, data structures, and modern programming paradigms.",
   items: [
     {
       institution: 'University of Bamenda',
-      degree: 'Master of Science in Computer Science',
+      degree: 'Bachelors in Computer Engineering',
       duration: '2017',
       description:
         'Specialized in software engineering, web development, and database management. Completed thesis on modern web application architectures and graduated with honors.',
