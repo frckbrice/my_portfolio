@@ -335,7 +335,7 @@ export const education: ExperienceTypi = {
   icons: '/assets/resume/cap.png',
   title: 'Education',
   description:
-    "Bachelors in Computer Engineering with specialization in software engineering and web development. Strong academic foundation in algorithms, data structures, and modern programming paradigms.",
+    'Bachelors in Computer Engineering with specialization in software engineering and web development. Strong academic foundation in algorithms, data structures, and modern programming paradigms.',
   items: [
     {
       institution: 'University of Bamenda',

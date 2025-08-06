@@ -1036,9 +1036,9 @@ export function CVDownload() {
         <div className="section">
           <h2 className="section-title">Professional Summary</h2>
           <p className="summary">
-            Results-driven Full-Stack Developer with 3 years of proven
-            expertise in building scalable web applications and mobile
-            solutions. Specialized in modern JavaScript ecosystem, microservices
+            Results-driven Full-Stack Developer with 3 years of proven expertise
+            in building scalable web applications and mobile solutions.
+            Specialized in modern JavaScript ecosystem, microservices
             architecture, and cross-platform development. Demonstrated track
             record of delivering high-performance applications across diverse
             industries, with strong emphasis on clean code principles, optimal
@@ -1096,10 +1096,13 @@ export function CVDownload() {
               </a>
             </h3>
             <p className="project-tech">
-              React Native • Git • TypeScript • docker • Github Actions • TailwindCss • Vitest • playright 
+              React Native • Git • TypeScript • docker • Github Actions •
+              TailwindCss • Vitest • playright
             </p>
             <p className="description">
-              A modern, responsive portfolio website showcasing my expertise in full-stack web development, mobile development, and software engineering.
+              A modern, responsive portfolio website showcasing my expertise in
+              full-stack web development, mobile development, and software
+              engineering.
             </p>
           </div>
 
@@ -1113,7 +1116,9 @@ export function CVDownload() {
               </a>
             </h3>
             <p className="project-tech">
-              Next.js 15 • Git •TypeScript • Supabase • WebSockets • Drizzle ORM • github-actions • stripe payment • TailwindCSS • quilljs • PostgreSQL
+              Next.js 15 • Git •TypeScript • Supabase • WebSockets • Drizzle ORM
+              • github-actions • stripe payment • TailwindCSS • quilljs •
+              PostgreSQL
             </p>
             <p className="description">
               Modern collaborative workspace with real-time features, user
@@ -1133,7 +1138,8 @@ export function CVDownload() {
               </a>
             </h3>
             <p className="project-tech">
-              Next.js 15+ • Git • TypeScript • Sanity CMS • Stripe • Service Workers  • Stripe Payment  • nextAuth • TailwindCSS   • github-actions
+              Next.js 15+ • Git • TypeScript • Sanity CMS • Stripe • Service
+              Workers • Stripe Payment • nextAuth • TailwindCSS • github-actions
             </p>
             <p className="description">
               Full-featured hotel management system with booking engine, payment
@@ -1153,15 +1159,15 @@ export function CVDownload() {
               </a>
             </h3>
             <p className="project-tech">
-              Node.js • Git • MongoDB • Clean Architecture • TypeScript • Express.js •
-              Jest • Supertest • Docker • github-actions • API Versioning 
+              Node.js • Git • MongoDB • Clean Architecture • TypeScript •
+              Express.js • Jest • Supertest • Docker • github-actions • API
+              Versioning
             </p>
             <p className="description">
               An example of a scalable backend following clean architecture
-              principles. Features include order management, inventory
-              tracking, user authentication, and comprehensive API
-              documentation. Handles 1000+ concurrent users with optimized
-              database queries. 
+              principles. Features include order management, inventory tracking,
+              user authentication, and comprehensive API documentation. Handles
+              1000+ concurrent users with optimized database queries.
             </p>
           </div>
         </div>
