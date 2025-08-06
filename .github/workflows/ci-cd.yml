@@ -1,10 +1,10 @@
-name: CI/CD
+name: CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, chore/fix_responsiveness]
   pull_request:
-    branches: [main, master]
+    branches: [main, master, chore/fix_responsiveness]
 
 permissions:
   security-events: write
@@ -32,19 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Check GitHub Secrets for Vercel
-        run: |
-          # Debug: Check if GitHub secrets are set
-          echo "VERCEL_TOKEN from secrets: $([ -n "${{ secrets.VERCEL_TOKEN }}" ] && echo "YES" || echo "NO")"
-          echo "VERCEL_ORG_ID from secrets: $([ -n "${{ secrets.VERCEL_ORG_ID }}" ] && echo "YES" || echo "NO")"
-          echo "VERCEL_PROJECT_ID from secrets: $([ -n "${{ secrets.VERCEL_PROJECT_ID }}" ] && echo "YES" || echo "NO")"
 
-          # Debug: Show token prefix (first 10 characters) for verification
-          echo "Token starts with: ${VERCEL_TOKEN:0:10}..."
-
-          # Remove any existing .vercel directory to prevent conflicts
-          rm -rf .vercel || true
-          echo "Removed .vercel directory if it existed"
 
       - name: Lint
         run: yarn lint || yarn run lint
@@ -74,15 +62,4 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
 
-      - name: Clean Vercel cache before deployment
-        run: |
-          rm -rf .vercel || true
-          echo "Cleaned .vercel directory before deployment"
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
