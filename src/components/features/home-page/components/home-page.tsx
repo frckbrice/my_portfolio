@@ -79,7 +79,7 @@ export function Homepage({
       {/* <PortfolioShowcase /> */}
 
       {/* Trusted Companies Section - Social Proof */}
-      <TrustedCompanies />
+      {/* <TrustedCompanies /> */}
 
       {/* SEO, Accessibility & Performance Section - Additional Expertise */}
       <SEOAccessibilityPerformance />

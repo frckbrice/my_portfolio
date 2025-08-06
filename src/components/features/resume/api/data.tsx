@@ -78,8 +78,9 @@ export const experience: ExperienceTypi = {
       businessImpact: [
         'Implemented OCR grade scanning with Tesseract.js for automated assessment',
         'Integrated Google Speech-to-Text for voice recognition capabilities',
-        'Built real-time notification system for seamless communication',
-        'Designed modular dashboard supporting multi-stakeholder access',
+        'Built real-time notification system for seamless communication between teachers, students and parents',
+        'Designed modular dashboard supporting multi-stakeholder (teachers, students, parents) access',
+        'WORK IN PROGRESS: AI-powered chatbot for personalized student support, and AI-powered grading system, and AI-powered attendance system, etc.',
       ],
       technologies: [
         'TypeScript',
@@ -98,10 +99,8 @@ export const experience: ExperienceTypi = {
         'OpenAI API',
         'Tesseract.js',
         'Google Speech-to-Text',
-        'Google Drive API',
+        'Google Drive, Form, Sheet API',
         'Google Cloud Vision API',
-        'Google Form API',
-        'Google Sheets API',
       ],
       achievements: [
         'AI Integration',
@@ -110,7 +109,7 @@ export const experience: ExperienceTypi = {
       ],
     },
     {
-      company: 'unRichunPauvre - Crowdfunding Platform, Remote - Morocco',
+      company: 'unRichunPauvre  - Crowdfunding Platform, Remote - Morocco',
       position: 'Full-Stack Mobile Developer',
       duration: 'February 2025 - May 2025',
       description:
@@ -142,8 +141,8 @@ export const experience: ExperienceTypi = {
       ],
     },
     {
-      company: 'SENIMA Consulting',
-      position: 'Full-Stack Developer',
+      company: 'SENIMA Consulting,  Yaoundé, Cameroon',
+      position: 'Full-Stack Mobile and Web Developer',
       duration: 'Septembre 2024 - March 2025',
       description: `Built a comprehensive cross-platform application (Android & Web) for cocoa industry companies. The application enables companies to create inspection and market projects, deploy field agents to inspect farmers and farms, facilitate cocoa purchasing during markets, organize farmer training sessions, and manage complete supply chain logistics from field to factory transformation.`,
       businessImpact: [
@@ -173,11 +172,12 @@ export const experience: ExperienceTypi = {
     },
 
     {
-      company: 'RB-Clean - Microservices Platform, Remote - Buea, Cameroon',
+      company: 'RB-Clean,  - Microservices Platform, Remote - Buea, Cameroon',
       position: 'Backend Developer (Client Project)',
       duration: 'June 2024 - August 2024',
-      description:
-        'Developed notification microservice for a comprehensive cloth cleaning management platform using Domain-Driven Design (DDD) principles. Implemented API gateway with load balancer to serve multiple microservices, ensuring scalable and maintainable architecture.',
+      description: `
+        Developed notification microservice for a comprehensive cloth cleaning management platform using Domain-Driven Design (DDD) principles.
+        Implemented API gateway with load balancer to serve multiple microservices, ensuring scalable and maintainable architecture.`,
       businessImpact: [
         'Designed and implemented notification service handling 100% of platform communications',
         'Reduced system coupling by 80% through microservices architecture implementation',
@@ -187,24 +187,32 @@ export const experience: ExperienceTypi = {
       ],
       technologies: [
         'Node.js',
-        'Express.js',
-        'MongoDB',
-        'Redis',
+        'TypeScript',
+        'NestJS',
+        'Kafka',                      
         'Docker',
         'Kubernetes',
-        'API Gateway',
-        'Load Balancer',
-        'DDD',
-        'Microservices',
-        'CQRS',
+        'PostgreSQL',
+        'API Gateway (NGINX)',
+        'NGINX (Load Balancer)',
+        'REST',
+        'OpenTelemetry',
+        'Prometheus & Grafana',
+        'DDD (Domain-Driven Design)',
+        'CQRS (Command Query Responsibility Segregation)',
+        'Microservices Architecture',
+        'Event-Driven Architecture',
       ],
       achievements: [
         'Microservices Architecture',
         'Domain-Driven Design',
         'System Scalability',
         'CQRS',
+        'Event-Driven Communication with Kafka',
+        'Infrastructure Monitoring',
       ],
     },
+
     {
       company: 'Innovent - Event Management Platform, Remote - Tanzania',
       position: 'Full-Stack Developer (Client Project)',
@@ -237,9 +245,9 @@ export const experience: ExperienceTypi = {
     },
 
     {
-      company: 'CodingPoet - Online Course Platform',
-      position: 'Full-Stack Developer (Client Project, Remote - Canada)',
-      duration: 'January 2024 - March 2024',
+      company: 'CodingPoet - Online Course Platform, Remote - Canada',
+      position: 'Full-Stack Developer (Client Project)',
+      duration: 'January 2024 - March 2024, ',
       description:
         'Built a complete online course selling platform with user authentication, course management, payment processing, and content delivery system. Created seamless learning experience for students and course creators.',
       businessImpact: [
@@ -265,40 +273,6 @@ export const experience: ExperienceTypi = {
         'Payment Integration',
       ],
     },
-
-    {
-      company:
-        'Rebase CodeCamp - Full-Stack Intensive Training Program, rebasecodecamp.com',
-      position: 'Student Developer, Cameroon',
-      duration: '2023 - 2024',
-      description:
-        'Completed intensive full-stack development training program focusing on modern web technologies. Built multiple real-world client projects demonstrating practical application of React, Node.js, and related technologies.',
-      businessImpact: [
-        'Mastered modern full-stack development stack (React, Node.js, Express)',
-        'Completed 2 real-world client projects with production deployments',
-        'Developed proficiency in GraphQL, payment processing, and real-time systems',
-        'Enhanced problem-solving skills through complex commercial applications',
-        'Stayed current with industry trends and emerging technologies',
-      ],
-      technologies: [
-        'React',
-        'Node.js',
-        'Express.js',
-        'GraphQL',
-        'PostgreSQL',
-        'Prisma',
-        'Stripe API',
-        'Docker',
-        'GitHub Actions',
-        'SSL/TLS',
-      ],
-      achievements: [
-        'Skill Development',
-        'Client Project Experience',
-        'Modern Technologies',
-      ],
-    },
-
     {
       company: 'ARMP (Agence de Régulation des Marchés Publics)',
       position: 'IT Infrastructure Specialist, Temporary staff member',
